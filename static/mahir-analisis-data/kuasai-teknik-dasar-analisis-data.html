@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>3 LANGKAH KILAT MAHIR ANALISIS DATA</title>
+  <meta name="description" content="Buku elektronik bagaimana cepat menguasai analisis data dengan RStudio">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="3 LANGKAH KILAT MAHIR ANALISIS DATA" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Buku elektronik bagaimana cepat menguasai analisis data dengan RStudio" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 LANGKAH KILAT MAHIR ANALISIS DATA" />
+  
+  <meta name="twitter:description" content="Buku elektronik bagaimana cepat menguasai analisis data dengan RStudio" />
+  
+
+<meta name="author" content="Pribadi Pramudya - pripramudya.com">
+
+
+<meta name="date" content="2019-01-14">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html">
+<link rel="next" href="latihan-latihan-latihan.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">3 Langkah Kilat Mahir Analisis Data</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Pendahuluan</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#selamat-datang"><i class="fa fa-check"></i>Selamat Datang</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#kenapa-anda-perlu-menguasai-keterampilan-analisis-data"><i class="fa fa-check"></i>Kenapa Anda Perlu Menguasai Keterampilan Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#konsep-dasar-analisis-data"><i class="fa fa-check"></i>Konsep Dasar Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#apa-itu-analisis-data"><i class="fa fa-check"></i>Apa itu Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#proses-dan-tahapan-analisis-data"><i class="fa fa-check"></i>Proses dan Tahapan Analisis Data</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#menentukan-tujuan"><i class="fa fa-check"></i>1. Menentukan Tujuan</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#menentukan-metode-pengukuran-yang-digunakan"><i class="fa fa-check"></i>2. Menentukan Metode Pengukuran yang Digunakan</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pengumpulan-data"><i class="fa fa-check"></i>3. Pengumpulan Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pembersihan-dan-pembentukan-data"><i class="fa fa-check"></i>4. Pembersihan dan Pembentukan Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#analisis-data"><i class="fa fa-check"></i>5. Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#interpretasi-dan-komunikasi-hasil-analisis-data"><i class="fa fa-check"></i>6. Interpretasi dan Komunikasi Hasil Analisis Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#langkah-kilat-mahir-analisis-data"><i class="fa fa-check"></i>3 Langkah Kilat Mahir Analisis Data</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><i class="fa fa-check"></i><b>1</b> Instal dan Pelajari Satu <em>Tool</em> Analisis Data yang <em>Powerful</em> ini</a><ul>
+<li class="chapter" data-level="1.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#tool-atau-perangkat-lunak-analisis-data-populer-yang-banyak-orang-pakai"><i class="fa fa-check"></i><b>1.1</b> <em>Tool</em> atau Perangkat Lunak Analisis Data Populer yang Banyak Orang Pakai</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#microsoft-excel"><i class="fa fa-check"></i><b>1.1.1</b> Microsoft Excel</a></li>
+<li class="chapter" data-level="1.1.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#python"><i class="fa fa-check"></i><b>1.1.2</b> Python</a></li>
+<li class="chapter" data-level="1.1.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#r"><i class="fa fa-check"></i><b>1.1.3</b> R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#kenapa-harus-r"><i class="fa fa-check"></i><b>1.2</b> Kenapa harus R</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#dukungan-paket-r"><i class="fa fa-check"></i><b>1.2.1</b> Dukungan Paket R</a></li>
+<li class="chapter" data-level="1.2.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#belajar-analisis-data-lebih-mudah-menggunakan-r"><i class="fa fa-check"></i><b>1.2.2</b> Belajar Analisis Data lebih mudah menggunakan R</a></li>
+<li class="chapter" data-level="1.2.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#fleksibilitas-r"><i class="fa fa-check"></i><b>1.2.3</b> Fleksibilitas R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#instal-r-dan-rstudio"><i class="fa fa-check"></i><b>1.3</b> Instal R dan RStudio</a></li>
+<li class="chapter" data-level="1.4" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#instal-paket-r"><i class="fa fa-check"></i><b>1.4</b> Instal Paket R</a></li>
+<li class="chapter" data-level="1.5" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#syntax-dan-operasi-dasar-r"><i class="fa fa-check"></i><b>1.5</b> <em>Syntax</em> dan Operasi Dasar R</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#kalkulator-interaktif"><i class="fa fa-check"></i><b>1.5.1</b> Kalkulator Interaktif</a></li>
+<li class="chapter" data-level="1.5.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#variabel"><i class="fa fa-check"></i><b>1.5.2</b> Variabel</a></li>
+<li class="chapter" data-level="1.5.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#vektor"><i class="fa fa-check"></i><b>1.5.3</b> Vektor</a></li>
+<li class="chapter" data-level="1.5.4" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#urutan-angka"><i class="fa fa-check"></i><b>1.5.4</b> Urutan Angka</a></li>
+<li class="chapter" data-level="1.5.5" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#replikasi-angka"><i class="fa fa-check"></i><b>1.5.5</b> Replikasi Angka</a></li>
+<li class="chapter" data-level="1.5.6" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#ambil-elemen-vektor"><i class="fa fa-check"></i><b>1.5.6</b> Ambil Elemen Vektor</a></li>
+<li class="chapter" data-level="1.5.7" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#syntax-fungsi-penting-lainnya"><i class="fa fa-check"></i><b>1.5.7</b> <em>Syntax</em> / Fungsi Penting Lainnya</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html"><i class="fa fa-check"></i><b>2</b> Kuasai Teknik Dasar Analisis Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#visualisasi-data"><i class="fa fa-check"></i><b>2.1</b> Visualisasi Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#pemetaan-data-ke-atribut-estetik"><i class="fa fa-check"></i><b>2.1.1</b> Pemetaan Data ke Atribut Estetik</a></li>
+<li class="chapter" data-level="2.1.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#lapisan"><i class="fa fa-check"></i><b>2.1.2</b> Lapisan</a></li>
+<li class="chapter" data-level="2.1.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#iterasi-pemetaan-dan-lapisan"><i class="fa fa-check"></i><b>2.1.3</b> Iterasi Pemetaan dan Lapisan</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#manipulasi-data"><i class="fa fa-check"></i><b>2.2</b> Manipulasi Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#melihat-dan-mengetahui-set-data"><i class="fa fa-check"></i><b>2.2.1</b> Melihat dan Mengetahui Set Data</a></li>
+<li class="chapter" data-level="2.2.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#mengubah-variabel-kolom-isi-data"><i class="fa fa-check"></i><b>2.2.2</b> Mengubah Variabel, Kolom, Isi Data</a></li>
+<li class="chapter" data-level="2.2.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#operator-pipa"><i class="fa fa-check"></i><b>2.2.3</b> Operator Pipa (<code>%&gt;%</code>)</a></li>
+<li class="chapter" data-level="2.2.4" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#memilih-variabel-data"><i class="fa fa-check"></i><b>2.2.4</b> Memilih Variabel Data</a></li>
+<li class="chapter" data-level="2.2.5" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#menyaring-baris-data"><i class="fa fa-check"></i><b>2.2.5</b> Menyaring Baris Data</a></li>
+<li class="chapter" data-level="2.2.6" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#mengurutkan-data"><i class="fa fa-check"></i><b>2.2.6</b> Mengurutkan Data</a></li>
+<li class="chapter" data-level="2.2.7" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#menambah-variabel-data"><i class="fa fa-check"></i><b>2.2.7</b> Menambah Variabel Data</a></li>
+<li class="chapter" data-level="2.2.8" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#mengelompokkan-dan-meringkas-data"><i class="fa fa-check"></i><b>2.2.8</b> Mengelompokkan dan Meringkas Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#interpretasi-data"><i class="fa fa-check"></i><b>2.3</b> Interpretasi Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#korelasi"><i class="fa fa-check"></i><b>2.3.1</b> Korelasi</a></li>
+<li class="chapter" data-level="2.3.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#trend"><i class="fa fa-check"></i><b>2.3.2</b> <em>Trend</em></a></li>
+<li class="chapter" data-level="2.3.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#distribusi"><i class="fa fa-check"></i><b>2.3.3</b> Distribusi</a></li>
+<li class="chapter" data-level="2.3.4" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#outlier"><i class="fa fa-check"></i><b>2.3.4</b> <em>Outlier</em></a></li>
+<li class="chapter" data-level="2.3.5" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#perbandingan-dan-peringkat"><i class="fa fa-check"></i><b>2.3.5</b> Perbandingan dan Peringkat</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html"><i class="fa fa-check"></i><b>3</b> Latihan, Latihan, Latihan</a><ul>
+<li class="chapter" data-level="3.1" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#unduh-inisiasi-dan-mempersiapkan-set-data"><i class="fa fa-check"></i><b>3.1</b> Unduh, Inisiasi, dan Mempersiapkan Set Data</a></li>
+<li class="chapter" data-level="3.2" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#visualisasi-grafik"><i class="fa fa-check"></i><b>3.2</b> Visualisasi Grafik</a></li>
+<li class="chapter" data-level="3.3" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#visualisasi-peta"><i class="fa fa-check"></i><b>3.3</b> Visualisasi Peta</a></li>
+<li class="chapter" data-level="3.4" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#insight"><i class="fa fa-check"></i><b>3.4</b> <em>Insight</em></a></li>
+<li class="chapter" data-level="3.5" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#referensi"><i class="fa fa-check"></i><b>3.5</b> Referensi</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://pripramudya.com" target="blank">Ditulis oleh Pribadi Pramudya</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">3 LANGKAH KILAT MAHIR ANALISIS DATA</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="kuasai-teknik-dasar-analisis-data" class="section level1">
+<h1><span class="header-section-number">Langkah Kilat 2</span> Kuasai Teknik Dasar Analisis Data</h1>
+<p>Analisis data merupakan subjek yang cukup luas. Anda tidak bisa belajar semuanya sekaligus. Waktu Anda terbatas dan sangat berharga. Anda perlu strategi khusus untuk menguasainya. Investasi terbaik Anda adalah waktu dan pikiran. Anda harus fokus belajar satu keterampilan yang memiliki keuntungan atau balik modal investasi yang tinggi.</p>
+<p>Kabar baiknya, Anda sudah melakukan hal ini: Belajar R.</p>
+<p>R merupakan tool yang memiliki keuntungan atau balik modal investasi paling tinggi.</p>
+<p>Jadi, lanjutkanlah belajar R.</p>
+<p>Di bagian ini, Anda akan diarahkan untuk mengetahui sebenarnya apa saja yang menjadi bagian dari teknik dasar analisis data.</p>
+<p>Teknik dasar analisis data dibagi menjadi 3:</p>
+<ol style="list-style-type: decimal">
+<li>Visualisasi Data</li>
+<li>Manipulasi Data</li>
+<li>Interpretasi Data</li>
+</ol>
+<p>Anda sebaiknya belajar teknik dasar analisis ini secara berurutan.</p>
+<p>Pertama-tama pelajari visualisasi data.</p>
+<p>Visualisasi data merupakan cara tercepat dan termudah untuk mendapatkan <em>insight</em> pada sebuah set data. Selain itu, keterampilan ini juga bisa dijadikan sebagai alat komunikasi ke siapa saja yang membutuhkan hasil analisis data.</p>
+<div id="visualisasi-data" class="section level2">
+<h2><span class="header-section-number">2.1</span> Visualisasi Data</h2>
+<p>Untuk belajar visualisasi data, gunakan salah satu paket R, yakni <code>ggplot2</code>.</p>
+<p>Huruf “gg” pada <code>ggplot2</code> merupakan kepanjangan dari <em>Grammar of Graphics</em>, sebuah buku yang ditulis oleh Leland Wilkinson, prinsip yang <code>ggplot2</code> ambil. <em>Grammar of Graphics</em> menjelaskan tentang metode membagi-bagi grafik ke berbagai elemen dan membangun setiap elemen tersebut di beberapa lapisan untuk menampilkan representasi visual.</p>
+<p>Singkatnya, grafik di petakan dari data ke atribut estetik, seperti warna, bentuk, atau ukuran juga ke objek geometrik, seperti titik, garis, ataupun batang. Selain itu, grafik juga dipetakan ke sistem koordinat.</p>
+<p>Sebuah grafik ggplot terdiri dari sebuah sistem koordinat dan setidaknya sebuah objek geometrik.</p>
+<p>Lalu, Kenapa <code>ggplot2</code>?</p>
+<p><code>ggplot2</code> mengajarkan Anda bagaimana berpikir tentang visualisasi data.</p>
+<p>Anda diajarkan tidak hanya secara <em>syntax</em> saja, tetapi juga berpikir dan memiliki konsep terkait proses memvisualisasi data.</p>
+<p><strong>3 Prinsip Dasar Visualisasi Menggunakan <code>ggplot2</code></strong></p>
+<ol style="list-style-type: decimal">
+<li>Pemetaan Data ke Atribut Estetik</li>
+<li>Lapisan</li>
+<li>Iterasi Pemetaan dan Lapisan</li>
+</ol>
+<p>OK, sampai sini, mungkin Anda masih bingung, tidak apa. Ada baiknya konsep ini langsung dijelaskan melalui contoh saja.</p>
+<div id="pemetaan-data-ke-atribut-estetik" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Pemetaan Data ke Atribut Estetik</h3>
+<p>Pada contoh kali ini, Anda akan diarahkan untuk membuat grafik batang atau <em>barchart</em>. Grafik ini merupakan grafik yang paling sering dipakai dan paling mudah dibaca. Selain itu, akan lebih memudahkan Anda untuk memahami prinsip dan filosofi membuat grafik menggunakan <code>ggplot2</code>.</p>
+<p>Sebenarnya ada banyak grafik jenis lainnya seperti histogram, grafik garis <em>(line chart)</em>, grafik sebar <em>(scatter plot)</em>, dan grafik lainnya. Pembahasan di bagian ini akan difokuskan pada grafik batang saja.</p>
+<p>Cukup penjelasannya, coba langsung Anda inisiasi paket <code>ggplot2</code> menggunakan fungsi <code>library()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Inisiasi paket ggplot</span>
+<span class="kw">library</span>(ggplot2)</code></pre></div>
+<p>Setiap Anda ingin menggunakan paket R yang cukup spesifik, Anda harus menginisasi paket tersebut di awal. Hal ini dilakukan agar Anda bisa mengakses seluruh fungsi yang ada di paket tersebut.</p>
+<p>Anda akan menggunakan data <em>built in</em> dari <code>ggplot2</code>, yakni <code>mpg</code>. Untuk melihat data <code>mpg</code>, ketik <code>mpg</code> di CONSOLE dan tekan Enter.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mpg</code></pre></div>
+<pre><code>## # A tibble: 234 x 11
+##    manufacturer model displ  year   cyl trans drv     cty   hwy fl    cla…
+##    &lt;chr&gt;        &lt;chr&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;ch&gt;
+##  1 audi         a4      1.8  1999     4 auto… f        18    29 p     com…
+##  2 audi         a4      1.8  1999     4 manu… f        21    29 p     com…
+##  3 audi         a4      2    2008     4 manu… f        20    31 p     com…
+##  4 audi         a4      2    2008     4 auto… f        21    30 p     com…
+##  5 audi         a4      2.8  1999     6 auto… f        16    26 p     com…
+##  6 audi         a4      2.8  1999     6 manu… f        18    26 p     com…
+##  7 audi         a4      3.1  2008     6 auto… f        18    27 p     com…
+##  8 audi         a4 q…   1.8  1999     4 manu… 4        18    26 p     com…
+##  9 audi         a4 q…   1.8  1999     4 auto… 4        16    25 p     com…
+## 10 audi         a4 q…   2    2008     4 manu… 4        20    28 p     com…
+## # ... with 224 more rows</code></pre>
+<p>Seperti yang Anda lihat, <code>mpg</code>, yang merupakan kepanjangan dari <em>miles per gallon</em> adalah sebuah set data tentang efisiensi penggunaan bensin 38 mobil terpopuler di Amerika Serikat.</p>
+<p>Anda bisa memahami lebih lanjut terkait detail set data ini melalui perintah <code>?mpg</code>.</p>
+<p>Untuk melihat berapa jumlah baris dan kolomnya, Anda bisa menggunakan fungsi <code>dim</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(mpg)</code></pre></div>
+<pre><code>## [1] 234  11</code></pre>
+<p>Set data ini memiliki 234 baris dan 11 kolom atau 234 observasi dan 11 variabel. Jika Anda lihat data ini lebih teliti lagi, 234 juga merupakan jumlah total keseluruhan mobil yang menjadi objek observasi.</p>
+<p>Sebelum melangkah lebih jauh ke teknis pembuatan grafik, Anda akan diarahkan untuk mengetahui <strong>perbandingan jumlah mobil antar ‘manufacturer’</strong> sebagai tujuan dari proses ini.</p>
+<p>OK, untuk mulai memetakan variabel ke grafik, gunakan fungsi <code>ggplot()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Pemetaan variabel `manufacturer` ke sistem koordinat x</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> mpg, <span class="kw">aes</span>(<span class="dt">x =</span> manufacturer))</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p>Fungsi <code>aes()</code> di atas adalah memetakan atribut variabel ‘manufacturer’ ke sistem koordinat x. Anda bisa lihat, di garis horizontal x sudah ada nama-nama pembuat mobil yang merupakan hasil pemetaan atribut estetik.</p>
+<p>Sampai sini Anda pasti berpikir,</p>
+<p><em>“Kenapa kok jelek banget grafiknya?”</em></p>
+<p><em>“Mana grafik batangnya?”</em></p>
+<p><em>“Tulisannya tumpang tindih, nggak beraturan.”</em></p>
+<p>Tenang, grafik tersebut masih tahap lapisan pertama dan iterasi pertama juga prosesnya masih langkah demi langkah sehingga Anda tidak bingung dan lebih mudah mengerti konsep membuat grafik <code>ggplot2</code>.</p>
+</div>
+<div id="lapisan" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Lapisan</h3>
+<p>Lapisan atau <em>layer</em> merupakan prinsip dasar visualisasi kedua menggunakan <code>ggplot2</code>. Filosofinya adalah Anda membuat grafik yang terdiri dari beberapa lapisan sehingga hasilnya merepresentasikan visualisasi yang Anda inginkan. Lapisan ini bisa berupa sistem koordinat, grafik batang, judul grafik, legenda, ataupun elemen lainnya.</p>
+<p>Langkah selanjutnya setelah pemetaan variabel, Anda akan menambahkan elemen grafik batang pada lapisan berikutnya dengan menggunakan operator <code>+</code> dan fungsi <code>geom_bar()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Penambahan elemen grafik batang pada lapisan kedua</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> mpg, <span class="kw">aes</span>(<span class="dt">x =</span> manufacturer)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_bar</span>()</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>Nah, sudah mulai terlihat grafiknya.</p>
+<p>Sampai sini, sudah ada 2 lapisan grafik. Lapisan pertama diisi oleh elemen sistem koordinat, lapisan kedua diisi oleh grafik batang.</p>
+</div>
+<div id="iterasi-pemetaan-dan-lapisan" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Iterasi Pemetaan dan Lapisan</h3>
+<p>Prinsip dasar ketiga ini merupakan perulangan dari prinsip satu dan prinsip kedua. Anda terus melakukan iterasi dan modifikasi atribut estetik serta penambahan lapisan atau elemen sehingga sesuai dengan representasi visual yang ingin Anda capai.</p>
+<p>Untuk mempermudah pemahaman, Anda akan diarahkan langsung melalui contoh penulisan kode yang disertai dengan penjelasan dari baris komentar (baris komentar diawali dengan tanda <code>#</code>).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Merubah warna grafik batang menjadi merah gelap</span>
+<span class="co"># dengan menggunakan argumen &quot;fill&quot; pada fungsi geom_bar()</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> mpg, <span class="kw">aes</span>(<span class="dt">x =</span> manufacturer)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">fill =</span> <span class="st">&quot;#8B0000&quot;</span>)</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Merubah label keterangan sistem koordinat x dan y</span>
+<span class="co"># dengan menggunakan fungsi labs()</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> mpg, <span class="kw">aes</span>(<span class="dt">x =</span> manufacturer)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">fill =</span> <span class="st">&quot;#8B0000&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Produsen&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Jumlah Mobil&quot;</span>)</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menambah judul dan subjudul</span>
+<span class="co"># dengan menggunakan fungsi ggtitle()</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> mpg, <span class="kw">aes</span>(<span class="dt">x =</span> manufacturer)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">fill =</span> <span class="st">&quot;#8B0000&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Produsen&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Jumlah Mobil&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Distribusi Jumlah Mobil Berdasarkan Produsen&quot;</span>, 
+          <span class="dt">subtitle =</span> <span class="st">&quot;Tahun Pembuatan 1999 dan 2008&quot;</span>)</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p>Begitulah bagaimana iterasi dilakukan terus menerus sehingga representasi grafik sesuai dengan yang Anda inginkan.</p>
+<p>Dan pada akhirnya, iterasi final, menukar sistem koordinat sehingga tulisan terlihat lebih rapih dan mudah dibaca.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menukar sistem koordinat sehingga lebih mudah dibaca</span>
+<span class="co"># menggunakan fungsi coord_flip()</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> mpg, <span class="kw">aes</span>(<span class="dt">x =</span> manufacturer)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">fill =</span> <span class="st">&quot;#8B0000&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Produsen&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Jumlah Mobil&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Distribusi Jumlah Mobil Berdasarkan Produsen&quot;</span>, 
+          <span class="dt">subtitle =</span> <span class="st">&quot;Tahun Pembuatan 1999 dan 2008&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">coord_flip</span>()</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p>Sekali Anda mengerti tentang prinsip dasar ini, pemahaman Anda terhadap data visualisasi akan berubah. Mungkin bagi Anda yang dulu terbiasa menggunakan grafik dari Excel akan memerlukan waktu lebih untuk menangkap ini semua. Bagaimana tidak, Excel memberikan kemudahan yang membuat Anda tidak perlu memikirkan proses bagaimana grafik dibuat. Anda hanya cukup <em>point, drag, and click</em>, sedikit konfigurasi, Excel akan membereskan semuanya.</p>
+<p>Pelajari <code>ggplot2</code>, Anda akan paham bagaimana proses grafik dibuat tahap demi tahap. Memang membutuhkan <em>effort</em> lebih, tetapi <em>worth it</em>. Seiring Anda mengerti cara menggunakan <code>ggplot2</code>, pemahaman prinsip visualisasi data Anda akan meningkat.</p>
+</div>
+</div>
+<div id="manipulasi-data" class="section level2">
+<h2><span class="header-section-number">2.2</span> Manipulasi Data</h2>
+<p>Manipulasi data berperan ketika representasi visualisasi yang Anda buat tidak cukup untuk memunculkan <em>insight</em>. Faktanya, data yang Anda peroleh hampir pasti perlu diolah terlebih dahulu. Menurut penelitian, seorang analis data kebanyakan mengerahkan usahanya berkutat di fase manipulasi atau mengolah data ini sekitar 60% - 70% dari keseluruhan proses analisis. Jadi bisa dikatakan, keterampilan manipulasi data cukup penting dan pastinya juga perlu Anda kuasai.</p>
+<p>Manipulasi data adalah segala proses yang dilakukan pada sebuah set data dengan tujuan mempermudah melakukan analisis data dan mendapatkan <em>insight</em>. Proses tersebut diantaranya mengubah nama kolom atau variabel, mengurutkan, menyaring, sampai dengan meringkas data.</p>
+<p>Konsep atau teknik manipulasi data yang akan dikupas diantaranya sebagai berikut:</p>
+<ol style="list-style-type: decimal">
+<li>Melihat dan Mengetahui Set Data</li>
+<li>Mengubah Variabel, Kolom, Isi Data</li>
+<li>Operator Pipa (<code>%&gt;%</code>)</li>
+<li>Memilih Variabel Data</li>
+<li>Menyaring Baris Data</li>
+<li>Mengurutkan Data</li>
+<li>Mengelompokkan Data</li>
+<li>Meringkas Data</li>
+</ol>
+<p>Pada bahasan kali ini, Anda akan diarahkan untuk menggunakan kembali set data <code>mpg</code> seperti sebelumnya ditambah satu paket manipulasi data yang sangat <em>powerful</em>, <code>dplyr</code>.</p>
+<p>Pertama-tama, inisiasi paket <code>dplyr</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Inisiasi paket dplyr</span>
+<span class="kw">library</span>(dplyr)</code></pre></div>
+<div id="melihat-dan-mengetahui-set-data" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Melihat dan Mengetahui Set Data</h3>
+<p>Setiap Anda mendapatkan sebuah data set untuk diolah, hal yang pertama harus Anda lakukan adalah mengetahui isi dan tentang apa data tersebut. Apa format datanya? Berapa dimensinya? Apa saja variabelnya? Bagaimana tipe variabelnya? Apakah ada data yang hilang atau tidak terisi? Dan lain sebagainya.</p>
+<p>Yang pertama adalah fungsi <code>class()</code> untuk menampilkan tipe data.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan tipe data</span>
+<span class="kw">class</span>(mpg)</code></pre></div>
+<pre><code>## [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
+<p>Apa itu “tbl_df” “tbl”?</p>
+<p>“tbl_df” = <em>table data frame</em></p>
+<p>“tbl” = <em>table</em></p>
+<p>Intinya, “tbl_df” “tbl” “data.frame” merupakan tipe data dari <code>mpg</code> yang berupa tabel atau data frame. Tabel atau data frame adalah tipe data berbentuk “kotak” yang terdiri dari baris dan kolom.</p>
+<p>Data yang mudah diolah atau dimanipulasi biasanya bertipe tabel atau data frame ini. Selain tabel, ada juga yang berbentuk vektor atau yang hanya terdiri dari satu baris saja atau satu kolom saja.</p>
+<p>Lalu, bagaimana cara mengetahui jumlah baris dan kolom data <code>mpg</code>? Ya, Anda benar, salah satunya menggunakan fungsi <code>dim()</code>.</p>
+<p>Anda juga bisa menggunakan fungsi <code>nrow()</code> dan <code>ncol()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan jumlah baris</span>
+<span class="kw">nrow</span>(mpg)</code></pre></div>
+<pre><code>## [1] 234</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan jumlah kolom atau variabel</span>
+<span class="kw">ncol</span>(mpg)</code></pre></div>
+<pre><code>## [1] 11</code></pre>
+<p>Dari fungsi di atas, Anda sudah mengetahui jumlah kolom atau variabel. Selanjutnya, Anda gali lebih jauh untuk mengetahui nama-nama kolom atau variabelnya. Fungsi <code>names()</code> bisa membantu Anda.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan seluruh variabel atau nama kolom</span>
+<span class="kw">names</span>(mpg)</code></pre></div>
+<pre><code>##  [1] &quot;manufacturer&quot; &quot;model&quot;        &quot;displ&quot;        &quot;year&quot;        
+##  [5] &quot;cyl&quot;          &quot;trans&quot;        &quot;drv&quot;          &quot;cty&quot;         
+##  [9] &quot;hwy&quot;          &quot;fl&quot;           &quot;class&quot;</code></pre>
+<p>Anda sudah tahu variabel dari set data <code>mpg</code>, akan lebih lengkap lagi jika Anda tahu isi di dalamnya. Gunakan fungsi <code>head()</code> dan <code>tail()</code> untuk mengintip isi bagian awal dan akhir dari sebuah set data.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan 7 baris awal dari data</span>
+<span class="kw">head</span>(mpg, <span class="dv">7</span>)</code></pre></div>
+<pre><code>## # A tibble: 7 x 11
+##   manufacturer model displ  year   cyl trans drv     cty   hwy fl    class
+##   &lt;chr&gt;        &lt;chr&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
+## 1 audi         a4      1.8  1999     4 auto… f        18    29 p     comp…
+## 2 audi         a4      1.8  1999     4 manu… f        21    29 p     comp…
+## 3 audi         a4      2    2008     4 manu… f        20    31 p     comp…
+## 4 audi         a4      2    2008     4 auto… f        21    30 p     comp…
+## 5 audi         a4      2.8  1999     6 auto… f        16    26 p     comp…
+## 6 audi         a4      2.8  1999     6 manu… f        18    26 p     comp…
+## 7 audi         a4      3.1  2008     6 auto… f        18    27 p     comp…</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan 8 baris akhir dari data</span>
+<span class="kw">tail</span>(mpg, <span class="dv">8</span>)</code></pre></div>
+<pre><code>## # A tibble: 8 x 11
+##   manufacturer model displ  year   cyl trans drv     cty   hwy fl    class
+##   &lt;chr&gt;        &lt;chr&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
+## 1 volkswagen   new …   2.5  2008     5 auto… f        20    29 r     subc…
+## 2 volkswagen   pass…   1.8  1999     4 manu… f        21    29 p     mids…
+## 3 volkswagen   pass…   1.8  1999     4 auto… f        18    29 p     mids…
+## 4 volkswagen   pass…   2    2008     4 auto… f        19    28 p     mids…
+## 5 volkswagen   pass…   2    2008     4 manu… f        21    29 p     mids…
+## 6 volkswagen   pass…   2.8  1999     6 auto… f        16    26 p     mids…
+## 7 volkswagen   pass…   2.8  1999     6 manu… f        18    26 p     mids…
+## 8 volkswagen   pass…   3.6  2008     6 auto… f        17    26 p     mids…</code></pre>
+<p>Selain <code>head()</code> dan <code>tail()</code>, untuk melihat isi data berformat <em>spreadsheet</em>, Anda bisa menggunakan fungsi <code>View()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan isi data berformat spreadsheet</span>
+<span class="kw">View</span>(mpg)</code></pre></div>
+<p>Hasilnya akan muncul di bagian jendela SCRIPT RStudio.</p>
+<p><strong>RINGKASAN DATA</strong></p>
+<p>Anda sudah mengetahui beberapa cara melihat dan menggali informasi dari sebuah set data. Ada satu cara untuk menampilkan ringkasan umum sehingga Anda bisa langsung melihat dan menangkap isi data secara <em>big picture</em>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan ringkasan umum dari data</span>
+<span class="kw">summary</span>(mpg)</code></pre></div>
+<pre><code>##  manufacturer          model               displ            year     
+##  Length:234         Length:234         Min.   :1.600   Min.   :1999  
+##  Class :character   Class :character   1st Qu.:2.400   1st Qu.:1999  
+##  Mode  :character   Mode  :character   Median :3.300   Median :2004  
+##                                        Mean   :3.472   Mean   :2004  
+##                                        3rd Qu.:4.600   3rd Qu.:2008  
+##                                        Max.   :7.000   Max.   :2008  
+##       cyl           trans               drv                 cty       
+##  Min.   :4.000   Length:234         Length:234         Min.   : 9.00  
+##  1st Qu.:4.000   Class :character   Class :character   1st Qu.:14.00  
+##  Median :6.000   Mode  :character   Mode  :character   Median :17.00  
+##  Mean   :5.889                                         Mean   :16.86  
+##  3rd Qu.:8.000                                         3rd Qu.:19.00  
+##  Max.   :8.000                                         Max.   :35.00  
+##       hwy             fl               class          
+##  Min.   :12.00   Length:234         Length:234        
+##  1st Qu.:18.00   Class :character   Class :character  
+##  Median :24.00   Mode  :character   Mode  :character  
+##  Mean   :23.44                                        
+##  3rd Qu.:27.00                                        
+##  Max.   :44.00</code></pre>
+<p>Fungsi <code>summary()</code> memberikan Anda ringkasan umum dari sebuah set data. Jika variabelnya bertipe numerik, akan ditampilkan ringkasan seperti nilai minimal, maksimal, rata-rata, median, kuartil pertama, dan kuartil ketiga.</p>
+<p>Selain fungsi <code>summary()</code>, ada fungsi lain yang lebih ringkas, yaitu <code>str()</code> dan <code>glimpse()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan struktur dan isi data</span>
+<span class="kw">str</span>(mpg)</code></pre></div>
+<pre><code>## Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:    234 obs. of  11 variables:
+##  $ manufacturer: chr  &quot;audi&quot; &quot;audi&quot; &quot;audi&quot; &quot;audi&quot; ...
+##  $ model       : chr  &quot;a4&quot; &quot;a4&quot; &quot;a4&quot; &quot;a4&quot; ...
+##  $ displ       : num  1.8 1.8 2 2 2.8 2.8 3.1 1.8 1.8 2 ...
+##  $ year        : int  1999 1999 2008 2008 1999 1999 2008 1999 1999 2008 ...
+##  $ cyl         : int  4 4 4 4 6 6 6 4 4 4 ...
+##  $ trans       : chr  &quot;auto(l5)&quot; &quot;manual(m5)&quot; &quot;manual(m6)&quot; &quot;auto(av)&quot; ...
+##  $ drv         : chr  &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; ...
+##  $ cty         : int  18 21 20 21 16 18 18 18 16 20 ...
+##  $ hwy         : int  29 29 31 30 26 26 27 26 25 28 ...
+##  $ fl          : chr  &quot;p&quot; &quot;p&quot; &quot;p&quot; &quot;p&quot; ...
+##  $ class       : chr  &quot;compact&quot; &quot;compact&quot; &quot;compact&quot; &quot;compact&quot; ...</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan struktur dan isi data</span>
+dplyr<span class="op">::</span><span class="kw">glimpse</span>(mpg)</code></pre></div>
+<pre><code>## Observations: 234
+## Variables: 11
+## $ manufacturer &lt;chr&gt; &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;...
+## $ model        &lt;chr&gt; &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4 qua...
+## $ displ        &lt;dbl&gt; 1.8, 1.8, 2.0, 2.0, 2.8, 2.8, 3.1, 1.8, 1.8, 2.0,...
+## $ year         &lt;int&gt; 1999, 1999, 2008, 2008, 1999, 1999, 2008, 1999, 1...
+## $ cyl          &lt;int&gt; 4, 4, 4, 4, 6, 6, 6, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6...
+## $ trans        &lt;chr&gt; &quot;auto(l5)&quot;, &quot;manual(m5)&quot;, &quot;manual(m6)&quot;, &quot;auto(av)...
+## $ drv          &lt;chr&gt; &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4&quot;,...
+## $ cty          &lt;int&gt; 18, 21, 20, 21, 16, 18, 18, 18, 16, 20, 19, 15, 1...
+## $ hwy          &lt;int&gt; 29, 29, 31, 30, 26, 26, 27, 26, 25, 28, 27, 25, 2...
+## $ fl           &lt;chr&gt; &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;,...
+## $ class        &lt;chr&gt; &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;comp...</code></pre>
+<p>Seperti yang Anda lihat, fungsi <code>glimpse()</code> sepertinya lebih rapih dalam tampilan.</p>
+<p>Kedua fungsi ini menampilkan cukup informasi dalam sebuah tampilan yang padat dan jelas mulai dari berapa jumlah variabel, jumlah observasi, nama variabel, tipe variabel, sampai dengan isi dari sebagian data.</p>
+<p>Ketika Anda mendapatkan sebuah set data untuk diolah, tentu fungsi ini tidak akan Anda lewatkan begitu saja.</p>
+<p>Yang perlu Anda cermati, set data <code>mpg</code> ini tipe variabelnya masih kurang tepat. Misalnya, variabel <code>year</code> atau tahun pembuatan mobil. Di data hanya ada tahun 1999 dan 2008 saja. Seharusnya ini termasuk ke dalam tipe variabel faktor atau kategorikal, bukan numerik.</p>
+<p>Di bagian berikutnya, akan dibahas bagaimana cara mengubah variabel.</p>
+</div>
+<div id="mengubah-variabel-kolom-isi-data" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Mengubah Variabel, Kolom, Isi Data</h3>
+<p>Sebelum melangkah lebih jauh, Anda harus mengetahui beberapa tipe variabel di pemrograman R.</p>
+<p><strong>TIPE VARIABEL</strong></p>
+<p>Yang sering digunakan ada 6 tipe:</p>
+<ul>
+<li>Karakter: Huruf, kata, atau kalimat seperti <code>b</code>, <code>apel</code>, <code>mantap jiwa</code>.</li>
+<li>Integer: Bilangan bulat, contoh <code>1</code>, <code>4</code>, <code>7</code>.</li>
+<li>Double: Bilangan tidak bulat atau real, contoh <code>2.3</code>, <code>3.5</code>.</li>
+<li>Logikal: Benar atau salah (<code>TRUE</code> / <code>FALSE</code>).</li>
+<li>Kompleks: <code>2+4i</code>, angka kompleks gabungan real dan imaginer.</li>
+<li>Faktor: Kategorikal, seperti <code>laki-laki</code>, <code>perempuan</code> (jenis kelamin).</li>
+</ul>
+<p>Jika Anda lihat kembali set data <code>mpg</code> menggunakan <code>str()</code> atau <code>glimpse()</code>, maka tipe masing-masing variabelnya sebagai berikut:</p>
+<ul>
+<li>manufacturer: karakter</li>
+<li>model: karakter</li>
+<li>displ: double</li>
+<li>year: integer</li>
+<li>cyl: integer</li>
+<li>trans: karakter</li>
+<li>drv: karakter</li>
+<li>cty: integer</li>
+<li>hwy: integer</li>
+<li>fl: karakter</li>
+<li>class: karakter</li>
+</ul>
+<p>Beberapa tipe variabel di atas ada yang tidak sesuai sehingga perlu diubah. Agar Anda lebih mengerti dan lebih jelas tentang variabel dan isinya serta tipe variabel yang seharusnya digunakan, maka coba Anda simak tabel berikut.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Variabel</th>
+<th align="left">Penjelasan</th>
+<th align="left">Tipe Variabel</th>
+<th align="left">Revisi Tipe Variabel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">manufacturer</td>
+<td align="left">Produsen pembuat mobil</td>
+<td align="left">karakter</td>
+<td align="left">faktor</td>
+</tr>
+<tr class="even">
+<td align="left">model</td>
+<td align="left">Nama model mobil</td>
+<td align="left">karakter</td>
+<td align="left">karakter</td>
+</tr>
+<tr class="odd">
+<td align="left">displ</td>
+<td align="left"><em>Engine displacement</em> atau kapasitas mesin dalam liter</td>
+<td align="left">double</td>
+<td align="left">double</td>
+</tr>
+<tr class="even">
+<td align="left">year</td>
+<td align="left">Tahun pembuatan mobil</td>
+<td align="left">integer</td>
+<td align="left">faktor</td>
+</tr>
+<tr class="odd">
+<td align="left">cyl</td>
+<td align="left">Jumlah silinder mesin</td>
+<td align="left">integer</td>
+<td align="left">faktor</td>
+</tr>
+<tr class="even">
+<td align="left">trans</td>
+<td align="left">Tipe transmisi, auto atau manual</td>
+<td align="left">karakter</td>
+<td align="left">faktor</td>
+</tr>
+<tr class="odd">
+<td align="left">drv</td>
+<td align="left">Roda penggerak, f = roda depan, r = roda belakang, 4 = 4 roda</td>
+<td align="left">karakter</td>
+<td align="left">faktor</td>
+</tr>
+<tr class="even">
+<td align="left">cty</td>
+<td align="left">Konsumsi bensin dalam kota (mil per galon)</td>
+<td align="left">integer</td>
+<td align="left">integer</td>
+</tr>
+<tr class="odd">
+<td align="left">hwy</td>
+<td align="left">Konsumsi bensin di jalan tol (mil per galon)</td>
+<td align="left">integer</td>
+<td align="left">integer</td>
+</tr>
+<tr class="even">
+<td align="left">fl</td>
+<td align="left">Jenis bensin, e = ethanol, d = diesel, r = reguler, p = premium, c = natural gas</td>
+<td align="left">karakter</td>
+<td align="left">faktor</td>
+</tr>
+<tr class="odd">
+<td align="left">class</td>
+<td align="left">Tipe atau kelas mobil</td>
+<td align="left">karakter</td>
+<td align="left">faktor</td>
+</tr>
+</tbody>
+</table>
+<p>Beberapa variabel seperti manufacturer, year, cyl, trans, drv, fl, dan class merupakan tipe variabel berupa kategori sehingga perlu diubah menjadi tipe faktor. Di set data original, variabel-variabel tersebut dikenali sebagai tipe karakter atau integer.</p>
+<p><strong>MENGAKSES VARIABEL ATAU KOLOM DALAM SET DATA</strong></p>
+<p>Untuk mengubah variabel, Anda harus tahu cara mengakses salah satu variabel atau kolom beserta isi dari sebuah set data. Operator yang sering digunakan untuk mengakses variabel atau kolom adalah <code>$</code>. Ketik nama set data diikuti operator <code>$</code> lalu nama variabel atau kolom. Semua diketik tanpa spasi.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengakses variabel atau kolom drv</span>
+mpg<span class="op">$</span>drv</code></pre></div>
+<pre><code>##   [1] &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot;
+##  [18] &quot;4&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;f&quot; &quot;f&quot;
+##  [35] &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot;
+##  [52] &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot;
+##  [69] &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot;
+##  [86] &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;r&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot;
+## [103] &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot;
+## [120] &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;r&quot; &quot;r&quot;
+## [137] &quot;r&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot;
+## [154] &quot;4&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot;
+## [171] &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot;
+## [188] &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;4&quot;
+## [205] &quot;4&quot; &quot;4&quot; &quot;4&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot;
+## [222] &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot;</code></pre>
+<p>Seluruh 234 isi dari variabel drv ditampilkan. Anda juga bisa mencoba variabel yang lainnya dengan cara yang sama.</p>
+<p><strong>MENGUBAH TIPE VARIABEL</strong></p>
+<p>Sebelum melakukan manipulasi data, pertama-tama pastikan Anda menyalin set data asli ke set data yang baru.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menyalin set data mpg ke set data baru bernama df.mobil</span>
+<span class="co"># df merupakan singkatan dari data frame</span>
+df.mobil &lt;-<span class="st"> </span>mpg</code></pre></div>
+<p>Mulai sekarang dan selanjutnya, segala manipulasi data dilakukan di set data <code>df.mobil</code>.</p>
+<p>Untuk mengubah tipe variabel ke tipe faktor atau kategorikal digunakan fungsi <code>as.factor()</code>. Fungsi pengubah tipe variabel lainnya:</p>
+<ul>
+<li><code>as.character()</code> mengubah ke tipe karakter</li>
+<li><code>as.integer()</code> mengubah ke tipe integer</li>
+<li><code>as.double()</code> mengubah ke tipe double</li>
+<li><code>as.logical()</code> mengubah ke tipe logikal</li>
+<li><code>as.complex()</code> mengubah ke tipe kompleks</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengubah tipe variabel manufacturer, year, cyl, trans, drv, fl, dan class</span>
+<span class="co"># ke tipe faktor</span>
+df.mobil<span class="op">$</span>manufacturer &lt;-<span class="st"> </span><span class="kw">as.factor</span>(df.mobil<span class="op">$</span>manufacturer)
+df.mobil<span class="op">$</span>year &lt;-<span class="st"> </span><span class="kw">as.factor</span>(df.mobil<span class="op">$</span>year)
+df.mobil<span class="op">$</span>cyl &lt;-<span class="st"> </span><span class="kw">as.factor</span>(df.mobil<span class="op">$</span>cyl)
+df.mobil<span class="op">$</span>trans &lt;-<span class="st"> </span><span class="kw">as.factor</span>(df.mobil<span class="op">$</span>trans)
+df.mobil<span class="op">$</span>drv &lt;-<span class="st"> </span><span class="kw">as.factor</span>(df.mobil<span class="op">$</span>drv)
+df.mobil<span class="op">$</span>fl &lt;-<span class="st"> </span><span class="kw">as.factor</span>(df.mobil<span class="op">$</span>fl)
+df.mobil<span class="op">$</span>class &lt;-<span class="st"> </span><span class="kw">as.factor</span>(df.mobil<span class="op">$</span>class)</code></pre></div>
+<p>Hasilnya bisa dicek melalui fungsi <code>str()</code> atau glimpse.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan struktur set data df.mobil</span>
+<span class="kw">str</span>(df.mobil)</code></pre></div>
+<pre><code>## Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:    234 obs. of  11 variables:
+##  $ manufacturer: Factor w/ 15 levels &quot;audi&quot;,&quot;chevrolet&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ model       : chr  &quot;a4&quot; &quot;a4&quot; &quot;a4&quot; &quot;a4&quot; ...
+##  $ displ       : num  1.8 1.8 2 2 2.8 2.8 3.1 1.8 1.8 2 ...
+##  $ year        : Factor w/ 2 levels &quot;1999&quot;,&quot;2008&quot;: 1 1 2 2 1 1 2 1 1 2 ...
+##  $ cyl         : Factor w/ 4 levels &quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;8&quot;: 1 1 1 1 3 3 3 1 1 1 ...
+##  $ trans       : Factor w/ 10 levels &quot;auto(av)&quot;,&quot;auto(l3)&quot;,..: 4 9 10 1 4 9 1 9 4 10 ...
+##  $ drv         : Factor w/ 3 levels &quot;4&quot;,&quot;f&quot;,&quot;r&quot;: 2 2 2 2 2 2 2 1 1 1 ...
+##  $ cty         : int  18 21 20 21 16 18 18 18 16 20 ...
+##  $ hwy         : int  29 29 31 30 26 26 27 26 25 28 ...
+##  $ fl          : Factor w/ 5 levels &quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;p&quot;,..: 4 4 4 4 4 4 4 4 4 4 ...
+##  $ class       : Factor w/ 7 levels &quot;2seater&quot;,&quot;compact&quot;,..: 2 2 2 2 2 2 2 2 2 2 ...</code></pre>
+<p>Variabel-variabel terkait yang sebelumnya bertipe integer atau karakter telah diubah menjadi faktor.</p>
+<p>Perubahan lain yang bisa dilihat melalui fungsi <code>summary()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan ringkasan umum dari set data df.mobil</span>
+<span class="kw">summary</span>(df.mobil)</code></pre></div>
+<pre><code>##      manufacturer    model               displ         year     cyl   
+##  dodge     :37    Length:234         Min.   :1.600   1999:117   4:81  
+##  toyota    :34    Class :character   1st Qu.:2.400   2008:117   5: 4  
+##  volkswagen:27    Mode  :character   Median :3.300              6:79  
+##  ford      :25                       Mean   :3.472              8:70  
+##  chevrolet :19                       3rd Qu.:4.600                    
+##  audi      :18                       Max.   :7.000                    
+##  (Other)   :74                                                        
+##         trans    drv          cty             hwy        fl     
+##  auto(l4)  :83   4:103   Min.   : 9.00   Min.   :12.00   c:  1  
+##  manual(m5):58   f:106   1st Qu.:14.00   1st Qu.:18.00   d:  5  
+##  auto(l5)  :39   r: 25   Median :17.00   Median :24.00   e:  8  
+##  manual(m6):19           Mean   :16.86   Mean   :23.44   p: 52  
+##  auto(s6)  :16           3rd Qu.:19.00   3rd Qu.:27.00   r:168  
+##  auto(l6)  : 6           Max.   :35.00   Max.   :44.00          
+##  (Other)   :13                                                  
+##         class   
+##  2seater   : 5  
+##  compact   :47  
+##  midsize   :41  
+##  minivan   :11  
+##  pickup    :33  
+##  subcompact:35  
+##  suv       :62</code></pre>
+<p>Dengan mengubah tipe variabel menjadi faktor, kategori pada masing-masing variabel akan terlihat dan dihitung frekuensinya. Tampilan ini memudahkan Anda untuk mengetahui bahwa produsen dodge dan toyota memiliki oberservasi terbanyak dibandingkan produsen mobil lainnya.</p>
+<p>Bandingkan dengan hasil ringkasan set data aslinya yang kurang informatif:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan ringkasan umum dari set data df.mobil</span>
+<span class="kw">summary</span>(mpg)</code></pre></div>
+<pre><code>##  manufacturer          model               displ            year     
+##  Length:234         Length:234         Min.   :1.600   Min.   :1999  
+##  Class :character   Class :character   1st Qu.:2.400   1st Qu.:1999  
+##  Mode  :character   Mode  :character   Median :3.300   Median :2004  
+##                                        Mean   :3.472   Mean   :2004  
+##                                        3rd Qu.:4.600   3rd Qu.:2008  
+##                                        Max.   :7.000   Max.   :2008  
+##       cyl           trans               drv                 cty       
+##  Min.   :4.000   Length:234         Length:234         Min.   : 9.00  
+##  1st Qu.:4.000   Class :character   Class :character   1st Qu.:14.00  
+##  Median :6.000   Mode  :character   Mode  :character   Median :17.00  
+##  Mean   :5.889                                         Mean   :16.86  
+##  3rd Qu.:8.000                                         3rd Qu.:19.00  
+##  Max.   :8.000                                         Max.   :35.00  
+##       hwy             fl               class          
+##  Min.   :12.00   Length:234         Length:234        
+##  1st Qu.:18.00   Class :character   Class :character  
+##  Median :24.00   Mode  :character   Mode  :character  
+##  Mean   :23.44                                        
+##  3rd Qu.:27.00                                        
+##  Max.   :44.00</code></pre>
+<p><strong>MENGUBAH NAMA VARIABEL</strong></p>
+<p>Nama variabel set data <code>mpg</code> menggunakan singkatan yang pendek dan berbahasa Inggris. Untuk memudahkan pemahaman, nama variabel tersebut akan diganti ke bahasa Indonesia serta tanpa singkatan.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan nama variabel set data df.mobil</span>
+<span class="kw">names</span>(df.mobil)</code></pre></div>
+<pre><code>##  [1] &quot;manufacturer&quot; &quot;model&quot;        &quot;displ&quot;        &quot;year&quot;        
+##  [5] &quot;cyl&quot;          &quot;trans&quot;        &quot;drv&quot;          &quot;cty&quot;         
+##  [9] &quot;hwy&quot;          &quot;fl&quot;           &quot;class&quot;</code></pre>
+<p>Perhatikan urutan dari output di atas. Urutan nama variabel dimulai dari baris paling atas kiri ke kanan, lalu baris kedua mulai kiri ke kanan dan seterusnya. Angka di dalam kurung kotak <code>[]</code> adalah alat bantu untuk mempermudah identifikasi nomor urut variabel. Contohnya <code>[7]</code> adalah nomor urut variabel ‘drv’, sebelah kanannya, ‘cty’ sudah tentu nomor delapan dan seterusnya.</p>
+<p>Mengubah nama variabel bisa dilakukan satu per satu atau sekaligus.</p>
+<p>Berikut cara untuk mengubah salah satu nama variabel pada sebuah set data.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengubah nama variabel displ menjadi kapasitas</span>
+<span class="kw">names</span>(df.mobil)[<span class="dv">3</span>] &lt;-<span class="st"> &quot;kapasitas&quot;</span></code></pre></div>
+<p>Penjelasan dari kode di atas adalah mengubah nama variabel yang merupakan elemen vektor ketiga set data df.mobil menjadi “kapasitas”.</p>
+<p>Yang perlu Anda identifikasi adalah nomor urut ke berapa variabel yang akan diubah. Variabel ‘displ’ urutan ketiga. Dengan menggunakan prinsip elemen vektor, maka digunakan <code>[3]</code> sebagai akses elemen dengan urutan yang ketiga.</p>
+<p>Pastikan bahwa nama variabel ‘displ’ sudah diubah.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan nama variabel set data df.mobil</span>
+<span class="kw">names</span>(df.mobil)</code></pre></div>
+<pre><code>##  [1] &quot;manufacturer&quot; &quot;model&quot;        &quot;kapasitas&quot;    &quot;year&quot;        
+##  [5] &quot;cyl&quot;          &quot;trans&quot;        &quot;drv&quot;          &quot;cty&quot;         
+##  [9] &quot;hwy&quot;          &quot;fl&quot;           &quot;class&quot;</code></pre>
+<p>Variabel kapasitas sudah ada di set data df.mobil.</p>
+<p>Lalu, bagaimana cara mengubah semua nama variabel sekaligus?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengubah seluruh nama variabel </span>
+<span class="kw">names</span>(df.mobil) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;produsen&quot;</span>, <span class="st">&quot;model&quot;</span>, <span class="st">&quot;kapasitas&quot;</span>, <span class="st">&quot;tahun&quot;</span>, <span class="st">&quot;silinder&quot;</span>, <span class="st">&quot;transmisi&quot;</span>, <span class="st">&quot;roda.gerak&quot;</span>, <span class="st">&quot;kota&quot;</span>, <span class="st">&quot;jalan.tol&quot;</span>, <span class="st">&quot;jenis.bensin&quot;</span>, <span class="st">&quot;kelas&quot;</span>)</code></pre></div>
+<p>Dengan menggunakan fungsi <code>names()</code> dan <code>c()</code>, kesebelas nama varibel baru disusun secara berurutan.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan nama variabel set data df.mobil</span>
+<span class="kw">names</span>(df.mobil)</code></pre></div>
+<pre><code>##  [1] &quot;produsen&quot;     &quot;model&quot;        &quot;kapasitas&quot;    &quot;tahun&quot;       
+##  [5] &quot;silinder&quot;     &quot;transmisi&quot;    &quot;roda.gerak&quot;   &quot;kota&quot;        
+##  [9] &quot;jalan.tol&quot;    &quot;jenis.bensin&quot; &quot;kelas&quot;</code></pre>
+<p>Seluruh nama variabel telah diubah.</p>
+<p><strong>MENGUBAH ISI DATA</strong></p>
+<p>Konsep mengubah isi data sebenarnya mirip seperti halnya konsep <em>“find and replace”</em> pada aplikasi <em>spreadsheet</em>. Untuk manipulasi ini digunakan fungsi <code>gsub()</code>.</p>
+<p>Argumen pertama huruf/kata yang akan diganti, argumen kedua huruf/kata pengganti, dan argumen terakhir adalah target variabelnya.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengubah isi variabel drv menjadi yang sebelumnya </span>
+<span class="co"># satu huruf menjadi satu kata berbahasa Indonesia </span>
+df.mobil<span class="op">$</span>roda.gerak &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;f&quot;</span>, <span class="st">&quot;depan&quot;</span>, df.mobil<span class="op">$</span>roda.gerak)
+df.mobil<span class="op">$</span>roda.gerak &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;r&quot;</span>, <span class="st">&quot;belakang&quot;</span>, df.mobil<span class="op">$</span>roda.gerak)
+df.mobil<span class="op">$</span>roda.gerak &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;4&quot;</span>, <span class="st">&quot;4roda&quot;</span>, df.mobil<span class="op">$</span>roda.gerak)</code></pre></div>
+<p>Hasil pengubahan isi data ini bisa dilihat menggunakan fungsi <code>table()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan ringkasan variabel roda.gerak pada set data df.mobil</span>
+<span class="kw">table</span>(df.mobil<span class="op">$</span>roda.gerak)</code></pre></div>
+<pre><code>## 
+##    4roda belakang    depan 
+##      103       25      106</code></pre>
+<p>Fungsi <code>table()</code> menampilkan ringkasan isi berupa banyaknya frekuensi faktor yang ada di salah satu variabel.</p>
+<p>Bandingkan dengan data aslinya.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan ringkasan variabel drv pada set data mpg</span>
+<span class="kw">table</span>(mpg<span class="op">$</span>drv)</code></pre></div>
+<pre><code>## 
+##   4   f   r 
+## 103 106  25</code></pre>
+<p>Yang baru saja dilakukan adalah cara mengubah isi data bertipe karakter. Bagaimana cara mengubah data numerik?</p>
+<p>Misalnya, Anda ingin mengubah isi data variabel ‘kota’ dan ‘jalan.tol’ pada set data df.mobil yang sebelumnya menggunakan satuan miles per gallon (mpg) menjadi kilometer per liter (untuk seterusnya disingkat kpl). Satuan kpl dalam perhitungan konsumsi BBM lebih familiar di Indonesia.</p>
+<p>1 miles per gallon (mpg standar Amerika) setara dengan 0.425144 kilometer per liter (kpl). Agar memudahkan perhitungan, dibulatkan menjadi 0.43 kpl.</p>
+<p>Di bab sebelumnya, Anda sudah belajar bagaimana R berfungsi sebagai <a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#kalkulator-interaktif">Kalkulator Interaktif</a>. Ya, Anda cukup menggunakan operator <code>*</code> untuk mengalikan 0.43 variabel ‘kota’ dan ‘jalan.tol’ sehingga isi data berubah menjadi satuan kpl.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengubah isi dari variabel kota dan jalan tol menjadi satuan kpl</span>
+<span class="co"># dengan mengalikan 0.43</span>
+df.mobil<span class="op">$</span>kota &lt;-<span class="st"> </span>df.mobil<span class="op">$</span>kota <span class="op">*</span><span class="st"> </span><span class="fl">0.43</span>
+df.mobil<span class="op">$</span>jalan.tol &lt;-<span class="st"> </span>df.mobil<span class="op">$</span>jalan.tol <span class="op">*</span><span class="st"> </span><span class="fl">0.43</span></code></pre></div>
+<p>Melihat hasilnya menggunakan fungsi <code>head()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Melihat 5 data pertama dari variabel kota dan jalan.tol pada set data df.mobil</span>
+<span class="kw">head</span>(df.mobil<span class="op">$</span>kota, <span class="dv">5</span>)</code></pre></div>
+<pre><code>## [1] 7.74 9.03 8.60 9.03 6.88</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(df.mobil<span class="op">$</span>jalan.tol, <span class="dv">5</span>)</code></pre></div>
+<pre><code>## [1] 12.47 12.47 13.33 12.90 11.18</code></pre>
+</div>
+<div id="operator-pipa" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Operator Pipa (<code>%&gt;%</code>)</h3>
+<p>R adalah bahasa fungsional. Artinya, <em>syntax</em> atau fungsi banyak sekali menggunakan tanda kurung <code>(</code> dan <code>)</code>. Ketika Anda melakukan manipulasi data yang kompleks, maka konsekuensinya kode juga banyak mengandung tanda kurung. Fungsi dalam fungsi yang bersarang. Ini membuat kode Anda sulit dibaca dan dimengerti. Operator pipa <code>%&gt;%</code> bisa menyederhanakannya.</p>
+<p>Sebagai contoh, Anda melakukan perhitungan berikut.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sin</span>(<span class="kw">exp</span>(<span class="kw">log</span>(<span class="kw">sqrt</span>(<span class="dv">9</span>))))</code></pre></div>
+<pre><code>## [1] 0.14112</code></pre>
+<p>Ada 4 fungsi yang terlibat dan banyak tanda kurung sehingga untuk mengetiknya pun Anda cukup rumit. Struktur urutan pengetikkan pun dimulai dari dalam ke luar atau dari kiri ke kanan. Mulai dari <code>sqrt(9)</code> lalu dikurung oleh <code>log()</code>, dikurung, dikurung sampai terakhir oleh <code>sin()</code>.</p>
+<p>Sekarang bandingkan dengan menggunakan <code>%&gt;%</code>. Hasil perhitungannya sama.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Inisiasi paket magrittr agar mengenali operator pipa</span>
+<span class="kw">library</span>(magrittr)
+
+<span class="co"># Contoh penggunaan operator pipa</span>
+<span class="dv">9</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">sqrt</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">log</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">exp</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">sin</span>()</code></pre></div>
+<pre><code>## [1] 0.14112</code></pre>
+<p>Operator pipa memberikan kemudahan memahami kode pemrograman dalam hal:</p>
+<ul>
+<li>Struktur urutan fungsi dari kiri ke kanan (yang biasanya dari kanan ke kiri)</li>
+<li>Menghindari banyaknya tanda kurung yang bersarang dari fungsi</li>
+<li>Menambah fungsi sesuai urutan jika diperlukan</li>
+</ul>
+<p>Contoh lainnya:</p>
+<ul>
+<li>Kode umum yang biasa digunakan untuk melihat 7 baris pertama pada set data df.mobil: <code>head(df.mobil, 7)</code></li>
+<li>Kode menggunakan operator pipa: <code>df.mobil %&gt;% head(7)</code></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Contoh lain penggunaan operator pipa</span>
+<span class="co"># melihat 7 baris pertama pada set data df.mobil</span>
+df.mobil <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">7</span>)</code></pre></div>
+<pre><code>## # A tibble: 7 x 11
+##   produsen model kapasitas tahun silinder transmisi roda.gerak  kota
+##   &lt;fct&gt;    &lt;chr&gt;     &lt;dbl&gt; &lt;fct&gt; &lt;fct&gt;    &lt;fct&gt;     &lt;chr&gt;      &lt;dbl&gt;
+## 1 audi     a4          1.8 1999  4        auto(l5)  depan       7.74
+## 2 audi     a4          1.8 1999  4        manual(m… depan       9.03
+## 3 audi     a4          2   2008  4        manual(m… depan       8.6 
+## 4 audi     a4          2   2008  4        auto(av)  depan       9.03
+## 5 audi     a4          2.8 1999  6        auto(l5)  depan       6.88
+## 6 audi     a4          2.8 1999  6        manual(m… depan       7.74
+## 7 audi     a4          3.1 2008  6        auto(av)  depan       7.74
+## # ... with 3 more variables: jalan.tol &lt;dbl&gt;, jenis.bensin &lt;fct&gt;,
+## #   kelas &lt;fct&gt;</code></pre>
+<p>Anda harus mengenal dan memahami operator pipa ini terlebih dulu karena pembahasan ke depan akan sering digunakan.</p>
+</div>
+<div id="memilih-variabel-data" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> Memilih Variabel Data</h3>
+<p>Untuk memilih beberapa variabel atau kolom pada sebuah set data, gunakan fungsi <code>select()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Memilih variabel produsen, tahun, dan roda.gerak dari 11 variabel yang ada</span>
+<span class="co"># pada set data df.mobil</span>
+contoh.pilih &lt;-<span class="st"> </span>df.mobil <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(produsen, tahun, roda.gerak)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Melihat 8 baris pertama pada set data contoh.pilih</span>
+contoh.pilih <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">head</span>(<span class="dv">8</span>)</code></pre></div>
+<pre><code>## # A tibble: 8 x 3
+##   produsen tahun roda.gerak
+##   &lt;fct&gt;    &lt;fct&gt; &lt;chr&gt;     
+## 1 audi     1999  depan     
+## 2 audi     1999  depan     
+## 3 audi     2008  depan     
+## 4 audi     2008  depan     
+## 5 audi     1999  depan     
+## 6 audi     1999  depan     
+## 7 audi     2008  depan     
+## 8 audi     1999  4roda</code></pre>
+<p>Kode pemrograman di atas dapat digabung tanpa perlu menyimpan hasilnya di sebuah variabel baru.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Memilih variabel produsen, tahun, dan roda.gerak </span>
+<span class="co"># lalu menampilkan 8 baris pertama dari set data df.mobil</span>
+df.mobil <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(produsen, tahun, roda.gerak) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">head</span>(<span class="dv">8</span>)</code></pre></div>
+<pre><code>## # A tibble: 8 x 3
+##   produsen tahun roda.gerak
+##   &lt;fct&gt;    &lt;fct&gt; &lt;chr&gt;     
+## 1 audi     1999  depan     
+## 2 audi     1999  depan     
+## 3 audi     2008  depan     
+## 4 audi     2008  depan     
+## 5 audi     1999  depan     
+## 6 audi     1999  depan     
+## 7 audi     2008  depan     
+## 8 audi     1999  4roda</code></pre>
+</div>
+<div id="menyaring-baris-data" class="section level3">
+<h3><span class="header-section-number">2.2.5</span> Menyaring Baris Data</h3>
+<p>Fungsi <code>filter()</code> digunakan untuk menyaring baris pada sebuah set data dengan kondisi tertentu.</p>
+<p>Misalnya, Anda ingin mengetahui model mobil yang merupakan kelas dua tempat duduk atau 2seater dari set data <code>df.mobil</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Memilih variabel model dan kelas</span>
+<span class="co"># lalu menyaring baris data dengan kondisi kelas 2seater</span>
+df.mobil <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(model, kelas) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(kelas <span class="op">==</span><span class="st"> &quot;2seater&quot;</span>)</code></pre></div>
+<pre><code>## # A tibble: 5 x 2
+##   model    kelas  
+##   &lt;chr&gt;    &lt;fct&gt;  
+## 1 corvette 2seater
+## 2 corvette 2seater
+## 3 corvette 2seater
+## 4 corvette 2seater
+## 5 corvette 2seater</code></pre>
+</div>
+<div id="mengurutkan-data" class="section level3">
+<h3><span class="header-section-number">2.2.6</span> Mengurutkan Data</h3>
+<p>Anda bisa mengurutkan data dengan menggunakan fungsi <code>arrange()</code>.</p>
+<p>Anda ingin mengetahui 10 peringkat teratas model mobil yang memiliki efisiensi konsumsi bensin (kpl) tertinggi dalam kota dari set data <code>df.mobil</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Memilih variabel model, transmisi, dan kota</span>
+<span class="co"># lalu mengurutkan kpl dari yang tertinggi ke terendah</span>
+<span class="co"># menggunakan fungsi arrange dan desc</span>
+<span class="co"># serta menampilkan hasilnya untuk 10 baris teratas</span>
+df.mobil <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(model, transmisi, kota) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(kota)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">head</span>(<span class="dv">10</span>)</code></pre></div>
+<pre><code>## # A tibble: 10 x 3
+##    model      transmisi   kota
+##    &lt;chr&gt;      &lt;fct&gt;      &lt;dbl&gt;
+##  1 new beetle manual(m5)  15.0
+##  2 jetta      manual(m5)  14.2
+##  3 new beetle auto(l4)    12.5
+##  4 civic      manual(m5)  12.0
+##  5 corolla    manual(m5)  12.0
+##  6 civic      manual(m5)  11.2
+##  7 corolla    manual(m5)  11.2
+##  8 corolla    auto(l4)    11.2
+##  9 civic      manual(m5)  10.8
+## 10 civic      auto(l5)    10.8</code></pre>
+</div>
+<div id="menambah-variabel-data" class="section level3">
+<h3><span class="header-section-number">2.2.7</span> Menambah Variabel Data</h3>
+<p>Pada contoh kali ini, akan ditambahkan variabel atau kolom efisiensi bensin untuk penggunaan dalam kota dengan satuan kilometer per liter dari set data <code>mpg</code>. Untuk manipulasi ini, fungsi <code>mutate()</code> akan digunakan.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Memilih variabel model, cty, dan hwy</span>
+<span class="co"># lalu menambahkan variabel baru: kota.kpl dan tol.kpl</span>
+<span class="co"># yang merupakan konversi satuan mpg ke kpl</span>
+<span class="co"># serta menampilkan hasilnya untuk 10 baris teratas</span>
+mpg <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(model, cty, hwy) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">kota.kpl =</span> cty <span class="op">*</span><span class="st"> </span><span class="fl">0.43</span>, <span class="dt">tol.kpl =</span> hwy <span class="op">*</span><span class="st"> </span><span class="fl">0.43</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">head</span>(<span class="dv">10</span>)</code></pre></div>
+<pre><code>## # A tibble: 10 x 5
+##    model        cty   hwy kota.kpl tol.kpl
+##    &lt;chr&gt;      &lt;int&gt; &lt;int&gt;    &lt;dbl&gt;   &lt;dbl&gt;
+##  1 a4            18    29     7.74    12.5
+##  2 a4            21    29     9.03    12.5
+##  3 a4            20    31     8.6     13.3
+##  4 a4            21    30     9.03    12.9
+##  5 a4            16    26     6.88    11.2
+##  6 a4            18    26     7.74    11.2
+##  7 a4            18    27     7.74    11.6
+##  8 a4 quattro    18    26     7.74    11.2
+##  9 a4 quattro    16    25     6.88    10.8
+## 10 a4 quattro    20    28     8.6     12.0</code></pre>
+</div>
+<div id="mengelompokkan-dan-meringkas-data" class="section level3">
+<h3><span class="header-section-number">2.2.8</span> Mengelompokkan dan Meringkas Data</h3>
+<p>Fungsi manipulasi terakhir yang dibahas adalah fungsi <code>group_by()</code> dan <code>summarise()</code> untuk mengelompokkan dan meringkas data.</p>
+<p>Kembali ke set data <code>df.mobil</code>. Anda ingin mengetahui berapa rata-rata efisiensi konsumsi bensin penggunaan dalam kota dan jalan tol untuk masing-masing kategori roda gerak.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengelompokkan berdasarkan kategori roda.gerak</span>
+<span class="co"># lalu menampilkan rata-rata efisiensi menggunakan fungsi mean</span>
+<span class="co"># untuk masing-masing konsumsi kpl kota dan jalan tol</span>
+df.mobil <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(roda.gerak) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">kota.kpl =</span> <span class="kw">mean</span>(kota), <span class="dt">tol.kpl =</span> <span class="kw">mean</span>(jalan.tol))</code></pre></div>
+<pre><code>## # A tibble: 3 x 3
+##   roda.gerak kota.kpl tol.kpl
+##   &lt;chr&gt;         &lt;dbl&gt;   &lt;dbl&gt;
+## 1 4roda          6.16    8.25
+## 2 belakang       6.05    9.03
+## 3 depan          8.59   12.1</code></pre>
+</div>
+</div>
+<div id="interpretasi-data" class="section level2">
+<h2><span class="header-section-number">2.3</span> Interpretasi Data</h2>
+<p>Interpretasi data berarti menyimpulkan hasil analisis data yang sudah Anda lakukan. Anda sudah bersusah payah membuat visualisasi serta manipulasi data, namun tidak diinterpretasikan, maka hasilnya nol besar. Anda harus menarik kesimpulan. Anda harus mendapatkan cerita dari data. Inti dari analisis data yang Anda sudah lakukan adalah untuk mendapatkan <em>insight</em>.</p>
+<p>Memang, kemampuan interpretasi setiap orang berbeda dan subjektif dalam memandang sebuah permasalahan atau dalam menarik informasi dari data. Untuk mengasah kemampuan interpretasi ini, Anda setidaknya harus memiliki 3 sikap positif: tekad/semangat <em>(passion)</em>, rasa penasaran <em>(curiosity)</em>, dan antusias.</p>
+<p>Ketiga sikap positif ini akan sangat membantu Anda, disamping keahlian teknis dalam analisis data tentunya. Mendapatkan <em>insight</em> dari kumpulan set data merupakan hal yang cukup menantang. Jika keahlian dan keterampilan teknis sudah semaksimal mungkin dikeluarkan, namun masih belum juga optimal dalam menggali kesimpulan dari data, sikap semangat pantang menyerah, rasa penasaran tinggi, dan antusias yang tidak pernah habis akan menjadi tambahan energi luar biasa bagi Anda.</p>
+<p>Selain faktor <em>soft skill</em> yang baru saja dibahas, berikut panduan pertanyaan-pertanyaan teknis sebagai pemicu untuk membantu Anda dalam proses interpretasi dan menggali informasi serta <em>insight</em> dalam analisis data.</p>
+<ul>
+<li><p><strong>Sebenarnya apa tujuan utama atau motivasi Anda dalam menganalisis set data tertentu? Apa inti permasalahan yang Anda atau organisasi/perusahaan hadapi?</strong> Ambil contoh set data <code>mpg</code> yang merupakan data efisiensi penggunaan bensin pada mobil. Anggaplah dalam beberapa bulan ke depan, Anda berencana membeli mobil pertama yang merupakan hasil jerih payah kerja Anda selama ini. Anda tidak ingin salah dalam membeli mobil pertama impian Anda. <strong>Kriteria pilihan Anda adalah mobil yang paling irit digunakan di dalam kota</strong>. Bisa dikatakan, kriteria pemilihan mobil merupakan salah satu motivasi Anda untuk menganalisis dan menggali informasi dari set data <code>mpg</code>. Anda ingin tahu, tipe atau jenis mobil seperti apa yang memiliki efisiensi penggunaan bensin yang tinggi sehingga Anda bisa membeli mobil dengan kriteria atau karakterisitik yang sama di Indonesia.</p></li>
+<li><p><strong>Dari beberapa variabel pada suatu set data, kira-kira variabel mana saja yang paling berpengaruh terhadap pengambilan keputusan dalam menjawab permasalahan Anda?</strong> Berkaitan dengan contoh sebelumnya, Anda mencari tahu mobil yang paling irit, maka tentu saja variabel utama yang paling berpengaruh adalah variabel ‘cty’ dan ‘hwy’. Kedua variabel tersebut merupakan data miles per gallon penggunaan bensin di kota dan jalan tol. Selain kedua variabel tersebut, Anda juga harus mencari variabel lain yang berpengaruh terhadap efisiensi penggunaan mobil.</p></li>
+<li><p><strong>Bagaimana cara mendapatkan temuan atau <em>insight</em> pada set data yang berguna dalam mengatasi permasalahan Anda?</strong> Seringlah latihan dan otak-atik data. Untuk mendapatkan <em>insight</em>, pertama-tama Anda harus memahami data yang Anda analisis. Set data dapat Anda pahami dengan melakukan banyak visualisasi dan manipulasi sehingga Anda bisa menemukan semacam relasi variabel juga pola-pola tertentu yang jika terus dilakukan dan diasah akan meningkatkan intuisi Anda dalam menarik <em>insight</em> dari set data.</p></li>
+</ul>
+<p><strong>5 TIPE HUBUNGAN ANTAR VARIABEL DALAM SET DATA</strong></p>
+<p>Ketika Anda bermain dengan set data, ada satu titik Anda menemukan sebuah pola atau keterkaitan antar variabel yang bisa membantu Anda mendapatkan <em>insight</em>. Anda harus mengetahui 5 tipe hubungan antar variabel dalam set data yang sering ditemukan:</p>
+<ol style="list-style-type: decimal">
+<li>Korelasi</li>
+<li><em>Trend</em></li>
+<li>Distribusi</li>
+<li><em>Outlier</em></li>
+<li>Perbandingan dan Peringkat</li>
+</ol>
+<div id="korelasi" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Korelasi</h3>
+<p>Korelasi antar dua variabel bisa diidentifikasi dengan menggunakan grafik sebar <em>(scatter plot)</em>.</p>
+<p>Berikut gambar penjelasannya (sumber: <a href="https://statistics.laerd.com/statistical-guides/pearson-correlation-coefficient-statistical-guide.php" class="uri">https://statistics.laerd.com/statistical-guides/pearson-correlation-coefficient-statistical-guide.php</a>):</p>
+<p><img src="images/pearson-1-small.png" width="100%" /></p>
+<ul>
+<li>Korelasi positif: peningkatan nilai pada variabel pertama berbanding lurus dengan nilai variabel kedua. Variabel A naik, variabel B naik.</li>
+<li>Korelasi negatif: peningkatan nilai pada variabel pertama berbanding terbalik dengan nilai variabel kedua. Variabel A naik, variabel B turun.</li>
+<li>Tidak ada korelasi: tidak ada kolerasi antara variabel pertama dan kedua.</li>
+</ul>
+<p>Misalnya, Anda akan mengecek apakah ada korelasi antara variabel ‘kapasitas’ dan ‘kota’ pada set data <code>df.mobil</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Membuat grafik sebar antara variabel kapasitas dan kota</span>
+<span class="co"># pada set data df.mobil menggunakan fungsi geom_point()</span>
+df.mobil <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> kota, <span class="dt">y =</span> kapasitas)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
+<p>Anda bisa lihat grafik sebar diatas. Sebarannya berpola korelasi negatif. Semakin rendah nilai kapasitas mesin, maka efisiensi penggunaan bensin mobil di dalam kota akan semakin tinggi, demikian sebaliknya.</p>
+<p>Selain melalui grafik sebar, koefisien korelasi juga bisa dihitung dengan menggunakan fungsi <code>cor.test()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengitung korelasi antara variabel kapasitas dan kota</span>
+<span class="co"># pada set data df.mobil menggunakan fungsi cor.test()</span>
+  <span class="kw">cor.test</span>(df.mobil<span class="op">$</span>kapasitas, df.mobil<span class="op">$</span>kota)</code></pre></div>
+<pre><code>## 
+##  Pearson&#39;s product-moment correlation
+## 
+## data:  df.mobil$kapasitas and df.mobil$kota
+## t = -20.205, df = 232, p-value &lt; 2.2e-16
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  -0.8406782 -0.7467508
+## sample estimates:
+##       cor 
+## -0.798524</code></pre>
+<p>Nilai koefisien korelasinya <code>-0.798524</code>. Korelasi negatif.</p>
+<p>Korelasinya cukup kuat. Kekuatan korelasi antar dua variabel ditentukan oleh nilai koefisiennya. Semakin mendekati angka <code>1</code> atau <code>-1</code>, maka korelasinya semakin kuat.</p>
+</div>
+<div id="trend" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> <em>Trend</em></h3>
+<p><em>Trend</em> dapat didefinisikan sebagai arah atau pergerakan. Bisa naik atau turun. Biasanya ditunjukkan melalui grafik garis atau grafik batang.</p>
+<p>Berikut contoh grafik trend (sumber: <a href="http://ririnzuliyaningsih.blogspot.com/2015/05/kemiskinan-dan-kesenjangan-pembangunan.html" class="uri">http://ririnzuliyaningsih.blogspot.com/2015/05/kemiskinan-dan-kesenjangan-pembangunan.html</a>)</p>
+<p><img src="images/garis-kemiskinan.jpg" width="100%" /></p>
+<p>Grafik ini menunjukkan <em>trend</em> kemiskinan di Indonesia dari tahun 1996 sampai dengan 2012. Trend naik ditunjukkan mulai tahun 1996 - 1999. Dari tahun 2006 sampai tahun 2012 terlihat penurunan jumlah penduduk miskin.</p>
+<p>Kesimpulannya, terjadi penurunan <em>trend</em> kemiskinan di Indonesia dalam rentang waktu 16 tahun sejak 1996.</p>
+<p>Selain <em>insight</em> dari <em>trend</em>, Anda juga bisa mencermati dari rentang 16 tahun tersebut, jumlah penduduk miskin tertinggi ada di tahun berapa?</p>
+<p>Tahun 1998.</p>
+<p>Lalu, Anda coba gali lagi, ada apa di tahun 1998 yang menyebabkan angka kemiskinan menjadi paling tinggi dibandingkan tahun lainnya?</p>
+<p>Krisis moneter.</p>
+<p>Apakah ketika terjadi krisis di Indonesia, selalu diikuti dengan peningkatan jumlah kemiskinan di tahun yang sama?</p>
+<p>Di tahun 2008 terjadi krisis ekonomi, namun tidak diikuti dengan meningkatnya jumlah penduduk miskin.</p>
+<p>Kenapa tidak terjadi peningkatan jumlah kemiskinan di tahun 2008? Apa bedanya krisis tahun 1998 dengan tahun 2008? Apa yang menyebabkan krisis? Apakah ada kaitan antara krisis ekonomi dengan kemiskinan?</p>
+<p>Dan seterusnya.</p>
+<p>Diiringi dengan rasa penasaran serta antusias, munculkan pertanyaan-pertanyaan yang bisa membuat Anda berpikir kritis. Dengan cara ini, Anda bisa menggali <em>insight</em> dan informasi dari sebuah set data atau grafik.</p>
+</div>
+<div id="distribusi" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> Distribusi</h3>
+<p>Distribusi sering digunakan untuk mengetahui nilai terendah, tertinggi, rata-rata, median, serta rentang dari suatu variabel pada set data. Grafik histogram biasa dipakai untuk menunjukkan pola distribusi ini.</p>
+<p>Sebagai contoh, Anda ingin mengetahui distribusi jumlah mobil berdasarkan kapasitas mesinnya pada set data <code>df.mobil</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Membuat grafik histogram kapasitas mesin</span>
+<span class="co"># pada set data df.mobil menggunakan fungsi geom_histogram()</span>
+df.mobil <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> kapasitas)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
+<p>Anda bisa lihat, jumlah mobil terbanyak pada set data <code>df.mobil</code> memiliki kapasitas mesin antara 1 - 2.5 liter.</p>
+</div>
+<div id="outlier" class="section level3">
+<h3><span class="header-section-number">2.3.4</span> <em>Outlier</em></h3>
+<p><em>Outlier</em> atau pencilan adalah data obervasi yang menyimpang terlalu jauh atau bernilai ekstrim dibandingkan data lainnya. Data <em>outlier</em> ini bisa terjadi karena beberapa hal, diantaranya kesalahan dalam pemasukan data, kesalahan dalam pengambilan sampel, atau memang ada data – data ekstrim yang tidak dapat dihindarkan keberadaannya. Untuk mengidentifikasinya dapat dilakukan dengan beberapa cara antara lain melalui boxplot atau scatterplot.</p>
+<p>Ilustrasi <em>outlier</em> (sumber: <a href="http://disabilitydunktank.com/tag/social-security-disability-fraud/" class="uri">http://disabilitydunktank.com/tag/social-security-disability-fraud/</a>):</p>
+<p><img src="images/outlier.jpeg" width="100%" /></p>
+<p>Misalkan Anda seorang penyidik yang bekerja di KPK atau kepolisian. Anda bisa mendapatkan data pendapatan yang diterima pejabat-pejabat Pegawai Negeri Sipil (PNS) tertentu dari bank. Setelah Anda analisis data tersebut, Anda menemukan bahwa rata-rata pendapatan pejabat PNS adalah sekitar 100 juta rupiah per bulan. Anda gali lebih dalam lagi, ternyata ada 3 pejabat yang memiliki pendapatan 10 miliar rupiah per bulan. Inilah yang dinamakan <em>outlier</em>.</p>
+<p>Apa yang harus dilakukan dengan data <em>outlier</em> ini? Tergantung tujuan Anda. Jika Anda seorang penyidik seperti contoh di atas, tentu Anda memfokuskan pada 3 pejabat tersebut. Data <em>outlier</em> ini dapat dijadikan sebuah <em>insight</em> bernilai bagi Anda. Anda bisa melakukan penyidikan lebih lanjut terhadap ketiga pejabat tersebut. Dari mana pendapatan mereka berasal?</p>
+<p>Jika Anda, misalkan seorang penentu kebijakan di pemerintahan dan ingin mengkaji usulan kenaikan gaji PNS, maka data <em>outlier</em> tersebut sebaiknya disingkirkan. <em>Outlier</em> dapat menyebabkan penyimpangan hasil analisis data yang Anda lakukan.</p>
+</div>
+<div id="perbandingan-dan-peringkat" class="section level3">
+<h3><span class="header-section-number">2.3.5</span> Perbandingan dan Peringkat</h3>
+<p>Cara ini sering dilakukan jika Anda ingin mengetahui nilai tertinggi dan terendah serta perbandingan antara satu data obervasi dengan yang lainnya. Yang sering digunakan biasanya grafik batang.</p>
+<p>Perbandingan dan Peringkat ini sudah disinggung sebelumnya di bagian (#mengurutkan-data).</p>
+<p>Langsung ke contoh. Misalkan Anda ingin mengetahui peringkat produsen mobil yang memiliki efisiensi penggunaan bensin (kpl) tertinggi di jalan tol dari set data <code>df.mobil</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengelompokkan berdasarkan variabel produsen</span>
+<span class="co"># lalu meringkas nilai rata-rata efisiensi di jalan tol</span>
+<span class="co"># dan menampilkannya dalam grafik batang</span>
+df.mobil <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(produsen) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">rerata.tol =</span> <span class="kw">mean</span>(jalan.tol)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">y =</span> rerata.tol, <span class="dt">x =</span> <span class="kw">reorder</span>(produsen, rerata.tol))) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;#8B0000&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Produsen&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Rata-rata Efisiensi (kpl)&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Peringkat Efisiensi Penggunaan Bensin di Jalan Tol&quot;</span>, 
+          <span class="dt">subtitle =</span> <span class="st">&quot;Berdasarkan Produsen Mobil&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">coord_flip</span>()</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
+<p>Dengan melihat grafik batang di atas, Anda dapat mengetahui produsen yang memiliki efisiensi tertinggi adalah Honda, sedangkan yang terendah adalah Land Rover. Selain itu, Anda juga bisa membandingkan efisiensi dari masing-masing produsen mobil lainnya.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="latihan-latihan-latihan.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

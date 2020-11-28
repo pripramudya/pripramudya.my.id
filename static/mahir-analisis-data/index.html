@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>3 LANGKAH KILAT MAHIR ANALISIS DATA</title>
+  <meta name="description" content="Buku elektronik bagaimana cepat menguasai analisis data dengan RStudio">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="3 LANGKAH KILAT MAHIR ANALISIS DATA" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Buku elektronik bagaimana cepat menguasai analisis data dengan RStudio" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 LANGKAH KILAT MAHIR ANALISIS DATA" />
+  
+  <meta name="twitter:description" content="Buku elektronik bagaimana cepat menguasai analisis data dengan RStudio" />
+  
+
+<meta name="author" content="Pribadi Pramudya - pripramudya.com">
+
+
+<meta name="date" content="2019-01-14">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+<link rel="next" href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">3 Langkah Kilat Mahir Analisis Data</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Pendahuluan</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#selamat-datang"><i class="fa fa-check"></i>Selamat Datang</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#kenapa-anda-perlu-menguasai-keterampilan-analisis-data"><i class="fa fa-check"></i>Kenapa Anda Perlu Menguasai Keterampilan Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#konsep-dasar-analisis-data"><i class="fa fa-check"></i>Konsep Dasar Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#apa-itu-analisis-data"><i class="fa fa-check"></i>Apa itu Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#proses-dan-tahapan-analisis-data"><i class="fa fa-check"></i>Proses dan Tahapan Analisis Data</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#menentukan-tujuan"><i class="fa fa-check"></i>1. Menentukan Tujuan</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#menentukan-metode-pengukuran-yang-digunakan"><i class="fa fa-check"></i>2. Menentukan Metode Pengukuran yang Digunakan</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pengumpulan-data"><i class="fa fa-check"></i>3. Pengumpulan Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pembersihan-dan-pembentukan-data"><i class="fa fa-check"></i>4. Pembersihan dan Pembentukan Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#analisis-data"><i class="fa fa-check"></i>5. Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#interpretasi-dan-komunikasi-hasil-analisis-data"><i class="fa fa-check"></i>6. Interpretasi dan Komunikasi Hasil Analisis Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#langkah-kilat-mahir-analisis-data"><i class="fa fa-check"></i>3 Langkah Kilat Mahir Analisis Data</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><i class="fa fa-check"></i><b>1</b> Instal dan Pelajari Satu <em>Tool</em> Analisis Data yang <em>Powerful</em> ini</a><ul>
+<li class="chapter" data-level="1.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#tool-atau-perangkat-lunak-analisis-data-populer-yang-banyak-orang-pakai"><i class="fa fa-check"></i><b>1.1</b> <em>Tool</em> atau Perangkat Lunak Analisis Data Populer yang Banyak Orang Pakai</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#microsoft-excel"><i class="fa fa-check"></i><b>1.1.1</b> Microsoft Excel</a></li>
+<li class="chapter" data-level="1.1.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#python"><i class="fa fa-check"></i><b>1.1.2</b> Python</a></li>
+<li class="chapter" data-level="1.1.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#r"><i class="fa fa-check"></i><b>1.1.3</b> R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#kenapa-harus-r"><i class="fa fa-check"></i><b>1.2</b> Kenapa harus R</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#dukungan-paket-r"><i class="fa fa-check"></i><b>1.2.1</b> Dukungan Paket R</a></li>
+<li class="chapter" data-level="1.2.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#belajar-analisis-data-lebih-mudah-menggunakan-r"><i class="fa fa-check"></i><b>1.2.2</b> Belajar Analisis Data lebih mudah menggunakan R</a></li>
+<li class="chapter" data-level="1.2.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#fleksibilitas-r"><i class="fa fa-check"></i><b>1.2.3</b> Fleksibilitas R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#instal-r-dan-rstudio"><i class="fa fa-check"></i><b>1.3</b> Instal R dan RStudio</a></li>
+<li class="chapter" data-level="1.4" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#instal-paket-r"><i class="fa fa-check"></i><b>1.4</b> Instal Paket R</a></li>
+<li class="chapter" data-level="1.5" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#syntax-dan-operasi-dasar-r"><i class="fa fa-check"></i><b>1.5</b> <em>Syntax</em> dan Operasi Dasar R</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#kalkulator-interaktif"><i class="fa fa-check"></i><b>1.5.1</b> Kalkulator Interaktif</a></li>
+<li class="chapter" data-level="1.5.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#variabel"><i class="fa fa-check"></i><b>1.5.2</b> Variabel</a></li>
+<li class="chapter" data-level="1.5.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#vektor"><i class="fa fa-check"></i><b>1.5.3</b> Vektor</a></li>
+<li class="chapter" data-level="1.5.4" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#urutan-angka"><i class="fa fa-check"></i><b>1.5.4</b> Urutan Angka</a></li>
+<li class="chapter" data-level="1.5.5" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#replikasi-angka"><i class="fa fa-check"></i><b>1.5.5</b> Replikasi Angka</a></li>
+<li class="chapter" data-level="1.5.6" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#ambil-elemen-vektor"><i class="fa fa-check"></i><b>1.5.6</b> Ambil Elemen Vektor</a></li>
+<li class="chapter" data-level="1.5.7" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#syntax-fungsi-penting-lainnya"><i class="fa fa-check"></i><b>1.5.7</b> <em>Syntax</em> / Fungsi Penting Lainnya</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html"><i class="fa fa-check"></i><b>2</b> Kuasai Teknik Dasar Analisis Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#visualisasi-data"><i class="fa fa-check"></i><b>2.1</b> Visualisasi Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#pemetaan-data-ke-atribut-estetik"><i class="fa fa-check"></i><b>2.1.1</b> Pemetaan Data ke Atribut Estetik</a></li>
+<li class="chapter" data-level="2.1.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#lapisan"><i class="fa fa-check"></i><b>2.1.2</b> Lapisan</a></li>
+<li class="chapter" data-level="2.1.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#iterasi-pemetaan-dan-lapisan"><i class="fa fa-check"></i><b>2.1.3</b> Iterasi Pemetaan dan Lapisan</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#manipulasi-data"><i class="fa fa-check"></i><b>2.2</b> Manipulasi Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#melihat-dan-mengetahui-set-data"><i class="fa fa-check"></i><b>2.2.1</b> Melihat dan Mengetahui Set Data</a></li>
+<li class="chapter" data-level="2.2.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#mengubah-variabel-kolom-isi-data"><i class="fa fa-check"></i><b>2.2.2</b> Mengubah Variabel, Kolom, Isi Data</a></li>
+<li class="chapter" data-level="2.2.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#operator-pipa"><i class="fa fa-check"></i><b>2.2.3</b> Operator Pipa (<code>%&gt;%</code>)</a></li>
+<li class="chapter" data-level="2.2.4" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#memilih-variabel-data"><i class="fa fa-check"></i><b>2.2.4</b> Memilih Variabel Data</a></li>
+<li class="chapter" data-level="2.2.5" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#menyaring-baris-data"><i class="fa fa-check"></i><b>2.2.5</b> Menyaring Baris Data</a></li>
+<li class="chapter" data-level="2.2.6" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#mengurutkan-data"><i class="fa fa-check"></i><b>2.2.6</b> Mengurutkan Data</a></li>
+<li class="chapter" data-level="2.2.7" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#menambah-variabel-data"><i class="fa fa-check"></i><b>2.2.7</b> Menambah Variabel Data</a></li>
+<li class="chapter" data-level="2.2.8" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#mengelompokkan-dan-meringkas-data"><i class="fa fa-check"></i><b>2.2.8</b> Mengelompokkan dan Meringkas Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#interpretasi-data"><i class="fa fa-check"></i><b>2.3</b> Interpretasi Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#korelasi"><i class="fa fa-check"></i><b>2.3.1</b> Korelasi</a></li>
+<li class="chapter" data-level="2.3.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#trend"><i class="fa fa-check"></i><b>2.3.2</b> <em>Trend</em></a></li>
+<li class="chapter" data-level="2.3.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#distribusi"><i class="fa fa-check"></i><b>2.3.3</b> Distribusi</a></li>
+<li class="chapter" data-level="2.3.4" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#outlier"><i class="fa fa-check"></i><b>2.3.4</b> <em>Outlier</em></a></li>
+<li class="chapter" data-level="2.3.5" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#perbandingan-dan-peringkat"><i class="fa fa-check"></i><b>2.3.5</b> Perbandingan dan Peringkat</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html"><i class="fa fa-check"></i><b>3</b> Latihan, Latihan, Latihan</a><ul>
+<li class="chapter" data-level="3.1" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#unduh-inisiasi-dan-mempersiapkan-set-data"><i class="fa fa-check"></i><b>3.1</b> Unduh, Inisiasi, dan Mempersiapkan Set Data</a></li>
+<li class="chapter" data-level="3.2" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#visualisasi-grafik"><i class="fa fa-check"></i><b>3.2</b> Visualisasi Grafik</a></li>
+<li class="chapter" data-level="3.3" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#visualisasi-peta"><i class="fa fa-check"></i><b>3.3</b> Visualisasi Peta</a></li>
+<li class="chapter" data-level="3.4" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#insight"><i class="fa fa-check"></i><b>3.4</b> <em>Insight</em></a></li>
+<li class="chapter" data-level="3.5" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#referensi"><i class="fa fa-check"></i><b>3.5</b> Referensi</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://pripramudya.com" target="blank">Ditulis oleh Pribadi Pramudya</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">3 LANGKAH KILAT MAHIR ANALISIS DATA</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">3 LANGKAH KILAT MAHIR ANALISIS DATA</h1>
+<p class="author"><em>Pribadi Pramudya - pripramudya.com</em></p>
+<p class="date"><em>2019-01-14</em></p>
+</div>
+<div id="pendahuluan" class="section level1 unnumbered">
+<h1>Pendahuluan</h1>
+<div id="selamat-datang" class="section level2 unnumbered">
+<h2>Selamat Datang</h2>
+<p><img src="images/ebook.jpg" width="75%" style="display: block; margin: auto;" /></p>
+<p>Terima kasih sudah bersedia menyempatkan sedikit waktu untuk mengunjungi website dan membaca buku ini.</p>
+<p>Berikut materi yang akan Anda dapatkan:</p>
+<ul>
+<li><strong>Kenapa Anda perlu menguasai</strong> keterampilan analisis data</li>
+<li><strong>Konsep dasar</strong> analisis data yang tidak diketahui banyak orang</li>
+<li>Satu <strong><em>tool</em> pengolah data <em>powerful</em></strong> yang perlu Anda kuasai</li>
+<li><strong>Teknik dasar</strong> analisis data yang perlu Anda pelajari</li>
+<li><strong>Panduan praktis dan rinci</strong> cara menganalisis data dari nol sama sekali</li>
+</ul>
+<p>Versi pdf buku elektronik pendek 3 Langkah Kilat Mahir Analisis Data bisa diunduh dengan mendaftarkan email Anda terlebih dulu di <a href="https://pripramudya.com" class="uri">https://pripramudya.com</a>.</p>
+<p>Buku dan website ini tersedia secara bebas, di bawah <a href="https://creativecommons.org/licenses/by/4.0/deed.id">Lisensi CC BY 4.0</a>.</p>
+<p>Anda diperbolehkan:</p>
+<p><strong>Berbagi</strong> — menyalin dan menyebarluaskan kembali materi ini dalam bentuk atau format apapun;</p>
+<p><strong>Adaptasi</strong> — menggubah, mengubah, dan membuat turunan dari materi ini untuk kepentingan apapun, termasuk kepentingan komersial.</p>
+<p>Dengan <strong>mencantumkan sumber tautan</strong> asli dari konten terkait.</p>
+</div>
+<div id="kenapa-anda-perlu-menguasai-keterampilan-analisis-data" class="section level2 unnumbered">
+<h2>Kenapa Anda Perlu Menguasai Keterampilan Analisis Data</h2>
+<p>Data ada di mana-mana.</p>
+<p>Hampir setiap hari Anda berhadapan dengan data, apapun profesi Anda.</p>
+<p>Apalagi di zaman <em>now</em>, data berkembang begitu pesat dalam hal jumlah <em>(volume)</em>, variasi <em>(variety)</em>, dan kecepatan <em>(velocity)</em>.</p>
+<p>Ya, sekarang kita berada di era <strong>big data</strong>.</p>
+<p>Begitu melimpah ruahnya, sehingga tidak banyak orang yang memiliki keterampilan mumpuni untuk mengambil <em>insight</em> (wawasan baru) dari banyaknya data tersebut.</p>
+<p>Tidak perlu jauh mencari sumber data dari luar, data yang tersedia di dalam bidang keprofesian Anda pun sepertinya masih belum dapat digali dengan optimal.</p>
+<p>Di tempat kerja saya, pegawai yang menguasai keterampilan analisis data memiliki peluang lebih baik dalam menanjak karir. Apalagi jika hasil analisis data ini digunakan sebagai bahan presentasi oleh kepala divisi. Karirnya meroket.</p>
+<p>Ini salah satu contoh nyata. Manajemen begitu membutuhkan <em>insight</em> yang dapat memberikan suatu perubahan lebih baik dalam mengelola roda aktivitas perusahaan sehingga berujung pada peningkatan profitabilitas perusahaan. Manajemen tingkat atas pasti tidak akan ragu memberikan promosi bagi pegawai yang memberikan <em>insight</em> tersebut. Peluang <em>(opportunity)</em> penanjakan karir pegawai yang memiliki keterampilan analisis yang mumpuni lebih baik dari pegawai yang memiliki keterampilan ala kadarnya saja.</p>
+<p>Saya akan meringkas bab ini cukup dengan dua kata saja:</p>
+<p><em><strong>INSIGHT &amp; OPPORTUNITY</strong></em></p>
+<p>Ingin mendapatkan <em>insight</em> yang dapat menjawab permasalahan di bidang keprofesian Anda dan membuka <em>opportunity</em> karir terbaik Anda?</p>
+<p><strong>Kuasai keterampilan analisis data.</strong></p>
+</div>
+<div id="konsep-dasar-analisis-data" class="section level2 unnumbered">
+<h2>Konsep Dasar Analisis Data</h2>
+<p>“Saya sudah tahu apa itu analisis data, tidak perlu dijelaskan lagi.”</p>
+<p>Mungkin hal tersebut yang ada di benak Anda ketika membaca judul di bab ini.</p>
+<p>Memang, membaca teori tidaklah begitu menarik. Anda ingin langsung meloncat ke bab langkah kilat.</p>
+<p>Silakan saja. Gunakan menu di daftar isi lalu klik ke bab yang ingin Anda baca.</p>
+<p>Namun, tetap saya sarankan untuk membaca bab ini sampai akhir.</p>
+<p>Anda perlu tahu konsep dasar analisis data agar memudahkan Anda agar bisa cepat menguasai keterampilan ini.</p>
+</div>
+<div id="apa-itu-analisis-data" class="section level2 unnumbered">
+<h2>Apa itu Analisis Data</h2>
+<p>Jadi, apa sebenarnya analisis data itu?</p>
+<p>Analisis data adalah proses mengetahui, memahami, memilah, memecah, merinci, mengurai data dengan berbagai cara atau teknik tertentu seperti manipulasi, visualisasi, pengelompokkan, perbandingan, atau teknik lainnya sehingga didapatkan informasi berguna yang dapat menjawab permasalahan serta membantu dalam pengambilan keputusan.</p>
+<p>Ya, <strong>tujuan dari analisis data adalah pengambilan keputusan yang lebih baik</strong>. Keputusan yang didasarkan pada informasi hasil analisis data bukan berdasarkan naluri semata. Keputusan luar biasa krusialnya yang bisa saja membuat sebuah perusahaan sebelumnya berkibar berujung menjadi gulung tikar ataupun sebaliknya.</p>
+<p>Ini membuat analisis data menjadi salah satu keterampilan yang sangat penting penerapannya di hampir seluruh bidang.</p>
+<p>Beberapa contoh penerapan dalam bidang bisnis sebagai berikut:</p>
+<p><strong>Perkenalan produk kopi terbaru Starbucks</strong></p>
+<p>Starbucks memperkenalkan produk kopi terbaru dengan memperhatikan apakah pelanggan menyukai produk baru tersebut. Pada pagi hari produk tersebut mulai dijual, Starbucks memantau berbagai blog, Twitter, forum diskusi dan grup tentang kopi untuk mengetahui bagaimana reaksi pelanggan. Siang harinya, Starbucks menemukan bahwa walaupun pelanggan menyukai rasa kopinya, namun mereka berpikir harganya terlalu mahal. Starbucks langsung menurunkan harga. Pada sore harinya, semua persepsi negatif terkait produk kopi baru tersebut hilang.</p>
+<p>Pendekatan dengan respons cepat seperti ini tentu lebih baik dibandingkan pendekatan tradisional dengan menunggu laporan penjualan harian masuk lebih dulu yang pada akhirnya ditemukan bahwa penjualannya mengecewakan. Langkah <em>jadul</em> berikutnya mencari tahu alasan kenapa penjualan mengecewakan dengan melakukan diskusi grup terpusat <em>(focus group discussion)</em>. Selanjutnya, beberapa minggu kemudian Starbucks baru menemukan bahwa harganya terlalu mahal lalu menurunkan harganya.</p>
+<p><strong>Sistem rekomendasi Amazon</strong></p>
+<p>Amazon menggunakan data penjualan, data produk yang sering dilihat, dan perilaku serta preferensi pelanggan lainnya untuk membuat sebuah sistem rekomendasi. Sistem ini membantu Amazon meningkatkan 29% penjualannya. Jika Anda mengunjungi situs Amazon, di bagian bawah Anda akan melihat beberapa produk rekomendasi, produk yang Anda lihat sebelumnya, sampai dengan produk terlaris serta tawaran produk menarik lainnya.</p>
+<p><strong>Efisiensi Chevron dalam aktivitas pengeboran</strong></p>
+<p>Biaya setiap pengeboran di selat Meksiko diperkirakan sampai dengan $100 juta. Rugi sekali jika hasil pengeboran tersebut tidak didapat sumber minyak bumi. Untuk meningkatkan peluang keberhasilan menemukan sumber minyak, Chevron menganalisis 50 terabyte data seismik. Dengan dukungan kecanggihan komputer, kapasitas penyimpanan, serta tim analis yang mumpuni berhasil meningkatkan keberhasilan menemukan sumber minyak dari yang sebelumnya 1 dari 5 pengeboran menjadi 1 berbanding 3.</p>
+</div>
+<div id="proses-dan-tahapan-analisis-data" class="section level2 unnumbered">
+<h2>Proses dan Tahapan Analisis Data</h2>
+<p>Untuk menghasilkan informasi dan <em>insight</em> yang dapat memberikan keputusan lebih baik, Anda harus tahu proses dan tahapan dari analisis data. Tahapan analisis data terdiri dari 6 tahapan.</p>
+<ol style="list-style-type: decimal">
+<li>Menentukan Tujuan</li>
+<li>Menentukan Metode Pengukuran yang Digunakan</li>
+<li>Pengumpulan Data</li>
+<li>Pembersihan dan Pembentukan Data</li>
+<li>Analisis Data</li>
+<li>Interpretasi dan Komunikasi Hasil Analisis Data</li>
+</ol>
+<div id="menentukan-tujuan" class="section level3 unnumbered">
+<h3>1. Menentukan Tujuan</h3>
+<p>Ini adalah tahap pertama dari proses analisis data. Di bidang keprofesian Anda, Anda harus menentukan tujuan dari permasalahan yang akan diselesaikan dimulai dengan pertanyaan yang tepat. Tahap ini cukup vital mengingat pertanyaan yang salah akan menghasilkan informasi atau <em>insight</em> yang tidak tepat pula.</p>
+<p>“Kenapa total penjualan bulan ini turun dibandingkan bulan lalu?”</p>
+<p>“Kenapa 7 dari 10 proyek yang sedang berjalan saat ini terlambat?”</p>
+<p>“Bagaimana cara mencegah pelanggan kita pindah ke kompetitor?”</p>
+<p>Itu adalah contoh permasalahan yang akan disolusikan.</p>
+<p>Dengan menentukan pertanyaan yang tepat, Anda bisa lebih fokus dalam mencapai tujuan serta lebih efektif untuk menyelesaikan permasalahan yang ada.</p>
+<p>Sumber data yang akan digunakan nantinya juga tergantung dari penentuan tujuan dan pertanyaan tepat dari tahap ini.</p>
+</div>
+<div id="menentukan-metode-pengukuran-yang-digunakan" class="section level3 unnumbered">
+<h3>2. Menentukan Metode Pengukuran yang Digunakan</h3>
+<p>Anda sudah meneentukan tujuan di tahap pertama, selanjutnya adalah apa yang perlu dijadikan tolak ukur dan bagaimana cara Anda mengukurnya.</p>
+<p>Misalnya Anda mengambil contoh:</p>
+<p>“Kenapa total penjualan bulan ini turun dibandingkan bulan lalu?”</p>
+<p>Dari permasalahan ini, Anda bisa tentukan bahwa yang harus diukur adalah <strong>penjualan</strong>. Lalu, Anda tentukan lagi metrik dari penjualan, <strong>jumlah barang</strong> atau <strong>jumlah uang</strong> atau keduanya.</p>
+<ul>
+<li>Metrik jumlah barang: buah, lusin, kodi, dus, porsi, dan lainnya.</li>
+<li>Metrik jumlah uang: ratusan ribu rupiah, jutaan rupiah, ribuan dollar, dan lainnya.</li>
+</ul>
+<p>Pengukuran juga bisa dibandingkan berdasarkan periodenya. Terhadap bulan sebelumnya atau terhadap tahun sebelumnya di bulan yang sama.</p>
+<p>Selain itu, Anda pikirkan juga kira-kira faktor penyebab permasalahan yang bisa dijadikan sebagai tambahan pengukuran. Contoh di bidang penjualan, faktor seperti jumlah pembeli, promosi, diskon, lokasi, harga, bisa dimasukkan sebagai tambahan metode pengukuran.</p>
+<p>Pastikan pengukuran ini dilakukan secara tepat karena nantinya akan berpengaruh terhadap kualitas hasil analisis dan pengambilan keputusan.</p>
+</div>
+<div id="pengumpulan-data" class="section level3 unnumbered">
+<h3>3. Pengumpulan Data</h3>
+<p>Anda sudah menentukan tujuan dan juga metode pengukuran di tahapan sebelumnya. Selanjutnya adalah mencari dan mengumpulkan data yang relevan. Sumber data bisa dari mana saja. Internet, basis data internal, survey, wawancara, dan lainnya.</p>
+<p>Contoh permasalahan penjualan di tahapan sebelumnya. Data penjualan, promosi, jumlah pelanggan, bisa didapat dari internal. Untuk survey kepuasan pelanggan bisa dilakukan dengan metode pengisian kuesioner ataupun dengan wawancara langsung.</p>
+<p>Yang perlu diingat adalah Anda harus mengumpulkan berbagai macam data tersebut secara terstruktur sehingga bisa langsung dapat diolah.</p>
+</div>
+<div id="pembersihan-dan-pembentukan-data" class="section level3 unnumbered">
+<h3>4. Pembersihan dan Pembentukan Data</h3>
+<p>Dari seluruh tahapan proses analisis data, tahap ini adalah tahap yang paling banyak menyita waktu Anda. Ketika Anda membuka data yang Anda kumpulkan di tahap 3, Anda menemukan struktur data yang tidak siap olah. Berantakan. Duplikasi, salah ketik, karakter spesial, huruf kapital-kecil, data kosong atau NA, format tanggal/waktu tidak sama, dan lainnya merupakan beberapa hal yang sering ditemui pada sebuah basis data.</p>
+<p>Untuk mempermudah pembersihan dan pembentukan data ini Anda bisa menggunakan <em>tools</em> sejuta umat, Microsoft Excel. Anda juga bisa menggunakan software pengolah data lain yang Anda kuasai, misalnya SPSS, SAS, STATA, Python, R atau lainnya.</p>
+<p>Jangan terlalu menganggap remeh tahapan ini. Buat dan bentuk data sebaik mungkin sehingga data bisa langsung dianalisis. Jika data tidak bersih, semahir apapun Anda dalam menganalisis data, hasilnya tidak akan optimal. Ingat, jika masukannya sampah, keluarannya juga sampah.</p>
+</div>
+<div id="analisis-data" class="section level3 unnumbered">
+<h3>5. Analisis Data</h3>
+<p>Setelah data dibersihkan dan dibentuk, tahapan penting berikutnya adalah tahap analisis data. Tujuan dari tahapan ini adalah untuk mengerti lebih dalam tentang data beserta variabel-variabelnya. Ada beberapa teknik dasar analisis data yang dapat Anda gunakan.</p>
+<ul>
+<li>Teknik Eksplorasi</li>
+<li>Teknik Visualisasi</li>
+</ul>
+<p><strong>Teknik Eksplorasi</strong></p>
+<p>Sesuai dengan namanya, teknik menjelajah untuk mengerti tentang data. Anda memulainya dengan mencari tahu berapa jumlah baris dan kolom dari basis data, lalu melihat jenis variabelnya: karakter, numerik, atau kategorikal. Dilanjut dengan meringkas data tersebut sehingga dapat menampilkan informasi penting seperti variabel atau kategori dengan frekuensi terbanyak, nilai tertinggi, rerata, dan informasi lainnya.</p>
+<p>Intinya Anda menggunakan fungsi-fungsi dari <em>tools</em> analisis untuk mengerti tentang data. Terkadang Anda perlu kembali melakukan proses di tahapan sebelumnya, yakni pembersihan data lalu balik lagi ke tahap ini. Ya, tahap 4 dan 5 merupakan proses yang iteratif. Hal ini dilakukan agar Anda bisa lebih cepat mengerti tentang informasi yang tersimpan dalam data.</p>
+<p><strong>Teknik Visualisasi</strong></p>
+<blockquote>
+<p>“Sebuah gambar bernilai ribuan kata.”</p>
+</blockquote>
+<p>Salah satu pepatah bahasa inggris ini benar adanya. Anda lebih cepat mengerti data dengan mereprentasikannya dalam bentuk grafik seperti diagram batang, diagram garis, diagram tebar, histogram, serta info grafik lainnya. Teknik visualisasi merupakan teknik termudah, tercepat, dan terefektif dalam menampilkan informasi tentang data.</p>
+<p>Selain itu, hasil dari teknik visualisasi ini bisa digunakan sebagai alat bantu dalam mengkomunikasikan informasi dan insight.</p>
+<p>Jika ada satu teknik analisis data yang saya rekomendasikan untuk dikuasai pertama kali, maka teknik visualisasi inilah yang perlu Anda pelajari secepatnya.</p>
+</div>
+<div id="interpretasi-dan-komunikasi-hasil-analisis-data" class="section level3 unnumbered">
+<h3>6. Interpretasi dan Komunikasi Hasil Analisis Data</h3>
+<p>Hasil analisis yang sudah Anda selesaikan harus diinterpretasikan. Maksud dari interpretasi ini adalah mengubah hasil analisis yang masih dalam bentuk teknikal menjadi temuan, informasi, ataupun <em>insight</em> yang bisa dimengerti oleh orang awam sekalipun.</p>
+<p>Selanjutnya, apakah hasil interpretasi ini sudah menjawab pertanyaan permasalahan di proses tahap 1.</p>
+<p>Buat kesimpulan, akan lebih baik lagi jika disertai rekomendasi dan langkah-langkah yang diperlukan untuk menyelesaikan permasalahan yang ada.</p>
+<p>Sebaik apapun Anda dalam menganalisis data itu semua akan percuma jika Anda tidak mengkomunikasikan rekomendasi, informasi, dan insight ke atasan, manajemen, klien, pelanggan, masyarakat, ataupun <em>stakeholder</em> Anda. Bukan berarti teknik analisis data tidak penting sama sekali, namun dengan interpretasi dan mengkomunikasikan hasil analisis maka dampak efektivitas dalam mensolusikan permasalahan akan lebih terasa.</p>
+<p>Media dalam mengkomunikasikan pun terdapat banyak alternatif. Anda bisa membuat hasil analisis data dalam bentuk infografik (file gambar), tulisan dalam format pdf, slide presentasi, <em>spreadsheet</em>, dahsboard, sampai dengan artikel di blog.</p>
+<p>Dengan mengkomunikasikan hasil analisis data, maka pintu <em>opportunites</em> terbuka lebih lebar, mengundang karir terbaik Anda.</p>
+</div>
+</div>
+<div id="langkah-kilat-mahir-analisis-data" class="section level2 unnumbered">
+<h2>3 Langkah Kilat Mahir Analisis Data</h2>
+<p>Anda sudah mengetahui tentang konsep dasar data analisis yang menjadi landasan dan pondasi Anda dalam mempelajari keterampilan analisis data pada bab sebelumnya. Konsep tersebut merupakan hal yang penting agar Anda dapat cepat mahir dan menguasai keterampilan analisis data.</p>
+<p>Di bab selanjutnya akan dibahas bagaimana mempelajari dan mengaplikasikan teknik analisis data. Anda akan dipandu secara rinci bagaimana agar Anda dapat dengan cepat menguasai keterampilan analisis data dengan 3 langkah kilat berikut.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

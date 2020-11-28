@@ -1,0 +1,16 @@
+baseURL = "https://pripramudya.com"
+title = "pripramudya.com"
+author = "Pribadi Pramudya"
+languageCode = "en-US"
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+enableRobotsTXT = true
+
+[permalinks]
+  blog = "/:slug/"
+  tags = "/blog/:slug"
+
+[params]
+  description = "Blog Pengembangan Diri Melalui Keterampilan Digital"
+  favicon = "images/favicon.png"
+  title = "Pribadi Pramudya Blog"

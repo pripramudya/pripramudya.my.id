@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>3 LANGKAH KILAT MAHIR ANALISIS DATA</title>
+  <meta name="description" content="Buku elektronik bagaimana cepat menguasai analisis data dengan RStudio">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="3 LANGKAH KILAT MAHIR ANALISIS DATA" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Buku elektronik bagaimana cepat menguasai analisis data dengan RStudio" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 LANGKAH KILAT MAHIR ANALISIS DATA" />
+  
+  <meta name="twitter:description" content="Buku elektronik bagaimana cepat menguasai analisis data dengan RStudio" />
+  
+
+<meta name="author" content="Pribadi Pramudya - pripramudya.com">
+
+
+<meta name="date" content="2019-01-14">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="kuasai-teknik-dasar-analisis-data.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">3 Langkah Kilat Mahir Analisis Data</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Pendahuluan</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#selamat-datang"><i class="fa fa-check"></i>Selamat Datang</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#kenapa-anda-perlu-menguasai-keterampilan-analisis-data"><i class="fa fa-check"></i>Kenapa Anda Perlu Menguasai Keterampilan Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#konsep-dasar-analisis-data"><i class="fa fa-check"></i>Konsep Dasar Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#apa-itu-analisis-data"><i class="fa fa-check"></i>Apa itu Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#proses-dan-tahapan-analisis-data"><i class="fa fa-check"></i>Proses dan Tahapan Analisis Data</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#menentukan-tujuan"><i class="fa fa-check"></i>1. Menentukan Tujuan</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#menentukan-metode-pengukuran-yang-digunakan"><i class="fa fa-check"></i>2. Menentukan Metode Pengukuran yang Digunakan</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pengumpulan-data"><i class="fa fa-check"></i>3. Pengumpulan Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pembersihan-dan-pembentukan-data"><i class="fa fa-check"></i>4. Pembersihan dan Pembentukan Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#analisis-data"><i class="fa fa-check"></i>5. Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#interpretasi-dan-komunikasi-hasil-analisis-data"><i class="fa fa-check"></i>6. Interpretasi dan Komunikasi Hasil Analisis Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#langkah-kilat-mahir-analisis-data"><i class="fa fa-check"></i>3 Langkah Kilat Mahir Analisis Data</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><i class="fa fa-check"></i><b>1</b> Instal dan Pelajari Satu <em>Tool</em> Analisis Data yang <em>Powerful</em> ini</a><ul>
+<li class="chapter" data-level="1.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#tool-atau-perangkat-lunak-analisis-data-populer-yang-banyak-orang-pakai"><i class="fa fa-check"></i><b>1.1</b> <em>Tool</em> atau Perangkat Lunak Analisis Data Populer yang Banyak Orang Pakai</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#microsoft-excel"><i class="fa fa-check"></i><b>1.1.1</b> Microsoft Excel</a></li>
+<li class="chapter" data-level="1.1.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#python"><i class="fa fa-check"></i><b>1.1.2</b> Python</a></li>
+<li class="chapter" data-level="1.1.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#r"><i class="fa fa-check"></i><b>1.1.3</b> R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#kenapa-harus-r"><i class="fa fa-check"></i><b>1.2</b> Kenapa harus R</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#dukungan-paket-r"><i class="fa fa-check"></i><b>1.2.1</b> Dukungan Paket R</a></li>
+<li class="chapter" data-level="1.2.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#belajar-analisis-data-lebih-mudah-menggunakan-r"><i class="fa fa-check"></i><b>1.2.2</b> Belajar Analisis Data lebih mudah menggunakan R</a></li>
+<li class="chapter" data-level="1.2.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#fleksibilitas-r"><i class="fa fa-check"></i><b>1.2.3</b> Fleksibilitas R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#instal-r-dan-rstudio"><i class="fa fa-check"></i><b>1.3</b> Instal R dan RStudio</a></li>
+<li class="chapter" data-level="1.4" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#instal-paket-r"><i class="fa fa-check"></i><b>1.4</b> Instal Paket R</a></li>
+<li class="chapter" data-level="1.5" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#syntax-dan-operasi-dasar-r"><i class="fa fa-check"></i><b>1.5</b> <em>Syntax</em> dan Operasi Dasar R</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#kalkulator-interaktif"><i class="fa fa-check"></i><b>1.5.1</b> Kalkulator Interaktif</a></li>
+<li class="chapter" data-level="1.5.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#variabel"><i class="fa fa-check"></i><b>1.5.2</b> Variabel</a></li>
+<li class="chapter" data-level="1.5.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#vektor"><i class="fa fa-check"></i><b>1.5.3</b> Vektor</a></li>
+<li class="chapter" data-level="1.5.4" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#urutan-angka"><i class="fa fa-check"></i><b>1.5.4</b> Urutan Angka</a></li>
+<li class="chapter" data-level="1.5.5" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#replikasi-angka"><i class="fa fa-check"></i><b>1.5.5</b> Replikasi Angka</a></li>
+<li class="chapter" data-level="1.5.6" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#ambil-elemen-vektor"><i class="fa fa-check"></i><b>1.5.6</b> Ambil Elemen Vektor</a></li>
+<li class="chapter" data-level="1.5.7" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#syntax-fungsi-penting-lainnya"><i class="fa fa-check"></i><b>1.5.7</b> <em>Syntax</em> / Fungsi Penting Lainnya</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html"><i class="fa fa-check"></i><b>2</b> Kuasai Teknik Dasar Analisis Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#visualisasi-data"><i class="fa fa-check"></i><b>2.1</b> Visualisasi Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#pemetaan-data-ke-atribut-estetik"><i class="fa fa-check"></i><b>2.1.1</b> Pemetaan Data ke Atribut Estetik</a></li>
+<li class="chapter" data-level="2.1.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#lapisan"><i class="fa fa-check"></i><b>2.1.2</b> Lapisan</a></li>
+<li class="chapter" data-level="2.1.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#iterasi-pemetaan-dan-lapisan"><i class="fa fa-check"></i><b>2.1.3</b> Iterasi Pemetaan dan Lapisan</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#manipulasi-data"><i class="fa fa-check"></i><b>2.2</b> Manipulasi Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#melihat-dan-mengetahui-set-data"><i class="fa fa-check"></i><b>2.2.1</b> Melihat dan Mengetahui Set Data</a></li>
+<li class="chapter" data-level="2.2.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#mengubah-variabel-kolom-isi-data"><i class="fa fa-check"></i><b>2.2.2</b> Mengubah Variabel, Kolom, Isi Data</a></li>
+<li class="chapter" data-level="2.2.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#operator-pipa"><i class="fa fa-check"></i><b>2.2.3</b> Operator Pipa (<code>%&gt;%</code>)</a></li>
+<li class="chapter" data-level="2.2.4" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#memilih-variabel-data"><i class="fa fa-check"></i><b>2.2.4</b> Memilih Variabel Data</a></li>
+<li class="chapter" data-level="2.2.5" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#menyaring-baris-data"><i class="fa fa-check"></i><b>2.2.5</b> Menyaring Baris Data</a></li>
+<li class="chapter" data-level="2.2.6" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#mengurutkan-data"><i class="fa fa-check"></i><b>2.2.6</b> Mengurutkan Data</a></li>
+<li class="chapter" data-level="2.2.7" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#menambah-variabel-data"><i class="fa fa-check"></i><b>2.2.7</b> Menambah Variabel Data</a></li>
+<li class="chapter" data-level="2.2.8" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#mengelompokkan-dan-meringkas-data"><i class="fa fa-check"></i><b>2.2.8</b> Mengelompokkan dan Meringkas Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#interpretasi-data"><i class="fa fa-check"></i><b>2.3</b> Interpretasi Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#korelasi"><i class="fa fa-check"></i><b>2.3.1</b> Korelasi</a></li>
+<li class="chapter" data-level="2.3.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#trend"><i class="fa fa-check"></i><b>2.3.2</b> <em>Trend</em></a></li>
+<li class="chapter" data-level="2.3.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#distribusi"><i class="fa fa-check"></i><b>2.3.3</b> Distribusi</a></li>
+<li class="chapter" data-level="2.3.4" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#outlier"><i class="fa fa-check"></i><b>2.3.4</b> <em>Outlier</em></a></li>
+<li class="chapter" data-level="2.3.5" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#perbandingan-dan-peringkat"><i class="fa fa-check"></i><b>2.3.5</b> Perbandingan dan Peringkat</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html"><i class="fa fa-check"></i><b>3</b> Latihan, Latihan, Latihan</a><ul>
+<li class="chapter" data-level="3.1" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#unduh-inisiasi-dan-mempersiapkan-set-data"><i class="fa fa-check"></i><b>3.1</b> Unduh, Inisiasi, dan Mempersiapkan Set Data</a></li>
+<li class="chapter" data-level="3.2" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#visualisasi-grafik"><i class="fa fa-check"></i><b>3.2</b> Visualisasi Grafik</a></li>
+<li class="chapter" data-level="3.3" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#visualisasi-peta"><i class="fa fa-check"></i><b>3.3</b> Visualisasi Peta</a></li>
+<li class="chapter" data-level="3.4" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#insight"><i class="fa fa-check"></i><b>3.4</b> <em>Insight</em></a></li>
+<li class="chapter" data-level="3.5" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#referensi"><i class="fa fa-check"></i><b>3.5</b> Referensi</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://pripramudya.com" target="blank">Ditulis oleh Pribadi Pramudya</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">3 LANGKAH KILAT MAHIR ANALISIS DATA</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="latihan-latihan-latihan" class="section level1">
+<h1><span class="header-section-number">Langkah Kilat 3</span> Latihan, Latihan, Latihan</h1>
+<p>Ya, tidak ada yang spesial atau hal yang <em>wah</em> di langkah ketiga ini. Untuk bisa mahir analisis data, Anda harus banyak latihan.</p>
+<p>Baca kembali 2 langkah sebelumnya, terutama langkah kedua. Kuasai teknik dasar analisis terlebih dahulu.</p>
+<p>Jalankan kode programnya, <em>copy paste</em> boleh, pelajari cara kerja dan konsepnya. Setelah Anda sudah tidak merasa asing dengan sistem pemrograman R, coba Anda ketik kode programnya, tidak <em>copy paste</em>. Dengan mengetik, Anda akan lebih cepat terbiasa dengan beberapa fungsi yang sering digunakan untuk mengolah data.</p>
+<p>Lalu, Anda coba latihan dengan set data yang lain. Jelajahi set data tersebut dengan fungsi-fungsi yang sudah dibahas di buku ini.</p>
+<p>Berikut akan disajikan bagaimana cara melakukan analisis data dari mulai proses pengambilan sampai dengan mendapatkan <em>insight</em>. Fungsi-fungsi yang digunakan pada contoh kali ini sebagian sudah dibahas di bagian sebelumnya dan sebagian akan dibahas beriringan dengan penulisan kode.</p>
+<div id="unduh-inisiasi-dan-mempersiapkan-set-data" class="section level2">
+<h2><span class="header-section-number">3.1</span> Unduh, Inisiasi, dan Mempersiapkan Set Data</h2>
+<p>Set data yang akan digunakan dapat diunduh secara manual pada tautan berikut:</p>
+<ul>
+<li><a href="http://data.jakarta.go.id/dataset/jumlahpendudukberdasarkanjeniskelamindankewarganegaraandkijakarta/resource/5a948e1c-facd-4eec-8943-bef5c45d16d8">Data Jumlah Penduduk Jakarta Berdasarkan Jenis Kelamin dan Kewarganegaraan</a></li>
+</ul>
+<p>Anda bisa langsung inisiasi dan menyimpan set data ini ke dalam variabel tanpa harus mengunduhnya terlebih dahulu.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Meyimpan alamat tautan (URL) data penduduk Jakarta berdasarkan jenis kelamin dan kewarganegaraan dalam variabel alamat</span>
+alamat &lt;-<span class="st"> &quot;http://data.jakarta.go.id/dataset/aed0be8f-b36e-457c-9210-6f5e970b987c/resource/5a948e1c-facd-4eec-8943-bef5c45d16d8/download/Data-Jumlah-Penduduk-Berdasarkan-Kewarganegaraan-dan-Jenis-Kelamin-Tahun-2017.csv&quot;</span>
+
+<span class="co"># Membaca file csv dari set data dan memasukkannya ke dalam variabel</span>
+df.penduduk &lt;-<span class="st"> </span><span class="kw">read.csv</span>(alamat, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>)</code></pre></div>
+<p>Set data kependudukan Jakarta tersedia dalam bentuk file csv, sehingga untuk membaca data tersebut digunakan fungsi <code>read.csv</code>.</p>
+<p>Melihat struktur dari set data <code>df.penduduk</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(df.penduduk)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    1068 obs. of  8 variables:
+##  $ tahun          : int  2017 2017 2017 2017 2017 2017 2017 2017 2017 2017 ...
+##  $ provinsi       : Factor w/ 1 level &quot;DKI Jakarta&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ kabupaten      : Factor w/ 6 levels &quot;JAKARTA BARAT&quot;,..: 6 6 6 6 6 6 2 2 2 2 ...
+##  $ kecamatan      : Factor w/ 44 levels &quot;CAKUNG&quot;,&quot;CEMPAKA PUTIH&quot;,..: 22 22 22 21 21 21 9 9 9 9 ...
+##  $ kelurahan      : Factor w/ 267 levels &quot;ANCOL&quot;,&quot;ANGKE&quot;,..: 165 164 163 168 167 166 55 24 195 194 ...
+##  $ kewarganegaraan: Factor w/ 2 levels &quot;WNA&quot;,&quot;WNI&quot;: 2 2 2 2 2 2 2 2 2 2 ...
+##  $ jenis_kelamin  : Factor w/ 2 levels &quot;Laki-laki&quot;,&quot;Perempuan&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ jumlah         : int  3426 3546 1241 1204 2797 1688 1645 9802 11224 9333 ...</code></pre>
+<p>Seperti yang Anda lihat, beberapa variabel seperti provinsi, kabupaten, kecamatan, kelurahan, kewarganegaraan, serta jenis kelamin sudah bertipe faktor, sehingga tidak perlu diubah lagi. Variabel yang lain seperti tahun dan jumlah sudah benar bertipe integer.</p>
+<p>Yang perlu sedikit diubah adalah penamaan variabel kabupaten. Di DKI Jakarta, penamaan wilayah administratif setelah propinsi lebih tepatnya kota, bukan kabupaten.</p>
+<p>Masih ingat bagaimana cara mengubah nama variabel?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengubah nama variabel kabupaten menjadi kota pada set data df.penduduk</span>
+<span class="kw">names</span>(df.penduduk)[<span class="dv">3</span>] &lt;-<span class="st"> &quot;kota&quot;</span></code></pre></div>
+<p>Bagaimana dengan informasi jumlah penduduk Jakarta?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Jumlah total penduduk Jakarta</span>
+<span class="kw">sum</span>(df.penduduk<span class="op">$</span>jumlah)</code></pre></div>
+<pre><code>## [1] 10348570</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Jumlah penduduk Jakarta terbanyak berdasarkan kecamatan</span>
+df.penduduk <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">select</span>(kecamatan, jumlah) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(kecamatan) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">jumlah =</span> <span class="kw">sum</span>(jumlah)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">arrange</span>(<span class="op">-</span>jumlah) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">head</span>(<span class="dv">5</span>)</code></pre></div>
+<pre><code>## # A tibble: 5 x 2
+##   kecamatan     jumlah
+##   &lt;fct&gt;          &lt;int&gt;
+## 1 CENGKARENG    513064
+## 2 CAKUNG        509194
+## 3 DUREN SAWIT   406998
+## 4 CILINCING     403028
+## 5 TANJUNG PRIOK 395022</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Jumlah penduduk Jakarta paling sedikit berdasarkan kecamatan</span>
+df.penduduk <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">select</span>(kecamatan, jumlah) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(kecamatan) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">jumlah =</span> <span class="kw">sum</span>(jumlah)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">arrange</span>(jumlah) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">head</span>(<span class="dv">5</span>)</code></pre></div>
+<pre><code>## # A tibble: 5 x 2
+##   kecamatan       jumlah
+##   &lt;fct&gt;            &lt;int&gt;
+## 1 KEP. SERIBU SLT  11342
+## 2 KEP. SERIBU UTR  16249
+## 3 MENTENG          92026
+## 4 CEMPAKA PUTIH    99263
+## 5 GAMBIR          101832</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Peringkat jumlah penduduk Jakarta berdasarkan kota</span>
+df.penduduk <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">select</span>(kota, jumlah) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(kota) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">jumlah =</span> <span class="kw">sum</span>(jumlah)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">arrange</span>(<span class="op">-</span>jumlah)</code></pre></div>
+<pre><code>## # A tibble: 6 x 2
+##   kota                jumlah
+##   &lt;fct&gt;                &lt;int&gt;
+## 1 JAKARTA TIMUR      2946926
+## 2 JAKARTA BARAT      2327258
+## 3 JAKARTA SELATAN    2190919
+## 4 JAKARTA UTARA      1716591
+## 5 JAKARTA PUSAT      1139285
+## 6 KAB.ADM.KEP.SERIBU   27591</code></pre>
+</div>
+<div id="visualisasi-grafik" class="section level2">
+<h2><span class="header-section-number">3.2</span> Visualisasi Grafik</h2>
+<p>Set data kependudukan <code>df.penduduk</code> ini dari awal sudah lumayan rapih dan tidak diperlukan proses manipulasi. Langkah berikutnya menggunakan <code>ggplot</code> untuk memvisualisasikan data agar bisa mendapatkan <code>insight</code> dari set data kependudukan ini.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Inisiasi paket ggplot dan dplyr</span>
+<span class="kw">library</span>(ggplot2)
+<span class="kw">library</span>(dplyr)
+
+df.penduduk <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">reorder</span>(kecamatan, jumlah, sum), <span class="dt">y =</span> jumlah)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;#8B0000&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.y =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">6</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span><span class="kw">comma_format</span>()) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Kecamatan&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Jumlah Penduduk&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Perbandingan Jumlah Penduduk Jakarta Berdasarkan Kecamatan&quot;</span>, 
+          <span class="dt">subtitle =</span> <span class="st">&quot;Tahun 2017&quot;</span>)</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-86-1.png" width="672" /></p>
+<p>Penjelasan kode:</p>
+<ul>
+<li><p><code>ggplot(aes(x = reorder(kecamatan, jumlah, sum), y = jumlah))</code>: mengurutkan faktor kecamatan berdasarkan jumlah dengan fungsi <code>reorder</code>.</p></li>
+<li><p><code>theme(axis.text.y = element_text(size = 6))</code>: mengatur huruf pada axis y menjadi berukuran 6.</p></li>
+<li><p><code>scale_y_continuous(labels = scales::comma_format()</code>: mengatur skala angka menjadi format yang mudah dibaca.</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df.penduduk <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">reorder</span>(kota, jumlah, sum), <span class="dt">y =</span> jumlah)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;#8B0000&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.y =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">8</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">7</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span><span class="kw">comma_format</span>()) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Kota&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Jumlah Penduduk&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Perbandingan Jumlah Penduduk Jakarta Berdasarkan Kota&quot;</span>,
+          <span class="dt">subtitle =</span> <span class="st">&quot;Tahun 2017&quot;</span>)</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-87-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df.penduduk <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">reorder</span>(kecamatan, jumlah, sum), <span class="dt">y =</span> jumlah)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="kw">aes</span>(<span class="dt">fill =</span> jenis_kelamin)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.y =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">6</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span><span class="kw">comma_format</span>()) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Kecamatan&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Jumlah Penduduk&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Perbandingan Jumlah Penduduk Jakarta&quot;</span>,
+          <span class="dt">subtitle =</span> <span class="st">&quot;Berdasarkan Jenis Kelamin Per Kecamatan Tahun 2017&quot;</span>)</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-88-1.png" width="672" /></p>
+<p>Argumen <code>fill</code> pada kode di atas berfungsi untuk menampilkan atribut estetik berdasarkan variabel jenis_kelamin, sehingga pada grafik terlihat komposisi penduduk laki-laki dan perempuan yang berbeda warna.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df.penduduk <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">reorder</span>(kecamatan, jumlah, sum), <span class="dt">y =</span> jumlah)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;#8B0000&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.y =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">6</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span><span class="kw">comma_format</span>()) <span class="op">+</span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>jenis_kelamin) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Kecamatan&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Jumlah Penduduk&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Perbandingan Jumlah Penduduk Jakarta&quot;</span>,
+          <span class="dt">subtitle =</span> <span class="st">&quot;Berdasarkan Jenis Kelamin Per Kecamatan Tahun 2017&quot;</span>)</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-89-1.png" width="672" /></p>
+<p>Fungsi <code>facet_wrap()</code> membuat grafik terbagi menjadi dua kolom berdasarkan jenis kelamin. Opsi ini mempermudah pengguna untuk melihat lebih detail untuk masing-masing kategori.</p>
+</div>
+<div id="visualisasi-peta" class="section level2">
+<h2><span class="header-section-number">3.3</span> Visualisasi Peta</h2>
+<p>Visualisasi data juga dapat ditampilkan dalam bentuk peta. Selain cukup informatif, visualisasi peta juga secara estetis indah dipandang dan keren.</p>
+<p>Untuk membuat visualisasi peta Jakarta, Anda perlu menginstal paket berikut terlebih dahulu.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)
+<span class="kw">install.packages</span>(<span class="st">&quot;sf&quot;</span>)
+devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;tidyverse/ggplot2&quot;</span>)
+devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;rasyidstat/indonesia&quot;</span>) </code></pre></div>
+<p>Inisiasi paket dan persiapan visualiasi peta Jakarta.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Persiapan data spasial peta Jakarta dengan pembagian wilayah kelurahan</span>
+kelurahan.jkt &lt;-<span class="st"> </span><span class="kw">id_map</span>(<span class="st">&quot;jakarta&quot;</span>, <span class="st">&quot;kelurahan&quot;</span>)
+
+<span class="co"># Menampilkan struktur set data kelurahan.jkt</span>
+<span class="kw">str</span>(kelurahan.jkt)</code></pre></div>
+<pre><code>## Classes &#39;sf&#39; and &#39;data.frame&#39;:   377 obs. of  9 variables:
+##  $ kode_provinsi : int  31 31 31 31 31 31 31 31 31 31 ...
+##  $ nama_provinsi : Factor w/ 1 level &quot;DAERAH KHUSUS IBUKOTA JAKARTA&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ kode_kota     : int  3171 3172 3172 3172 3172 3171 3172 3172 3171 3172 ...
+##  $ nama_kota     : Factor w/ 6 levels &quot;Jakarta Barat&quot;,..: 3 4 4 4 4 3 4 4 3 4 ...
+##  $ kode_kecamatan: int  3171010 3172020 3172030 3172030 3172010 3171010 3172010 3172020 3171010 3172030 ...
+##  $ nama_kecamatan: Factor w/ 45 levels &quot;Cakung&quot;,&quot;Cempaka Putih&quot;,..: 11 7 6 6 34 11 34 7 11 6 ...
+##  $ kode_kelurahan: num  3.17e+09 3.17e+09 3.17e+09 3.17e+09 3.17e+09 ...
+##  $ nama_kelurahan: Factor w/ 267 levels &quot;Ancol&quot;,&quot;Angke&quot;,..: 35 23 202 162 179 236 87 122 25 34 ...
+##  $ geometry      :sfc_POLYGON of length 377; first list element: List of 1
+##   ..$ : num [1:1283, 1:2] 107 107 107 107 107 ...
+##   ..- attr(*, &quot;class&quot;)= chr  &quot;XY&quot; &quot;POLYGON&quot; &quot;sfg&quot;
+##  - attr(*, &quot;sf_column&quot;)= chr &quot;geometry&quot;
+##  - attr(*, &quot;agr&quot;)= Factor w/ 3 levels &quot;constant&quot;,&quot;aggregate&quot;,..: NA NA NA NA NA NA NA NA
+##   ..- attr(*, &quot;names&quot;)= chr  &quot;kode_provinsi&quot; &quot;nama_provinsi&quot; &quot;kode_kota&quot; &quot;nama_kota&quot; ...</code></pre>
+<p>Melalui fungsi <code>str()</code> diketahui bahwa set data <code>kelurahan.jkt</code> bertipe ‘sf’ dan ‘data.frame’. Simple features atau sf adalah bentuk set data yang didalamnya berisi variabel geometri dua dimensi (titik, garis, poligon). Di dalam set data <code>kelurahan.jkt</code> diwakili oleh variabel ‘geometry’.</p>
+<p>Untuk memvisualisasikan peta, gunakan paket <code>ggplot</code> diikuti dengan fungsi <code>geom_sf()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Visualisasi peta dasar Jakarta</span>
+kelurahan.jkt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_sf</span>()</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-93-1.png" width="672" /></p>
+<p>Visualisasi peta dasar Jakarta yang dihasilkan dari kode di atas tidak terlalu bagus. Seperti yang Anda lihat, Kepulauan Seribu termasuk dalam wilayah Jakarta, sehingga visualisasi yang dihasilkan mencakup seluruh wilayah administratif sesuai variabel pada set data <code>kelurahan.jkt</code>. Agar visualisasi yang dihasilkan lebih estetis, maka wilayah Kepulauan Seribu akan dikeluarkan dari set data.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengeluarkan data observasi kecamatan KEPULAUAN SERIBU</span>
+<span class="co"># dan memvisualisasikan peta dengan ggplot dan fungsi geom_sf</span>
+kelurahan.jkt <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>nama_kecamatan <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;KEPULAUAN SERIBU UTARA&quot;</span>, <span class="st">&quot;KEPULAUAN SERIBU SELATAN&quot;</span>)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_sf</span>()</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-94-1.png" width="672" /></p>
+<p>Nah, hasilnya sudah lumayan bagus. Peta difokuskan pada wilayah Jakarta yang ada di pulau Jawa, tidak termasuk wilayah Kepulauan Seribu.</p>
+<p>Selanjutnya yang harus dilakukan adalah menggabungkan set data <code>kelurahan.jkt</code> dan <code>df.penduduk</code> sehingga visualisasi peta kepadatan penduduk Jakarta dapat ditampilkan.</p>
+<p>Syarat agar dua set data bisa digabung: ada satu variabel memiliki isi yang sama pada kedua set data. Pada contoh ini, variabel ‘jumlah’ pada set data <code>df.penduduk</code> akan digabungkan ke set data <code>kelurahan.jkt</code> melalui variabel kelurahan/nama_kelurahan.</p>
+<p>Jadi, harus dipastikan dulu penamaan variabel kelurahan/nama_kelurahan beserta isinya pada kedua set data harus sama.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Meringkas variabel kelurahan dan jumlah penduduk pada set data df.penduduk</span>
+<span class="co"># lalu menyimpannya di variabel jml.penduduk</span>
+jml.penduduk &lt;-<span class="st"> </span>
+<span class="st">  </span>df.penduduk <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">group_by</span>(kelurahan) <span class="op">%&gt;%</span>
+<span class="st">    </span><span class="kw">summarise</span>(<span class="dt">jumlah =</span> <span class="kw">sum</span>(jumlah))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengambil isi variabel nama_kelurahan pada set data keluahan.jkt</span>
+<span class="co"># dan menyimpannya di variabel kelurahan</span>
+kelurahan &lt;-<span class="st"> </span><span class="kw">sort</span>(<span class="kw">unique</span>(kelurahan.jkt<span class="op">$</span>nama_kelurahan))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menggabungkan set data jml.penduduk dan vektor kelurahan</span>
+<span class="co"># menggunakan fungsi data.frame</span>
+cek.kelurahan &lt;-<span class="st"> </span><span class="kw">data.frame</span>(jml.penduduk, <span class="dt">nama_kelurahan =</span> kelurahan)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menampilkan isi set data cek.kelurahan</span>
+<span class="kw">head</span>(cek.kelurahan)</code></pre></div>
+<pre><code>##      kelurahan jumlah nama_kelurahan
+## 1        ANCOL  28870          Ancol
+## 2        ANGKE  34663          Angke
+## 3 BALE KAMBANG  32083   Bale Kambang
+## 4  BALI MESTER  11290     Balimester
+## 5   BAMBU APUS  28952     Bambu Apus
+## 6       BANGKA  25245         Bangka</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengecek adakah perbedaan penamaan kelurahan dengan membuat</span>
+<span class="co"># kolom baru bernama cek_nama yang berisi data logikal menggunakan</span>
+<span class="co"># menggunakan fungsi mutate() dari paket dplyr pada set data cek.kelurahan</span>
+cek.kelurahan &lt;-<span class="st">  </span>
+<span class="st">  </span>cek.kelurahan <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">cek_nama =</span> <span class="kw">ifelse</span>(<span class="kw">tolower</span>(kelurahan) <span class="op">%in%</span><span class="st"> </span><span class="kw">tolower</span>(nama_kelurahan), <span class="st">&quot;TRUE&quot;</span>, <span class="st">&quot;FALSE&quot;</span>))</code></pre></div>
+<p>Operator <code>==</code> bersifat <em>case sensitive</em>, artinya perbedaan huruf besar/kecil juga menjadi faktor pengetesan logika.</p>
+<p>Contohnya: <code>ifelse(&quot;ANCOL&quot; == &quot;Ancol&quot;, &quot;TRUE&quot;, &quot;FALSE&quot;)</code> akan menghasilkan output <code>FALSE</code>.</p>
+<p>Fungsi <code>tolower()</code> yang diaplikasikan di variabel kelurahan dan nama_kelurahan membuat isi dari kedua variabel tersebut menjadi huruf kecil semua sehingga pengetesan logika menjadi lebih optimal.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengecek nama kelurahan yang berbeda dengan fungsi filter</span>
+cek.kelurahan <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">select</span>(kelurahan, cek_nama) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(cek_nama <span class="op">==</span><span class="st"> &quot;FALSE&quot;</span>)</code></pre></div>
+<pre><code>##                kelurahan cek_nama
+## 1            BALI MESTER    FALSE
+## 2  HALIM PERDANA KUSUMAH    FALSE
+## 3          HARAPAN MULIA    FALSE
+## 4              KALIDERES    FALSE
+## 5              KERENDANG    FALSE
+## 6       KOTA BAMBU UTARA    FALSE
+## 7             P. HARAPAN    FALSE
+## 8              P. KELAPA    FALSE
+## 9            P. PANGGANG    FALSE
+## 10               P. PARI    FALSE
+## 11             P. TIDUNG    FALSE
+## 12        P. UNTUNG JAWA    FALSE
+## 13            PAL MERIAM    FALSE
+## 14              PALMERAH    FALSE</code></pre>
+<p>Ternyata ada 14 nama kelurahan yang berbeda. Untuk memperbaiki tulisan nama kelurahan, harus dibandingkan dulu versi nama kelurahan dari kedua set data tersebut.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengecek nama kelurahan yang berbeda dengan fungsi filter</span>
+cek.kelurahan <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">select</span>(nama_kelurahan) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="st">&quot;mester|halim|harapan|deres|endang|bambu|</span>
+<span class="st">               |kelapa|panggang|pari|tidung|untung|meriam|merah&quot;</span>,    
+               nama_kelurahan, <span class="dt">ignore.case =</span> <span class="ot">TRUE</span>))</code></pre></div>
+<pre><code>##          nama_kelurahan
+## 1            Balimester
+## 2            Bambu Apus
+## 3  Halim Perdana Kusuma
+## 4         Harapan Mulya
+## 5            Kali Deres
+## 6          Kebon Kelapa
+## 7            Kelapa Dua
+## 8      Kelapa Dua Wetan
+## 9   Kelapa Gading Barat
+## 10  Kelapa Gading Timur
+## 11   Kota Bambu Selatan
+## 12      Kotabambu Utara
+## 13             Krendang
+## 14            Pal Merah
+## 15            Palmeriam
+## 16         Pondok Bambu
+## 17        Pondok Kelapa
+## 18        PULAU HARAPAN
+## 19         PULAU KELAPA
+## 20       PULAU PANGGANG
+## 21           PULAU PARI
+## 22         PULAU TIDUNG
+## 23    PULAU UNTUNG JAWA
+## 24         Sungai Bambu</code></pre>
+<p>Dari hasil di atas, terdapat 14 perbedaan penamaan kelurahan di antara dua set data sebagai berikut:</p>
+<ol style="list-style-type: decimal">
+<li>bali mester - balimester</li>
+<li>halim perdana kusumah - halim perdana kusuma</li>
+<li>harapan mulia - harapan mulya</li>
+<li>kalideres - kali deres</li>
+<li>kerendang - krendang</li>
+<li>kota bambu utara - kotabambu utara</li>
+<li><ol start="16" style="list-style-type: lower-alpha">
+<li>harapan - pulau harapan</li>
+</ol></li>
+<li><ol start="16" style="list-style-type: lower-alpha">
+<li>kelapa - pulau kelapa</li>
+</ol></li>
+<li><ol start="16" style="list-style-type: lower-alpha">
+<li>panggang - pulau panggang</li>
+</ol></li>
+<li><ol start="16" style="list-style-type: lower-alpha">
+<li>pari - pulau pari</li>
+</ol></li>
+<li><ol start="16" style="list-style-type: lower-alpha">
+<li>tidung - pulau tidung</li>
+</ol></li>
+<li><ol start="16" style="list-style-type: lower-alpha">
+<li>untung jawa - pulau untung jawa</li>
+</ol></li>
+<li>pal meriam - palmeriam</li>
+<li>palmerah - pal merah</li>
+</ol>
+<p>Selanjutnya, mengubah nama kelurahan di salah satu set data. Untuk contoh kali ini, nama kelurahan pada set data <code>jml.penduduk</code> akan diubah mengikuti penamaan kelurahan set data <code>kelurahan.jkt</code>.</p>
+<p>Setelah penamaan kelurahan sudah sama persis, penggabungan kedua set data ini bisa dilakukan.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Mengubah nama kelurahan menjadi huruf kecil semua pada set data</span>
+<span class="co"># jml.penduduk dan kelurahan.jkt untuk memudahkan manipulasi string</span>
+jml.penduduk<span class="op">$</span>kelurahan &lt;-<span class="st"> </span><span class="kw">as.factor</span>(<span class="kw">tolower</span>(jml.penduduk<span class="op">$</span>kelurahan))
+kelurahan.jkt<span class="op">$</span>nama_kelurahan &lt;-<span class="st"> </span><span class="kw">as.factor</span>(<span class="kw">tolower</span>(kelurahan.jkt<span class="op">$</span>nama_kelurahan))
+
+<span class="co"># Mengubah penamaan kelurahan pada set data jml.penduduk</span>
+<span class="co"># mengikuti peamaan kelurahan set data kelurahan.jkt</span>
+<span class="co"># menggunakan fungsi fct_recode</span>
+jml.penduduk &lt;-<span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(jml.penduduk, <span class="dt">kelurahan =</span> 
+           <span class="kw">fct_recode</span>(kelurahan,
+             <span class="st">&quot;balimester&quot;</span> =<span class="st"> &quot;bali mester&quot;</span>,
+             <span class="st">&quot;halim perdana kusuma&quot;</span> =<span class="st"> &quot;halim perdana kusumah&quot;</span>,
+             <span class="st">&quot;harapan mulya&quot;</span> =<span class="st"> &quot;harapan mulia&quot;</span>,
+             <span class="st">&quot;kali deres&quot;</span> =<span class="st"> &quot;kalideres&quot;</span>,
+             <span class="st">&quot;krendang&quot;</span> =<span class="st"> &quot;kerendang&quot;</span>,
+             <span class="st">&quot;kotabambu utara&quot;</span> =<span class="st"> &quot;kota bambu utara&quot;</span>,
+             <span class="st">&quot;pulau harapan&quot;</span> =<span class="st"> &quot;p. harapan&quot;</span>,
+             <span class="st">&quot;pulau kelapa&quot;</span> =<span class="st"> &quot;p. kelapa&quot;</span>,
+             <span class="st">&quot;pulau panggang&quot;</span> =<span class="st"> &quot;p. panggang&quot;</span>,
+             <span class="st">&quot;pulau pari&quot;</span> =<span class="st"> &quot;p. pari&quot;</span>,
+             <span class="st">&quot;pulau tidung&quot;</span> =<span class="st"> &quot;p. tidung&quot;</span>,
+             <span class="st">&quot;pulau untung jawa&quot;</span> =<span class="st"> &quot;p. untung jawa&quot;</span>,
+             <span class="st">&quot;palmeriam&quot;</span> =<span class="st"> &quot;pal meriam&quot;</span>,
+             <span class="st">&quot;pal merah&quot;</span> =<span class="st"> &quot;palmerah&quot;</span> 
+  ))</code></pre></div>
+<p>String di sebelah kiri <code>=</code> adalah nama baru, sedangkan di sebelah kanan <code>=</code> adalah nama lama.</p>
+<p>Fungsi <code>fct_recode()</code> pada dasarnya sama dengan fungsi <code>gsub()</code>. Perbedaannya, mengubah string dengan menggunakan <code>fct_recode()</code> dilakukan pada variabel faktor, sedangkan <code>gsub()</code> pada tipe variabel karakter.</p>
+<p>Jika <code>gsub()</code> digunakan untuk memanipulasi string pada tipe variabel faktor, maka ketika diaplikasikan variabel tersebut akan berubah menjadi tipe variabel karakter.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Menggabungkan set data jml.penduduk ke set data kelurahan.jkt</span>
+<span class="co"># menggunakan fungsi left_join dari paket dplyr</span>
+kelurahan.jkt &lt;-
+<span class="st">  </span><span class="kw">left_join</span>(kelurahan.jkt, jml.penduduk, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;nama_kelurahan&quot;</span> =<span class="st"> &quot;kelurahan&quot;</span>))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Memvisualisasikan peta jumlah penduduk Jakarta</span>
+kelurahan.jkt <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>nama_kecamatan <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;KEPULAUAN SERIBU UTARA&quot;</span>, <span class="st">&quot;KEPULAUAN SERIBU SELATAN&quot;</span>)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> jumlah), <span class="dt">color =</span> <span class="st">&quot;gray75&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_fill_viridis_c</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Jumlah Penduduk DKI Jakarta 2017&quot;</span>, 
+          <span class="dt">subtitle =</span> <span class="st">&quot;sumber set data: data.jakarta.go.id; referensi kode: datascience.or.id&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">panel.background =</span> <span class="kw">element_blank</span>()) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.title =</span> <span class="kw">element_blank</span>()) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text =</span> <span class="kw">element_blank</span>()) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.ticks =</span> <span class="kw">element_blank</span>()) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.title =</span> <span class="kw">element_blank</span>())</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-104-1.png" width="672" /></p>
+<p>Jika Anda ingin menampilkan salah satu kota di DKI Jakarta, tinggal menambahkan saringan set data untuk kota terkait. Contoh berikut menampilkan kota Jakarta Barat.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Memvisualisasikan peta jumlah penduduk Jakarta Barat</span>
+kelurahan.jkt <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>nama_kecamatan <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;KEPULAUAN SERIBU UTARA&quot;</span>, <span class="st">&quot;KEPULAUAN SERIBU SELATAN&quot;</span>) <span class="op">&amp;</span><span class="st"> </span>
+<span class="st">          </span>nama_kota <span class="op">==</span><span class="st"> &quot;Jakarta Barat&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> jumlah), <span class="dt">color =</span> <span class="st">&quot;gray75&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_fill_viridis_c</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Jumlah Penduduk Jakarta Barat 2017&quot;</span>,
+          <span class="dt">subtitle =</span> <span class="st">&quot;sumber set data: data.jakarta.go.id; referensi kode: datascience.or.id&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">panel.background =</span> <span class="kw">element_blank</span>()) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.title =</span> <span class="kw">element_blank</span>()) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text =</span> <span class="kw">element_blank</span>()) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.ticks =</span> <span class="kw">element_blank</span>()) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.title =</span> <span class="kw">element_blank</span>())</code></pre></div>
+<p><img src="ebook_files/figure-html/unnamed-chunk-105-1.png" width="672" /></p>
+</div>
+<div id="insight" class="section level2">
+<h2><span class="header-section-number">3.4</span> <em>Insight</em></h2>
+<p>Beberapa <em>insight</em> atau informasi yang bisa didapat dari hasil eksplorasi di atas antara lain sebagai berikut:</p>
+<ol style="list-style-type: decimal">
+<li>Jumlah penduduk terbanyak ada di kecamatan Cengkareng, sedangkan untuk kategori kota ada di Jakarta Timur.</li>
+<li>Jumlah penduduk paling sedikit terdapat di Kepulauan Seribu.</li>
+<li>DKI Jakarta dalam angka jumlah penduduk tahun 2017:
+<ul>
+<li>Total = 10.348.570.</li>
+<li>Kecamatan terbanyak, Cengkareng = 513.064.</li>
+<li>Kecamatan/kota tersedikit, Kepulauan Seribu = 27.591.</li>
+<li>Kota terbanyak, Jakarta Timur = 2.946.926.</li>
+</ul></li>
+</ol>
+</div>
+<div id="referensi" class="section level2">
+<h2><span class="header-section-number">3.5</span> Referensi</h2>
+<p>Berikut referensi yang bisa Anda jadikan panduan untuk lebih cepat menguasai R:</p>
+<ul>
+<li><p><a href="https://www.rstudio.com/resources/cheatsheets/"><em>Cheat Sheet</em> RStudio</a>. <em>Cheat Sheet</em> atau contekan yang dirangkum dalam 2-3 lembar ini membantu dan mempermudah Anda untuk menavigasi fungsi-fungsi yang diperlukan ketika proses eksplorasi data.</p></li>
+<li><p><a href="https://www.datacamp.com/courses/free-introduction-to-r">Kursus online gratis dari DataCamp</a>. Tidak hanya belajar teori dan perintah dasar pemrograman R, Anda juga akan disuguhi dan dilatih dengan banyak praktek penulisan kode. Setiap bagian akan ada instruksi juga kuis yang harus Anda jawab dengan menuliskan kode yang sesuai.</p></li>
+<li><p>Googling. Anda juga bisa mendapatkan referensi melalui Google dengan mengetikkan kata kunci secara spesifik terkait permasalahan tentang R yang Anda hadapi.</p></li>
+</ul>
+<p>Akhir kata, semoga buku yang ditulis secara amatir ini dapat membawa banyak manfaat bagi Anda.</p>
+<p>Terima kasih sudah membaca buku ini sampai akhir.</p>
+<p>dan..</p>
+<p><strong>SELAMAT BELAJAR</strong></p>
+<blockquote>
+<p>“Anyone who stops learning is old, whether at twenty or eighty. Anyone who keeps learning stays young.”</p>
+</blockquote>
+<blockquote>
+<p>―- <strong>Henry Ford</strong></p>
+</blockquote>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="kuasai-teknik-dasar-analisis-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

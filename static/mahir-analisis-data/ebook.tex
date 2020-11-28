@@ -1,0 +1,3563 @@
+\documentclass[openany]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={3 LANGKAH KILAT MAHIR ANALISIS DATA},
+            pdfauthor={Pribadi Pramudya - pripramudya.com},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{3 LANGKAH KILAT MAHIR ANALISIS DATA}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Pribadi Pramudya - pripramudya.com}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{2019-01-14}
+
+\usepackage{booktabs}
+\renewcommand{\contentsname}{Daftar Isi}
+\renewcommand{\chaptername}{Langkah Kilat}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter*{Pendahuluan}\label{pendahuluan}
+\addcontentsline{toc}{chapter}{Pendahuluan}
+
+\section*{Selamat Datang}\label{selamat-datang}
+\addcontentsline{toc}{section}{Selamat Datang}
+
+\begin{center}\includegraphics[width=0.75\linewidth]{images/ebook} \end{center}
+
+Terima kasih sudah bersedia menyempatkan sedikit waktu untuk mengunjungi
+website dan membaca buku ini.
+
+Berikut materi yang akan Anda dapatkan:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Kenapa Anda perlu menguasai} keterampilan analisis data
+\item
+  \textbf{Konsep dasar} analisis data yang tidak diketahui banyak orang
+\item
+  Satu \textbf{\emph{tool} pengolah data \emph{powerful}} yang perlu
+  Anda kuasai
+\item
+  \textbf{Teknik dasar} analisis data yang perlu Anda pelajari
+\item
+  \textbf{Panduan praktis dan rinci} cara menganalisis data dari nol
+  sama sekali
+\end{itemize}
+
+Versi pdf buku elektronik pendek 3 Langkah Kilat Mahir Analisis Data
+bisa diunduh dengan mendaftarkan email Anda terlebih dulu di
+\url{https://pripramudya.com}.
+
+Buku dan website ini tersedia secara bebas, di bawah
+\href{https://creativecommons.org/licenses/by/4.0/deed.id}{Lisensi CC BY
+4.0}.
+
+Anda diperbolehkan:
+
+\textbf{Berbagi} --- menyalin dan menyebarluaskan kembali materi ini
+dalam bentuk atau format apapun;
+
+\textbf{Adaptasi} --- menggubah, mengubah, dan membuat turunan dari
+materi ini untuk kepentingan apapun, termasuk kepentingan komersial.
+
+Dengan \textbf{mencantumkan sumber tautan} asli dari konten terkait.
+
+\section*{Kenapa Anda Perlu Menguasai Keterampilan Analisis
+Data}\label{kenapa-anda-perlu-menguasai-keterampilan-analisis-data}
+\addcontentsline{toc}{section}{Kenapa Anda Perlu Menguasai Keterampilan
+Analisis Data}
+
+Data ada di mana-mana.
+
+Hampir setiap hari Anda berhadapan dengan data, apapun profesi Anda.
+
+Apalagi di zaman \emph{now}, data berkembang begitu pesat dalam hal
+jumlah \emph{(volume)}, variasi \emph{(variety)}, dan kecepatan
+\emph{(velocity)}.
+
+Ya, sekarang kita berada di era \textbf{big data}.
+
+Begitu melimpah ruahnya, sehingga tidak banyak orang yang memiliki
+keterampilan mumpuni untuk mengambil \emph{insight} (wawasan baru) dari
+banyaknya data tersebut.
+
+Tidak perlu jauh mencari sumber data dari luar, data yang tersedia di
+dalam bidang keprofesian Anda pun sepertinya masih belum dapat digali
+dengan optimal.
+
+Di tempat kerja saya, pegawai yang menguasai keterampilan analisis data
+memiliki peluang lebih baik dalam menanjak karir. Apalagi jika hasil
+analisis data ini digunakan sebagai bahan presentasi oleh kepala divisi.
+Karirnya meroket.
+
+Ini salah satu contoh nyata. Manajemen begitu membutuhkan \emph{insight}
+yang dapat memberikan suatu perubahan lebih baik dalam mengelola roda
+aktivitas perusahaan sehingga berujung pada peningkatan profitabilitas
+perusahaan. Manajemen tingkat atas pasti tidak akan ragu memberikan
+promosi bagi pegawai yang memberikan \emph{insight} tersebut. Peluang
+\emph{(opportunity)} penanjakan karir pegawai yang memiliki keterampilan
+analisis yang mumpuni lebih baik dari pegawai yang memiliki keterampilan
+ala kadarnya saja.
+
+Saya akan meringkas bab ini cukup dengan dua kata saja:
+
+\emph{\textbf{INSIGHT \& OPPORTUNITY}}
+
+Ingin mendapatkan \emph{insight} yang dapat menjawab permasalahan di
+bidang keprofesian Anda dan membuka \emph{opportunity} karir terbaik
+Anda?
+
+\textbf{Kuasai keterampilan analisis data.}
+
+\section*{Konsep Dasar Analisis Data}\label{konsep-dasar-analisis-data}
+\addcontentsline{toc}{section}{Konsep Dasar Analisis Data}
+
+``Saya sudah tahu apa itu analisis data, tidak perlu dijelaskan lagi.''
+
+Mungkin hal tersebut yang ada di benak Anda ketika membaca judul di bab
+ini.
+
+Memang, membaca teori tidaklah begitu menarik. Anda ingin langsung
+meloncat ke bab langkah kilat.
+
+Silakan saja. Gunakan menu di daftar isi lalu klik ke bab yang ingin
+Anda baca.
+
+Namun, tetap saya sarankan untuk membaca bab ini sampai akhir.
+
+Anda perlu tahu konsep dasar analisis data agar memudahkan Anda agar
+bisa cepat menguasai keterampilan ini.
+
+\section*{Apa itu Analisis Data}\label{apa-itu-analisis-data}
+\addcontentsline{toc}{section}{Apa itu Analisis Data}
+
+Jadi, apa sebenarnya analisis data itu?
+
+Analisis data adalah proses mengetahui, memahami, memilah, memecah,
+merinci, mengurai data dengan berbagai cara atau teknik tertentu seperti
+manipulasi, visualisasi, pengelompokkan, perbandingan, atau teknik
+lainnya sehingga didapatkan informasi berguna yang dapat menjawab
+permasalahan serta membantu dalam pengambilan keputusan.
+
+Ya, \textbf{tujuan dari analisis data adalah pengambilan keputusan yang
+lebih baik}. Keputusan yang didasarkan pada informasi hasil analisis
+data bukan berdasarkan naluri semata. Keputusan luar biasa krusialnya
+yang bisa saja membuat sebuah perusahaan sebelumnya berkibar berujung
+menjadi gulung tikar ataupun sebaliknya.
+
+Ini membuat analisis data menjadi salah satu keterampilan yang sangat
+penting penerapannya di hampir seluruh bidang.
+
+Beberapa contoh penerapan dalam bidang bisnis sebagai berikut:
+
+\textbf{Perkenalan produk kopi terbaru Starbucks}
+
+Starbucks memperkenalkan produk kopi terbaru dengan memperhatikan apakah
+pelanggan menyukai produk baru tersebut. Pada pagi hari produk tersebut
+mulai dijual, Starbucks memantau berbagai blog, Twitter, forum diskusi
+dan grup tentang kopi untuk mengetahui bagaimana reaksi pelanggan. Siang
+harinya, Starbucks menemukan bahwa walaupun pelanggan menyukai rasa
+kopinya, namun mereka berpikir harganya terlalu mahal. Starbucks
+langsung menurunkan harga. Pada sore harinya, semua persepsi negatif
+terkait produk kopi baru tersebut hilang.
+
+Pendekatan dengan respons cepat seperti ini tentu lebih baik
+dibandingkan pendekatan tradisional dengan menunggu laporan penjualan
+harian masuk lebih dulu yang pada akhirnya ditemukan bahwa penjualannya
+mengecewakan. Langkah \emph{jadul} berikutnya mencari tahu alasan kenapa
+penjualan mengecewakan dengan melakukan diskusi grup terpusat
+\emph{(focus group discussion)}. Selanjutnya, beberapa minggu kemudian
+Starbucks baru menemukan bahwa harganya terlalu mahal lalu menurunkan
+harganya.
+
+\textbf{Sistem rekomendasi Amazon}
+
+Amazon menggunakan data penjualan, data produk yang sering dilihat, dan
+perilaku serta preferensi pelanggan lainnya untuk membuat sebuah sistem
+rekomendasi. Sistem ini membantu Amazon meningkatkan 29\% penjualannya.
+Jika Anda mengunjungi situs Amazon, di bagian bawah Anda akan melihat
+beberapa produk rekomendasi, produk yang Anda lihat sebelumnya, sampai
+dengan produk terlaris serta tawaran produk menarik lainnya.
+
+\textbf{Efisiensi Chevron dalam aktivitas pengeboran}
+
+Biaya setiap pengeboran di selat Meksiko diperkirakan sampai dengan
+\$100 juta. Rugi sekali jika hasil pengeboran tersebut tidak didapat
+sumber minyak bumi. Untuk meningkatkan peluang keberhasilan menemukan
+sumber minyak, Chevron menganalisis 50 terabyte data seismik. Dengan
+dukungan kecanggihan komputer, kapasitas penyimpanan, serta tim analis
+yang mumpuni berhasil meningkatkan keberhasilan menemukan sumber minyak
+dari yang sebelumnya 1 dari 5 pengeboran menjadi 1 berbanding 3.
+
+\section*{Proses dan Tahapan Analisis
+Data}\label{proses-dan-tahapan-analisis-data}
+\addcontentsline{toc}{section}{Proses dan Tahapan Analisis Data}
+
+Untuk menghasilkan informasi dan \emph{insight} yang dapat memberikan
+keputusan lebih baik, Anda harus tahu proses dan tahapan dari analisis
+data. Tahapan analisis data terdiri dari 6 tahapan.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Menentukan Tujuan
+\item
+  Menentukan Metode Pengukuran yang Digunakan
+\item
+  Pengumpulan Data
+\item
+  Pembersihan dan Pembentukan Data
+\item
+  Analisis Data
+\item
+  Interpretasi dan Komunikasi Hasil Analisis Data
+\end{enumerate}
+
+\subsection*{1. Menentukan Tujuan}\label{menentukan-tujuan}
+\addcontentsline{toc}{subsection}{1. Menentukan Tujuan}
+
+Ini adalah tahap pertama dari proses analisis data. Di bidang
+keprofesian Anda, Anda harus menentukan tujuan dari permasalahan yang
+akan diselesaikan dimulai dengan pertanyaan yang tepat. Tahap ini cukup
+vital mengingat pertanyaan yang salah akan menghasilkan informasi atau
+\emph{insight} yang tidak tepat pula.
+
+``Kenapa total penjualan bulan ini turun dibandingkan bulan lalu?''
+
+``Kenapa 7 dari 10 proyek yang sedang berjalan saat ini terlambat?''
+
+``Bagaimana cara mencegah pelanggan kita pindah ke kompetitor?''
+
+Itu adalah contoh permasalahan yang akan disolusikan.
+
+Dengan menentukan pertanyaan yang tepat, Anda bisa lebih fokus dalam
+mencapai tujuan serta lebih efektif untuk menyelesaikan permasalahan
+yang ada.
+
+Sumber data yang akan digunakan nantinya juga tergantung dari penentuan
+tujuan dan pertanyaan tepat dari tahap ini.
+
+\subsection*{2. Menentukan Metode Pengukuran yang
+Digunakan}\label{menentukan-metode-pengukuran-yang-digunakan}
+\addcontentsline{toc}{subsection}{2. Menentukan Metode Pengukuran yang
+Digunakan}
+
+Anda sudah meneentukan tujuan di tahap pertama, selanjutnya adalah apa
+yang perlu dijadikan tolak ukur dan bagaimana cara Anda mengukurnya.
+
+Misalnya Anda mengambil contoh:
+
+``Kenapa total penjualan bulan ini turun dibandingkan bulan lalu?''
+
+Dari permasalahan ini, Anda bisa tentukan bahwa yang harus diukur adalah
+\textbf{penjualan}. Lalu, Anda tentukan lagi metrik dari penjualan,
+\textbf{jumlah barang} atau \textbf{jumlah uang} atau keduanya.
+
+\begin{itemize}
+\tightlist
+\item
+  Metrik jumlah barang: buah, lusin, kodi, dus, porsi, dan lainnya.
+\item
+  Metrik jumlah uang: ratusan ribu rupiah, jutaan rupiah, ribuan dollar,
+  dan lainnya.
+\end{itemize}
+
+Pengukuran juga bisa dibandingkan berdasarkan periodenya. Terhadap bulan
+sebelumnya atau terhadap tahun sebelumnya di bulan yang sama.
+
+Selain itu, Anda pikirkan juga kira-kira faktor penyebab permasalahan
+yang bisa dijadikan sebagai tambahan pengukuran. Contoh di bidang
+penjualan, faktor seperti jumlah pembeli, promosi, diskon, lokasi,
+harga, bisa dimasukkan sebagai tambahan metode pengukuran.
+
+Pastikan pengukuran ini dilakukan secara tepat karena nantinya akan
+berpengaruh terhadap kualitas hasil analisis dan pengambilan keputusan.
+
+\subsection*{3. Pengumpulan Data}\label{pengumpulan-data}
+\addcontentsline{toc}{subsection}{3. Pengumpulan Data}
+
+Anda sudah menentukan tujuan dan juga metode pengukuran di tahapan
+sebelumnya. Selanjutnya adalah mencari dan mengumpulkan data yang
+relevan. Sumber data bisa dari mana saja. Internet, basis data internal,
+survey, wawancara, dan lainnya.
+
+Contoh permasalahan penjualan di tahapan sebelumnya. Data penjualan,
+promosi, jumlah pelanggan, bisa didapat dari internal. Untuk survey
+kepuasan pelanggan bisa dilakukan dengan metode pengisian kuesioner
+ataupun dengan wawancara langsung.
+
+Yang perlu diingat adalah Anda harus mengumpulkan berbagai macam data
+tersebut secara terstruktur sehingga bisa langsung dapat diolah.
+
+\subsection*{4. Pembersihan dan Pembentukan
+Data}\label{pembersihan-dan-pembentukan-data}
+\addcontentsline{toc}{subsection}{4. Pembersihan dan Pembentukan Data}
+
+Dari seluruh tahapan proses analisis data, tahap ini adalah tahap yang
+paling banyak menyita waktu Anda. Ketika Anda membuka data yang Anda
+kumpulkan di tahap 3, Anda menemukan struktur data yang tidak siap olah.
+Berantakan. Duplikasi, salah ketik, karakter spesial, huruf
+kapital-kecil, data kosong atau NA, format tanggal/waktu tidak sama, dan
+lainnya merupakan beberapa hal yang sering ditemui pada sebuah basis
+data.
+
+Untuk mempermudah pembersihan dan pembentukan data ini Anda bisa
+menggunakan \emph{tools} sejuta umat, Microsoft Excel. Anda juga bisa
+menggunakan software pengolah data lain yang Anda kuasai, misalnya SPSS,
+SAS, STATA, Python, R atau lainnya.
+
+Jangan terlalu menganggap remeh tahapan ini. Buat dan bentuk data sebaik
+mungkin sehingga data bisa langsung dianalisis. Jika data tidak bersih,
+semahir apapun Anda dalam menganalisis data, hasilnya tidak akan
+optimal. Ingat, jika masukannya sampah, keluarannya juga sampah.
+
+\subsection*{5. Analisis Data}\label{analisis-data}
+\addcontentsline{toc}{subsection}{5. Analisis Data}
+
+Setelah data dibersihkan dan dibentuk, tahapan penting berikutnya adalah
+tahap analisis data. Tujuan dari tahapan ini adalah untuk mengerti lebih
+dalam tentang data beserta variabel-variabelnya. Ada beberapa teknik
+dasar analisis data yang dapat Anda gunakan.
+
+\begin{itemize}
+\tightlist
+\item
+  Teknik Eksplorasi
+\item
+  Teknik Visualisasi
+\end{itemize}
+
+\textbf{Teknik Eksplorasi}
+
+Sesuai dengan namanya, teknik menjelajah untuk mengerti tentang data.
+Anda memulainya dengan mencari tahu berapa jumlah baris dan kolom dari
+basis data, lalu melihat jenis variabelnya: karakter, numerik, atau
+kategorikal. Dilanjut dengan meringkas data tersebut sehingga dapat
+menampilkan informasi penting seperti variabel atau kategori dengan
+frekuensi terbanyak, nilai tertinggi, rerata, dan informasi lainnya.
+
+Intinya Anda menggunakan fungsi-fungsi dari \emph{tools} analisis untuk
+mengerti tentang data. Terkadang Anda perlu kembali melakukan proses di
+tahapan sebelumnya, yakni pembersihan data lalu balik lagi ke tahap ini.
+Ya, tahap 4 dan 5 merupakan proses yang iteratif. Hal ini dilakukan agar
+Anda bisa lebih cepat mengerti tentang informasi yang tersimpan dalam
+data.
+
+\textbf{Teknik Visualisasi}
+
+\begin{quote}
+``Sebuah gambar bernilai ribuan kata.''
+\end{quote}
+
+Salah satu pepatah bahasa inggris ini benar adanya. Anda lebih cepat
+mengerti data dengan mereprentasikannya dalam bentuk grafik seperti
+diagram batang, diagram garis, diagram tebar, histogram, serta info
+grafik lainnya. Teknik visualisasi merupakan teknik termudah, tercepat,
+dan terefektif dalam menampilkan informasi tentang data.
+
+Selain itu, hasil dari teknik visualisasi ini bisa digunakan sebagai
+alat bantu dalam mengkomunikasikan informasi dan insight.
+
+Jika ada satu teknik analisis data yang saya rekomendasikan untuk
+dikuasai pertama kali, maka teknik visualisasi inilah yang perlu Anda
+pelajari secepatnya.
+
+\subsection*{6. Interpretasi dan Komunikasi Hasil Analisis
+Data}\label{interpretasi-dan-komunikasi-hasil-analisis-data}
+\addcontentsline{toc}{subsection}{6. Interpretasi dan Komunikasi Hasil
+Analisis Data}
+
+Hasil analisis yang sudah Anda selesaikan harus diinterpretasikan.
+Maksud dari interpretasi ini adalah mengubah hasil analisis yang masih
+dalam bentuk teknikal menjadi temuan, informasi, ataupun \emph{insight}
+yang bisa dimengerti oleh orang awam sekalipun.
+
+Selanjutnya, apakah hasil interpretasi ini sudah menjawab pertanyaan
+permasalahan di proses tahap 1.
+
+Buat kesimpulan, akan lebih baik lagi jika disertai rekomendasi dan
+langkah-langkah yang diperlukan untuk menyelesaikan permasalahan yang
+ada.
+
+Sebaik apapun Anda dalam menganalisis data itu semua akan percuma jika
+Anda tidak mengkomunikasikan rekomendasi, informasi, dan insight ke
+atasan, manajemen, klien, pelanggan, masyarakat, ataupun
+\emph{stakeholder} Anda. Bukan berarti teknik analisis data tidak
+penting sama sekali, namun dengan interpretasi dan mengkomunikasikan
+hasil analisis maka dampak efektivitas dalam mensolusikan permasalahan
+akan lebih terasa.
+
+Media dalam mengkomunikasikan pun terdapat banyak alternatif. Anda bisa
+membuat hasil analisis data dalam bentuk infografik (file gambar),
+tulisan dalam format pdf, slide presentasi, \emph{spreadsheet},
+dahsboard, sampai dengan artikel di blog.
+
+Dengan mengkomunikasikan hasil analisis data, maka pintu
+\emph{opportunites} terbuka lebih lebar, mengundang karir terbaik Anda.
+
+\section*{3 Langkah Kilat Mahir Analisis
+Data}\label{langkah-kilat-mahir-analisis-data}
+\addcontentsline{toc}{section}{3 Langkah Kilat Mahir Analisis Data}
+
+Anda sudah mengetahui tentang konsep dasar data analisis yang menjadi
+landasan dan pondasi Anda dalam mempelajari keterampilan analisis data
+pada bab sebelumnya. Konsep tersebut merupakan hal yang penting agar
+Anda dapat cepat mahir dan menguasai keterampilan analisis data.
+
+Di bab selanjutnya akan dibahas bagaimana mempelajari dan
+mengaplikasikan teknik analisis data. Anda akan dipandu secara rinci
+bagaimana agar Anda dapat dengan cepat menguasai keterampilan analisis
+data dengan 3 langkah kilat berikut.
+
+\chapter{\texorpdfstring{Instal dan Pelajari Satu \emph{Tool} Analisis
+Data yang \emph{Powerful}
+ini}{Instal dan Pelajari Satu Tool Analisis Data yang Powerful ini}}\label{instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini}
+
+Salah satu yang mempengaruhi proses dan kualitas hasil analisis adalah
+dari \emph{tool} yang dipakai. \emph{Tool} atau perangkat lunak ini
+memudahkan Anda sebagai analis untuk melakukan proses analisis data
+secara efektif dan efisien. Selain itu, jika Anda menguasai dan mahir
+salah satu \emph{tool} analisis data maka peluang dalam membuka karir
+terbaik Anda akan lebih tinggi. Begitu pentingnya pemilihan \emph{tool}
+ini, sehingga saya akan merekomendasikan terlebih dahulu beberapa
+alternatif \emph{tool} analisis data yang dipakai banyak orang.
+
+\section{\texorpdfstring{\emph{Tool} atau Perangkat Lunak Analisis Data
+Populer yang Banyak Orang
+Pakai}{Tool atau Perangkat Lunak Analisis Data Populer yang Banyak Orang Pakai}}\label{tool-atau-perangkat-lunak-analisis-data-populer-yang-banyak-orang-pakai}
+
+Ada 3 \emph{tool} yang akan dibahas di bagian ini:
+
+\begin{itemize}
+\tightlist
+\item
+  Microsoft Excel
+\item
+  Python
+\item
+  R
+\end{itemize}
+
+\subsection{Microsoft Excel}\label{microsoft-excel}
+
+\emph{Software} nomor satu yang paling banyak dipakai orang di dunia.
+
+Microsoft pertama kali membuat dan memasarkan sebuah \emph{spreadsheet
+program} bernama Multiplan di tahun 1982 yang sangat populer di CP/M
+sistem (sistem operasi mikrokontroler), namun kalah bersaing dengan
+Lotus 1-2-3 di MS-DOS. Hal ini membuat Microsoft mengembangkan versi
+terbaru dari \emph{spreadsheet program} bernama Excel yang dimaksudkan
+untuk menyaingi seluruh fitur Lotus 1-2-3 dan membuatnya lebih baik.
+
+Versi pertama Excel dipasarkan untuk Mac di tahun 1985 dan pada Nopember
+1987 untuk Windows. Di tahun 1988, Excel berhasil memimpin pangsa pasar
+\emph{spreadsheet program} menyingkirkan Lotus 1-2-3 dan menjadi
+\emph{software} yang paling banyak dipakai di seluruh dunia.
+
+Yang pasti Anda sudah familiar dan mahir menggunakan \emph{sofware} ini.
+Jika Anda sedang mencari pekerjaan kantoran, maka keterampilan dasar
+yang dijadikan sebagai syarat di sebagian besar perusahaan adalah bisa
+menggunakan \emph{sofware} Excel. Saking mudahnya mengoperasikan Excel,
+pengguna pemula tidak perlu belajar khusus untuk menguasainya. Tidak
+perlu tahu tentang \emph{programming}. Cukup bermodalkan \emph{point,
+click,} dan \emph{drag}, Anda sudah bisa melakukan analisis data dengan
+\emph{software} ini.
+
+\subsection{Python}\label{python}
+
+Python adalah salah satu bahasa pemrograman untuk membuat berbagai macam
+aplikasi \emph{(general purpose programming)}. Dibuat oleh Guido van
+Rossum dan pertama kali dirilis pada tahun 1991, Python menjadi salah
+satu bahasa pemrograman yang banyak digunakan di dunia. Kemudahan
+\emph{syntax}, lisensi \emph{open source}, serta dukungan komunitas
+merupakan beberapa faktor yang membuat popularitas Python melesat di
+beberapa tahun belakangan ini.
+
+Python juga menjadi salah satu \emph{tool} yang sering digunakan untuk
+analisis data. Dukungan dari banyaknya paket membuat Python sangat
+fleksibel. Ada NumPy dan Pandas untuk manipulasi data, SciPy untuk
+perhitungan \emph{science}, Matplotlib untuk data visualisasi, serta
+paket-paket lainnya.
+
+IDE \emph{(Integrated Development Environment)} Python juga ada banyak
+pilihan. Mulai dari Spyder, Jupyter Notebook, Atom, PyCharm, dan Rodeo.
+Banyaknya pilihan dan fleksibilitas serta kemudahan dalam programming
+membuat Python menjadi \emph{tool} nomor satu untuk data analisis saat
+ini.
+
+\subsection{R}\label{r}
+
+R adalah perangkat lunak gratis untuk komputasi dan analisis data
+statistik yang juga dapat menampilkan visualisasi grafik. R didukung
+oleh ribuan \emph{packages} yang dibuat oleh banyak kontributor aktif
+sehingga memudahkan pengguna dalam pengembangan aplikasi.
+
+R pertama kali dibuat oleh Ross Ihaka and Robert Gentleman di University
+of Auckland, New Zealand pada tahun 1992. Saat ini dikembangkan oleh R
+Development Core Team. Dinamakan R diambil dari abjad pertama kedua
+pembuat program ini. Versi pertama dirilis pada tahun 1995 dan versi
+beta yang stabil pada tahun 2000.
+
+Seperti halnya Python, bahasa pemrograman memiliki lisensi \emph{open
+source}, dan dapat diinstal di seluruh sistem operasi: Windows, Linux,
+ataupun Mac. Komunitasnya pun banyak ditemukan di website seperti
+Stackoverflow ataupun di Github.
+
+Terkait popularitas, R masih kalah dibandingkan dengan Python. R nomor
+dua dalam hal \emph{tool} analisis data paling banyak digunakan dan
+paling populer setelah Python.
+
+Anda masih ingat judul bab ini? Tentang \emph{tool} analisis data
+\emph{powerful}.
+
+Ya, \textbf{R adalah \emph{tool} analisis data \emph{powerful} yang
+perlu Anda pelajari dan kuasai.}
+
+\section{Kenapa harus R}\label{kenapa-harus-r}
+
+Anda saat ini pasti bertanya-tanya kenapa harus belajar R? Kenapa tidak
+Excel saja atau Python?
+
+Yang pertama, kenapa tidak Excel saja? Karena Anda pasti sudah cukup
+mahir menggunakannya. Apakah hanya Anda yang mahir Excel? Tentu saja,
+tidak hanya Anda yang mahir, tetapi juga banyak orang. Menurut saya,
+orang yang minimal berpendidikan SMA pasti mengenal Excel.
+
+Jika Anda dalam posisi bersaing untuk mendapatkan karir yang lebih baik
+di suatu perusahaan atau mencari pekerjaan baru di perusahaan lain, maka
+Anda perlu memiliki \emph{skill} yang berbeda dibandingkan kebanyakan
+orang.
+
+\textbf{R atau Python dapat memberikan perbedaan itu.}
+
+Yang kedua, kenapa tidak Python?
+
+\emph{Karena saya belum pernah pakai Python, he he :D}
+
+Pada saat saya bertekad untuk belajar analisis data, saya memilih R
+sebagai \emph{tool} utama. Python dan R sama-sama powerful, tinggal
+preferensi masing-masing saja. Jika Anda memiliki latar belakang
+\emph{software developer}, mungkin Anda lebih cocok dengan Python,
+begitu pun sebaliknya. Saya memilih R karena saya bukan \emph{software
+developer}. R sangat membantu meningkatkan produktifitas dalam
+menganalisis data di tempat kerja saya. R mungkin cocok buat Anda yang
+tidak memiliki latar belakang di bidang komputer atau \emph{software}.
+
+Setidaknya ada 3 alasan kenapa Anda harus mencoba belajar R:
+
+\subsection{Dukungan Paket R}\label{dukungan-paket-r}
+
+Jumlah paket R yang bisa didownload sampai dengan sekarang ini sebanyak
+13.409 di \href{https://cran.r-project.org/}{CRAN} (Comprehensive R
+Archive Network), \emph{repository} R. Paket tersedia sebanyak ini belum
+termasuk ribuan lainnya yang ada di GitHub, juga paket komersial yang
+dikembangkan oleh vendor besar seperti Microsoft dan Oracle.
+
+Kenapa bisa begitu banyak paket?
+
+\begin{itemize}
+\item
+  R memiliki banyak komunitas pengembang sangat aktif yang berkontribusi
+  dalam membuat paket-paket baru ke CRAN setiap hari. Hal ini membuat
+  hampir segala analisis yang ingin Anda lakukan sudah tersedia dalam
+  bentuk paket di CRAN.
+\item
+  R dibuat sejak tahun 1992, yang berarti sampai dengan saat ini sudah
+  berusia lebih dari 20 tahun. Selama itu pula, berbagai macam paket
+  terus dikembangkan sehingga R menjadi salah satu \emph{tool} analisis
+  data yang memiliki banyak pilihan paket dibandingkan \emph{tool}
+  analisis data lainnya.
+\item
+  R banyak digunakan sebagai \emph{tool} utama untuk penelitan
+  statistik. Ketika metode baru dikembangkan, hasil penelitian tersebut
+  tidak hanya dipublikasikan dalam bentuk makalah atau jurnal tetapi
+  juga dalam bentuk paket. Ini membuat R selalu terdepan dalam
+  mengadopsi metodologi terbaru.
+\item
+  R didesain sebagai bahasa antar muka bahasa pemrograman lainnya.
+  Banyak paket berfungsi sebagai pendukung perangkat lunak \emph{open
+  source} lainnya sehingga membuat R menjadi \emph{tool} yang
+  mempermudah kolaborasi berbagai macam metode dan algoritma
+  pemrograman.
+\item
+  Sistem CRAN merupakan platform yang sangat efektif dalam proses
+  kolaborasi pengembangan paket R. Dengan sistem yang sudah teratur,
+  pengguna bisa dengan mudah membuat, mengembangkan, mengetes, dan
+  mendistribusikan paket.
+\end{itemize}
+
+\subsection{Belajar Analisis Data lebih mudah menggunakan
+R}\label{belajar-analisis-data-lebih-mudah-menggunakan-r}
+
+R menyediakan paket pembelajaran yang dinamakan
+\href{https://swirlstats.com/}{swirl}. Swirl mengajarkan Anda
+pemgrograman R dan analisis data secara interaktif langsung di dalam
+aplikasi R sesuai kecepatan pemahaman Anda.
+
+Selain adanya paket belajar mandiri di swirl, R juga memiliki syntax
+atau perintah yang lebih simpel dan lebih mudah diingat sehingga dapat
+mempercepat proses pembelajaran Anda. Hal ini juga membuat Anda akan
+lebih mudah mengerti script pemrograman yang ditulis oleh orang lain
+tanpa perlu membaca komentar programnya.
+
+Ditambah dengan paket-paket yang mempermudah Anda dalam melakukan
+analisis data seperti dplyr (untuk manipulasi data), ggplot
+(visualisasi), dan lainnya. Paket tersebut dibuat sedemikian rupa
+sehingga Anda dibantu untuk mengerti proses dan teknik, bukan syntax
+sehingga Anda akan lebih diarahkan pada pembelajaran konsep.
+
+\subsection{Fleksibilitas R}\label{fleksibilitas-r}
+
+\href{https://www.rstudio.com/}{RStudio} adalah salah satu IDE
+(Integrated Development Environment) pemrograman R yang sangat populer.
+Dengan RStudio, membuat dan mengembangkan aplikasi R menjadi lebih mudah
+dibandingkan menggunakan konsol original R.
+
+RStudio sangat powerful dan membuat R menjadi sangat fleksibel. Anda
+bisa melakukan banyak hal melalui RStudio. Mulai dari membuat
+pemrograman script, grafik, laporan dalam bentuk pdf, ppt, excel, bahkan
+ebook, sampai dengan administrasi blog.
+
+Ya, ebook ini dan situs \url{pripramudya.com} dibuat menggunakan
+RStudio.
+
+Begitulah cerita tentang R. Jika Anda yakin untuk mulai belajar R,
+jangan ragu lagi untuk melakukan langkah kecil berikutnya.
+
+\section{Instal R dan RStudio}\label{instal-r-dan-rstudio}
+
+Pilihlah paket instalasi sesuai sistem operasi yang Anda pakai. Untuk
+RStudio, pilih yang versi desktop.
+
+\begin{itemize}
+\tightlist
+\item
+  R dapat diunduh di \href{https://repo.bppt.go.id/cran/}{sini}.
+\item
+  RStudio dapat diunduh di
+  \href{https://www.rstudio.com/products/rstudio/download/}{sini}.
+\end{itemize}
+
+Buka software RStudio.
+
+Layout RStudio terdiri dari bagian Script, Console, Variable, dan
+Output.
+
+\includegraphics[width=1\linewidth]{images/Rstudio_Layout}
+
+\section{Instal Paket R}\label{instal-paket-r}
+
+Paket adalah komponen penting yang memungkinkan pengguna untuk
+menggunakan program siap pakai tanpa harus membuatnya dari awal. Ada
+banyak ribuan paket di CRAN, tapi untuk saat ini, saya sarankan untuk
+instal cukup satu paket analisis data yang paling powerful, yakni
+\textbf{tidyverse}.
+
+Anda dapat menginstalnya cukup dengan mengetik di CONSOLE menggunakan
+perintah:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Cukup instal paket tidyverse ini, Anda sudah bisa mulai belajar analisis
+data menggunakan R.
+
+\section{\texorpdfstring{\emph{Syntax} dan Operasi Dasar
+R}{Syntax dan Operasi Dasar R}}\label{syntax-dan-operasi-dasar-r}
+
+Di bagian ini, Anda akan diarahkan untuk mengenal \emph{syntax} serta
+operasi dasar dari pemrograman R. Apa itu \emph{syntax}?
+
+\emph{Syntax} adalah aturan menulis kata perintah di CONSOLE agar dapat
+dimengerti dengan benar oleh bahasa pemrograman R. Aturan \emph{syntax}
+ini secara mutlak harus dipenuhi. Jika ada kesalahan penulisan
+\emph{syntax}, maka akan ada umpan balik berupa pesan eror yang diterima
+oleh pengguna.
+
+Jadi, bagian ini penting untuk Anda ketahui. Tutorial \emph{syntax} dan
+operasi dasar ini harus Anda ketik di CONSOLE RStudio.
+
+\hypertarget{kalkulator-interaktif}{\subsection{Kalkulator
+Interaktif}\label{kalkulator-interaktif}}
+
+R bisa digunakan sebagai kalkulator. Ketik \texttt{2\ +\ 5} di CONSOLE
+dan tekan Enter. Anda akan mendapat umpan balik berupa hasil perhitungan
+yang telah Anda input sebelumnya.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2} \OperatorTok{+}\StringTok{ }\DecValTok{5}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 7
+\end{verbatim}
+
+Anda juga bisa menggunakan operator aritmatika lainnya seperti
+\texttt{*} untuk perkalian, \texttt{-} untuk pengurangan, \texttt{/}
+untuk bagi, ataupun \texttt{\^{}} untuk kuadrat.
+
+\subsection{Variabel}\label{variabel}
+
+Jika Anda ingin melakukan perhitungan kedua menggunakan hasil di atas,
+maka Anda dapat menyimpannya dalam bentuk variabel. Dengan variabel,
+Anda tidak perlu ketik ulang \texttt{2\ +\ 5} setiap kali Anda
+memerlukannya.
+
+Untuk membuat variabel baru, gunakan operator \texttt{panah\ ke\ kiri},
+seperti ini: \texttt{\textless{}-}. Operator variabel ini merupakan
+gabungan karakter `kurang dari' yang diikuti karakter `minus'.
+
+Kenapa \texttt{panah\ ke\ kiri}? Operator ini merupakan simbol yang Anda
+gunakan seolah Anda memasukkan nilai yang ada di sebelah kanan panah ke
+variabel yang ada di sebelah kiri panah.
+
+Contohnya, Anda akan menyimpan hasil dari \texttt{2\ +\ 5} ke variabel
+bernama \texttt{x}. Ketik \texttt{x\ \textless{}-\ 2\ +\ 5} di CONSOLE
+dan tekan Enter.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\DecValTok{2} \OperatorTok{+}\StringTok{ }\DecValTok{5}
+\end{Highlighting}
+\end{Shaded}
+
+Anda akan menyadari, R tidak langsung mengirim umpan balik hasil dari
+kalkulasi tersebut. Yang R lakukan hanya menyimpan hasil perhitungan
+tersebut ke variabel `x' dan mengasumsikan Anda akan menggunakan varibel
+ini nantinya. Daftar nama variabel yang Anda buat akan tampil pada
+jendela VARIABLE di RStudio.
+
+Jika Anda ingin menampilkan isi variabel `x', Anda ketik \texttt{x} dan
+tekan Enter.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 7
+\end{verbatim}
+
+Sekarang, simpan hasil dari \texttt{x\ *\ 3} pada variabel bernama `y'.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y <-}\StringTok{ }\NormalTok{x }\OperatorTok{*}\StringTok{ }\DecValTok{3}
+\end{Highlighting}
+\end{Shaded}
+
+Tampilkan hasil dari `y'.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 21
+\end{verbatim}
+
+\subsection{Vektor}\label{vektor}
+
+Kumpulan dari beberapa objek disebut vektor. Objek bisa berupa angka,
+karakter, string, dan lainnya. Vektor berupa angka merupakan bentuk
+simpel dari struktur data di R. Bahkan, 1 angka bisa dikatakan sebagai
+vektor dengan elemen sepanjang 1.
+
+Cara membuat sebuah vektor adalah dengan menggunakan fungsi \texttt{c()}
+yang merupakan kepanjangan dari `concatenate' atau `combine'.
+
+Anda akan membuat sebuah vektor yang berisi nilai numerik 1.1, 9, dan
+3.14 (pada penulisan angka, tanda titik di pengaturan standar RStudio
+merupakan tanda koma, begitu juga sebaliknya). Vektor ini akan Anda
+simpan di variabel `z'.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{z <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\FloatTok{1.1}\NormalTok{, }\DecValTok{9}\NormalTok{, }\FloatTok{3.14}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Lalu, Anda tampilkan variabel `z'.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{z}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1.10 9.00 3.14
+\end{verbatim}
+
+Perhatikan hasil outputnya. Tidak ada tanda koma yang memisahkan antar
+nilai pada vektor tersebut.
+
+Anda juga bisa menggabungkan vektor untuk membuat vektor baru. Misalnya,
+vektor baru yang terdiri dari z, 777, dan z lagi. Tidak perlu menyimpan
+di variabel, sehingga Anda bisa melihat langsung hasilnya setelah
+menekan Enter.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{c}\NormalTok{(z, }\DecValTok{777}\NormalTok{, z)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]   1.10   9.00   3.14 777.00   1.10   9.00   3.14
+\end{verbatim}
+
+Numerik faktor bisa digunakan dengan operator aritmatika. Ketik: z * 2 +
+100, dan lihat apa yang terjadi.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{z }\OperatorTok{*}\StringTok{ }\DecValTok{2} \OperatorTok{+}\StringTok{ }\DecValTok{100}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 102.20 118.00 106.28
+\end{verbatim}
+
+Pertama-tama, R mengalikan 2 setiap elemen vektor z, lalu menambahkannya
+dengan 100 sehingga hasilnya seperti di atas.
+
+\subsection{Urutan Angka}\label{urutan-angka}
+
+Cara termudah untuk membuat angka yang berurutan adalah dengan
+menggunakan operator \texttt{:}. Ketik \texttt{1:20} di CONSOLE dan
+tekan Enter untuk melihat apa yang akan terjadi.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1}\OperatorTok{:}\DecValTok{20}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+\end{verbatim}
+
+Lalu bagaimana halnya dengan angka real? Misalnya, coba Anda ketik
+\texttt{pi:10}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pi}\OperatorTok{:}\DecValTok{10}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3.141593 4.141593 5.141593 6.141593 7.141593 8.141593 9.141593
+\end{verbatim}
+
+Hasilnya, angka real dimulai dari pi (3.141593), angka naik (bertambah
+1) sampai dengan 9. Batas atas 10 tidak tercapai karena angka
+selanjutnya (10.141593) lebih besar dari 10.
+
+Selain \texttt{:}, Anda bisa menggunakan fungsi \texttt{seq()}.
+Kelebihan fungsi ini, Anda bisa memilih opsi penambahannya. Contoh, Anda
+ingin membuat urutan angka dari 1 sampai dengan 5 dengan penambahan 0.5.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{seq}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DataTypeTok{by =} \FloatTok{0.5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0
+\end{verbatim}
+
+\subsection{Replikasi Angka}\label{replikasi-angka}
+
+Fungsi untuk mereplika Angka adalah \texttt{rep()} yang merupakan
+kepanjangan dari `replicate'. Berikut contoh mereplikasi angka 0
+sebanyak 30 kali.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{rep}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DataTypeTok{times =} \DecValTok{30}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+\end{verbatim}
+
+\subsection{Ambil Elemen Vektor}\label{ambil-elemen-vektor}
+
+Anda bisa mengambil elemen vektor dengan menggunakan operator
+\texttt{{[}{]}} dan operator urutan angka \texttt{:}, serta menggunakan
+fungsi \texttt{c()}.
+
+Misalkan, Anda ambil contoh: variabel `a' adalah vektor yang terdiri
+dari nilai 2, 4, 6, dan 8.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{8}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Ambil elemen ke-1 sampai dengan yang ke-3 dari variabel a}
+\NormalTok{a[}\DecValTok{1}\OperatorTok{:}\DecValTok{3}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2 4 6
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Ambil elemen ke-2 dari variabel a}
+\NormalTok{a[}\DecValTok{2}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Ambil elemen ke-4 dan ke-1 dari variabel a}
+\NormalTok{a[}\KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{1}\NormalTok{)]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 8 2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Keluarkan elemen ke-3 dari variabel a}
+\NormalTok{a[}\OperatorTok{-}\DecValTok{3}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2 4 8
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Keluarkan elemen ke-1 dan ke-3 dari variabel a}
+\NormalTok{a[}\OperatorTok{-}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{3}\NormalTok{)]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4 8
+\end{verbatim}
+
+\subsection{\texorpdfstring{\emph{Syntax} / Fungsi Penting
+Lainnya}{Syntax / Fungsi Penting Lainnya}}\label{syntax-fungsi-penting-lainnya}
+
+\begin{tabular}{l|l|l}
+\hline
+\_Syntax\_ & Keterangan & Contoh Penggunaan\\
+\hline
+? & Akses ke dokumentasi dan penjelasan fungsi & ?seq\\
+\hline
+getwd() & Menampilkan filepath direktori kerja & getwd()\\
+\hline
+ls() & Menampilkan daftar varibel & ls()\\
+\hline
+dir() & Menampilkan files dari sebuah direktori & dir()\\
+\hline
+rm(list=ls()) & Menghapus seluruh variabel & rm(list=ls())\\
+\hline
+length() & Mendapatkan panjang elemen sebuah vektor atau variabel & length(x)\\
+\hline
+\end{tabular}
+
+\textbf{Tombol Keyboard}
+
+Beberapa tombol keyboard berfungsi untuk mempercepat Anda dalam menulis
+script di R:
+
+\begin{itemize}
+\item
+  \texttt{tab} sangat sering digunakan untuk fitur \emph{auto
+  completion}. Contohnya, jika Anda memiliki varibel bernama
+  `aristoteles', Anda cukup ketik `a' di CONSOLE, lalu tekan tombol
+  \texttt{tab}, maka R akan langsung menyempurnakan penulisan variabel
+  tersebut.
+\item
+  \texttt{panah\ atas} dan \texttt{panah\ bawah} berfungsi untuk
+  mengakses histori perintah yang sudah Anda input sebelumnya, sehingga
+  Anda tidak perlu mengetik ulang.
+\end{itemize}
+
+\chapter{Kuasai Teknik Dasar Analisis
+Data}\label{kuasai-teknik-dasar-analisis-data}
+
+Analisis data merupakan subjek yang cukup luas. Anda tidak bisa belajar
+semuanya sekaligus. Waktu Anda terbatas dan sangat berharga. Anda perlu
+strategi khusus untuk menguasainya. Investasi terbaik Anda adalah waktu
+dan pikiran. Anda harus fokus belajar satu keterampilan yang memiliki
+keuntungan atau balik modal investasi yang tinggi.
+
+Kabar baiknya, Anda sudah melakukan hal ini: Belajar R.
+
+R merupakan tool yang memiliki keuntungan atau balik modal investasi
+paling tinggi.
+
+Jadi, lanjutkanlah belajar R.
+
+Di bagian ini, Anda akan diarahkan untuk mengetahui sebenarnya apa saja
+yang menjadi bagian dari teknik dasar analisis data.
+
+Teknik dasar analisis data dibagi menjadi 3:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Visualisasi Data
+\item
+  Manipulasi Data
+\item
+  Interpretasi Data
+\end{enumerate}
+
+Anda sebaiknya belajar teknik dasar analisis ini secara berurutan.
+
+Pertama-tama pelajari visualisasi data.
+
+Visualisasi data merupakan cara tercepat dan termudah untuk mendapatkan
+\emph{insight} pada sebuah set data. Selain itu, keterampilan ini juga
+bisa dijadikan sebagai alat komunikasi ke siapa saja yang membutuhkan
+hasil analisis data.
+
+\section{Visualisasi Data}\label{visualisasi-data}
+
+Untuk belajar visualisasi data, gunakan salah satu paket R, yakni
+\texttt{ggplot2}.
+
+Huruf ``gg'' pada \texttt{ggplot2} merupakan kepanjangan dari
+\emph{Grammar of Graphics}, sebuah buku yang ditulis oleh Leland
+Wilkinson, prinsip yang \texttt{ggplot2} ambil. \emph{Grammar of
+Graphics} menjelaskan tentang metode membagi-bagi grafik ke berbagai
+elemen dan membangun setiap elemen tersebut di beberapa lapisan untuk
+menampilkan representasi visual.
+
+Singkatnya, grafik di petakan dari data ke atribut estetik, seperti
+warna, bentuk, atau ukuran juga ke objek geometrik, seperti titik,
+garis, ataupun batang. Selain itu, grafik juga dipetakan ke sistem
+koordinat.
+
+Sebuah grafik ggplot terdiri dari sebuah sistem koordinat dan setidaknya
+sebuah objek geometrik.
+
+Lalu, Kenapa \texttt{ggplot2}?
+
+\texttt{ggplot2} mengajarkan Anda bagaimana berpikir tentang visualisasi
+data.
+
+Anda diajarkan tidak hanya secara \emph{syntax} saja, tetapi juga
+berpikir dan memiliki konsep terkait proses memvisualisasi data.
+
+\textbf{3 Prinsip Dasar Visualisasi Menggunakan \texttt{ggplot2}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Pemetaan Data ke Atribut Estetik
+\item
+  Lapisan
+\item
+  Iterasi Pemetaan dan Lapisan
+\end{enumerate}
+
+OK, sampai sini, mungkin Anda masih bingung, tidak apa. Ada baiknya
+konsep ini langsung dijelaskan melalui contoh saja.
+
+\subsection{Pemetaan Data ke Atribut
+Estetik}\label{pemetaan-data-ke-atribut-estetik}
+
+Pada contoh kali ini, Anda akan diarahkan untuk membuat grafik batang
+atau \emph{barchart}. Grafik ini merupakan grafik yang paling sering
+dipakai dan paling mudah dibaca. Selain itu, akan lebih memudahkan Anda
+untuk memahami prinsip dan filosofi membuat grafik menggunakan
+\texttt{ggplot2}.
+
+Sebenarnya ada banyak grafik jenis lainnya seperti histogram, grafik
+garis \emph{(line chart)}, grafik sebar \emph{(scatter plot)}, dan
+grafik lainnya. Pembahasan di bagian ini akan difokuskan pada grafik
+batang saja.
+
+Cukup penjelasannya, coba langsung Anda inisiasi paket \texttt{ggplot2}
+menggunakan fungsi \texttt{library()}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Inisiasi paket ggplot}
+\KeywordTok{library}\NormalTok{(ggplot2)}
+\end{Highlighting}
+\end{Shaded}
+
+Setiap Anda ingin menggunakan paket R yang cukup spesifik, Anda harus
+menginisasi paket tersebut di awal. Hal ini dilakukan agar Anda bisa
+mengakses seluruh fungsi yang ada di paket tersebut.
+
+Anda akan menggunakan data \emph{built in} dari \texttt{ggplot2}, yakni
+\texttt{mpg}. Untuk melihat data \texttt{mpg}, ketik \texttt{mpg} di
+CONSOLE dan tekan Enter.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mpg}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 234 x 11
+##    manufacturer model displ  year   cyl trans drv     cty   hwy fl    cla~
+##    <chr>        <chr> <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <ch>
+##  1 audi         a4      1.8  1999     4 auto~ f        18    29 p     com~
+##  2 audi         a4      1.8  1999     4 manu~ f        21    29 p     com~
+##  3 audi         a4      2    2008     4 manu~ f        20    31 p     com~
+##  4 audi         a4      2    2008     4 auto~ f        21    30 p     com~
+##  5 audi         a4      2.8  1999     6 auto~ f        16    26 p     com~
+##  6 audi         a4      2.8  1999     6 manu~ f        18    26 p     com~
+##  7 audi         a4      3.1  2008     6 auto~ f        18    27 p     com~
+##  8 audi         a4 q~   1.8  1999     4 manu~ 4        18    26 p     com~
+##  9 audi         a4 q~   1.8  1999     4 auto~ 4        16    25 p     com~
+## 10 audi         a4 q~   2    2008     4 manu~ 4        20    28 p     com~
+## # ... with 224 more rows
+\end{verbatim}
+
+Seperti yang Anda lihat, \texttt{mpg}, yang merupakan kepanjangan dari
+\emph{miles per gallon} adalah sebuah set data tentang efisiensi
+penggunaan bensin 38 mobil terpopuler di Amerika Serikat.
+
+Anda bisa memahami lebih lanjut terkait detail set data ini melalui
+perintah \texttt{?mpg}.
+
+Untuk melihat berapa jumlah baris dan kolomnya, Anda bisa menggunakan
+fungsi \texttt{dim}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{dim}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 234  11
+\end{verbatim}
+
+Set data ini memiliki 234 baris dan 11 kolom atau 234 observasi dan 11
+variabel. Jika Anda lihat data ini lebih teliti lagi, 234 juga merupakan
+jumlah total keseluruhan mobil yang menjadi objek observasi.
+
+Sebelum melangkah lebih jauh ke teknis pembuatan grafik, Anda akan
+diarahkan untuk mengetahui \textbf{perbandingan jumlah mobil antar
+`manufacturer'} sebagai tujuan dari proses ini.
+
+OK, untuk mulai memetakan variabel ke grafik, gunakan fungsi
+\texttt{ggplot()}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Pemetaan variabel `manufacturer` ke sistem koordinat x}
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ mpg, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ manufacturer))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-27-1.pdf}
+
+Fungsi \texttt{aes()} di atas adalah memetakan atribut variabel
+`manufacturer' ke sistem koordinat x. Anda bisa lihat, di garis
+horizontal x sudah ada nama-nama pembuat mobil yang merupakan hasil
+pemetaan atribut estetik.
+
+Sampai sini Anda pasti berpikir,
+
+\emph{``Kenapa kok jelek banget grafiknya?''}
+
+\emph{``Mana grafik batangnya?''}
+
+\emph{``Tulisannya tumpang tindih, nggak beraturan.''}
+
+Tenang, grafik tersebut masih tahap lapisan pertama dan iterasi pertama
+juga prosesnya masih langkah demi langkah sehingga Anda tidak bingung
+dan lebih mudah mengerti konsep membuat grafik \texttt{ggplot2}.
+
+\subsection{Lapisan}\label{lapisan}
+
+Lapisan atau \emph{layer} merupakan prinsip dasar visualisasi kedua
+menggunakan \texttt{ggplot2}. Filosofinya adalah Anda membuat grafik
+yang terdiri dari beberapa lapisan sehingga hasilnya merepresentasikan
+visualisasi yang Anda inginkan. Lapisan ini bisa berupa sistem
+koordinat, grafik batang, judul grafik, legenda, ataupun elemen lainnya.
+
+Langkah selanjutnya setelah pemetaan variabel, Anda akan menambahkan
+elemen grafik batang pada lapisan berikutnya dengan menggunakan operator
+\texttt{+} dan fungsi \texttt{geom\_bar()}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Penambahan elemen grafik batang pada lapisan kedua}
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ mpg, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ manufacturer)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-28-1.pdf}
+
+Nah, sudah mulai terlihat grafiknya.
+
+Sampai sini, sudah ada 2 lapisan grafik. Lapisan pertama diisi oleh
+elemen sistem koordinat, lapisan kedua diisi oleh grafik batang.
+
+\subsection{Iterasi Pemetaan dan
+Lapisan}\label{iterasi-pemetaan-dan-lapisan}
+
+Prinsip dasar ketiga ini merupakan perulangan dari prinsip satu dan
+prinsip kedua. Anda terus melakukan iterasi dan modifikasi atribut
+estetik serta penambahan lapisan atau elemen sehingga sesuai dengan
+representasi visual yang ingin Anda capai.
+
+Untuk mempermudah pemahaman, Anda akan diarahkan langsung melalui contoh
+penulisan kode yang disertai dengan penjelasan dari baris komentar
+(baris komentar diawali dengan tanda \texttt{\#}).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Merubah warna grafik batang menjadi merah gelap}
+\CommentTok{# dengan menggunakan argumen "fill" pada fungsi geom_bar()}
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ mpg, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ manufacturer)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{fill =} \StringTok{"#8B0000"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-29-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Merubah label keterangan sistem koordinat x dan y}
+\CommentTok{# dengan menggunakan fungsi labs()}
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ mpg, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ manufacturer)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{fill =} \StringTok{"#8B0000"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Produsen"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Jumlah Mobil"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-30-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menambah judul dan subjudul}
+\CommentTok{# dengan menggunakan fungsi ggtitle()}
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ mpg, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ manufacturer)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{fill =} \StringTok{"#8B0000"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Produsen"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Jumlah Mobil"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{ggtitle}\NormalTok{(}\StringTok{"Distribusi Jumlah Mobil Berdasarkan Produsen"}\NormalTok{, }
+          \DataTypeTok{subtitle =} \StringTok{"Tahun Pembuatan 1999 dan 2008"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-31-1.pdf}
+
+Begitulah bagaimana iterasi dilakukan terus menerus sehingga
+representasi grafik sesuai dengan yang Anda inginkan.
+
+Dan pada akhirnya, iterasi final, menukar sistem koordinat sehingga
+tulisan terlihat lebih rapih dan mudah dibaca.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menukar sistem koordinat sehingga lebih mudah dibaca}
+\CommentTok{# menggunakan fungsi coord_flip()}
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ mpg, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ manufacturer)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{fill =} \StringTok{"#8B0000"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Produsen"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Jumlah Mobil"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{ggtitle}\NormalTok{(}\StringTok{"Distribusi Jumlah Mobil Berdasarkan Produsen"}\NormalTok{, }
+          \DataTypeTok{subtitle =} \StringTok{"Tahun Pembuatan 1999 dan 2008"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{coord_flip}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-32-1.pdf}
+
+Sekali Anda mengerti tentang prinsip dasar ini, pemahaman Anda terhadap
+data visualisasi akan berubah. Mungkin bagi Anda yang dulu terbiasa
+menggunakan grafik dari Excel akan memerlukan waktu lebih untuk
+menangkap ini semua. Bagaimana tidak, Excel memberikan kemudahan yang
+membuat Anda tidak perlu memikirkan proses bagaimana grafik dibuat. Anda
+hanya cukup \emph{point, drag, and click}, sedikit konfigurasi, Excel
+akan membereskan semuanya.
+
+Pelajari \texttt{ggplot2}, Anda akan paham bagaimana proses grafik
+dibuat tahap demi tahap. Memang membutuhkan \emph{effort} lebih, tetapi
+\emph{worth it}. Seiring Anda mengerti cara menggunakan
+\texttt{ggplot2}, pemahaman prinsip visualisasi data Anda akan
+meningkat.
+
+\section{Manipulasi Data}\label{manipulasi-data}
+
+Manipulasi data berperan ketika representasi visualisasi yang Anda buat
+tidak cukup untuk memunculkan \emph{insight}. Faktanya, data yang Anda
+peroleh hampir pasti perlu diolah terlebih dahulu. Menurut penelitian,
+seorang analis data kebanyakan mengerahkan usahanya berkutat di fase
+manipulasi atau mengolah data ini sekitar 60\% - 70\% dari keseluruhan
+proses analisis. Jadi bisa dikatakan, keterampilan manipulasi data cukup
+penting dan pastinya juga perlu Anda kuasai.
+
+Manipulasi data adalah segala proses yang dilakukan pada sebuah set data
+dengan tujuan mempermudah melakukan analisis data dan mendapatkan
+\emph{insight}. Proses tersebut diantaranya mengubah nama kolom atau
+variabel, mengurutkan, menyaring, sampai dengan meringkas data.
+
+Konsep atau teknik manipulasi data yang akan dikupas diantaranya sebagai
+berikut:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Melihat dan Mengetahui Set Data
+\item
+  Mengubah Variabel, Kolom, Isi Data
+\item
+  Operator Pipa (\texttt{\%\textgreater{}\%})
+\item
+  Memilih Variabel Data
+\item
+  Menyaring Baris Data
+\item
+  Mengurutkan Data
+\item
+  Mengelompokkan Data
+\item
+  Meringkas Data
+\end{enumerate}
+
+Pada bahasan kali ini, Anda akan diarahkan untuk menggunakan kembali set
+data \texttt{mpg} seperti sebelumnya ditambah satu paket manipulasi data
+yang sangat \emph{powerful}, \texttt{dplyr}.
+
+Pertama-tama, inisiasi paket \texttt{dplyr}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Inisiasi paket dplyr}
+\KeywordTok{library}\NormalTok{(dplyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Melihat dan Mengetahui Set
+Data}\label{melihat-dan-mengetahui-set-data}
+
+Setiap Anda mendapatkan sebuah data set untuk diolah, hal yang pertama
+harus Anda lakukan adalah mengetahui isi dan tentang apa data tersebut.
+Apa format datanya? Berapa dimensinya? Apa saja variabelnya? Bagaimana
+tipe variabelnya? Apakah ada data yang hilang atau tidak terisi? Dan
+lain sebagainya.
+
+Yang pertama adalah fungsi \texttt{class()} untuk menampilkan tipe data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan tipe data}
+\KeywordTok{class}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "tbl_df"     "tbl"        "data.frame"
+\end{verbatim}
+
+Apa itu ``tbl\_df'' ``tbl''?
+
+``tbl\_df'' = \emph{table data frame}
+
+``tbl'' = \emph{table}
+
+Intinya, ``tbl\_df'' ``tbl'' ``data.frame'' merupakan tipe data dari
+\texttt{mpg} yang berupa tabel atau data frame. Tabel atau data frame
+adalah tipe data berbentuk ``kotak'' yang terdiri dari baris dan kolom.
+
+Data yang mudah diolah atau dimanipulasi biasanya bertipe tabel atau
+data frame ini. Selain tabel, ada juga yang berbentuk vektor atau yang
+hanya terdiri dari satu baris saja atau satu kolom saja.
+
+Lalu, bagaimana cara mengetahui jumlah baris dan kolom data
+\texttt{mpg}? Ya, Anda benar, salah satunya menggunakan fungsi
+\texttt{dim()}.
+
+Anda juga bisa menggunakan fungsi \texttt{nrow()} dan \texttt{ncol()}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan jumlah baris}
+\KeywordTok{nrow}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 234
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan jumlah kolom atau variabel}
+\KeywordTok{ncol}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 11
+\end{verbatim}
+
+Dari fungsi di atas, Anda sudah mengetahui jumlah kolom atau variabel.
+Selanjutnya, Anda gali lebih jauh untuk mengetahui nama-nama kolom atau
+variabelnya. Fungsi \texttt{names()} bisa membantu Anda.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan seluruh variabel atau nama kolom}
+\KeywordTok{names}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "manufacturer" "model"        "displ"        "year"        
+##  [5] "cyl"          "trans"        "drv"          "cty"         
+##  [9] "hwy"          "fl"           "class"
+\end{verbatim}
+
+Anda sudah tahu variabel dari set data \texttt{mpg}, akan lebih lengkap
+lagi jika Anda tahu isi di dalamnya. Gunakan fungsi \texttt{head()} dan
+\texttt{tail()} untuk mengintip isi bagian awal dan akhir dari sebuah
+set data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan 7 baris awal dari data}
+\KeywordTok{head}\NormalTok{(mpg, }\DecValTok{7}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 7 x 11
+##   manufacturer model displ  year   cyl trans drv     cty   hwy fl    class
+##   <chr>        <chr> <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <chr>
+## 1 audi         a4      1.8  1999     4 auto~ f        18    29 p     comp~
+## 2 audi         a4      1.8  1999     4 manu~ f        21    29 p     comp~
+## 3 audi         a4      2    2008     4 manu~ f        20    31 p     comp~
+## 4 audi         a4      2    2008     4 auto~ f        21    30 p     comp~
+## 5 audi         a4      2.8  1999     6 auto~ f        16    26 p     comp~
+## 6 audi         a4      2.8  1999     6 manu~ f        18    26 p     comp~
+## 7 audi         a4      3.1  2008     6 auto~ f        18    27 p     comp~
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan 8 baris akhir dari data}
+\KeywordTok{tail}\NormalTok{(mpg, }\DecValTok{8}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 8 x 11
+##   manufacturer model displ  year   cyl trans drv     cty   hwy fl    class
+##   <chr>        <chr> <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <chr>
+## 1 volkswagen   new ~   2.5  2008     5 auto~ f        20    29 r     subc~
+## 2 volkswagen   pass~   1.8  1999     4 manu~ f        21    29 p     mids~
+## 3 volkswagen   pass~   1.8  1999     4 auto~ f        18    29 p     mids~
+## 4 volkswagen   pass~   2    2008     4 auto~ f        19    28 p     mids~
+## 5 volkswagen   pass~   2    2008     4 manu~ f        21    29 p     mids~
+## 6 volkswagen   pass~   2.8  1999     6 auto~ f        16    26 p     mids~
+## 7 volkswagen   pass~   2.8  1999     6 manu~ f        18    26 p     mids~
+## 8 volkswagen   pass~   3.6  2008     6 auto~ f        17    26 p     mids~
+\end{verbatim}
+
+Selain \texttt{head()} dan \texttt{tail()}, untuk melihat isi data
+berformat \emph{spreadsheet}, Anda bisa menggunakan fungsi
+\texttt{View()}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan isi data berformat spreadsheet}
+\KeywordTok{View}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+Hasilnya akan muncul di bagian jendela SCRIPT RStudio.
+
+\textbf{RINGKASAN DATA}
+
+Anda sudah mengetahui beberapa cara melihat dan menggali informasi dari
+sebuah set data. Ada satu cara untuk menampilkan ringkasan umum sehingga
+Anda bisa langsung melihat dan menangkap isi data secara \emph{big
+picture}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan ringkasan umum dari data}
+\KeywordTok{summary}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  manufacturer          model               displ            year     
+##  Length:234         Length:234         Min.   :1.600   Min.   :1999  
+##  Class :character   Class :character   1st Qu.:2.400   1st Qu.:1999  
+##  Mode  :character   Mode  :character   Median :3.300   Median :2004  
+##                                        Mean   :3.472   Mean   :2004  
+##                                        3rd Qu.:4.600   3rd Qu.:2008  
+##                                        Max.   :7.000   Max.   :2008  
+##       cyl           trans               drv                 cty       
+##  Min.   :4.000   Length:234         Length:234         Min.   : 9.00  
+##  1st Qu.:4.000   Class :character   Class :character   1st Qu.:14.00  
+##  Median :6.000   Mode  :character   Mode  :character   Median :17.00  
+##  Mean   :5.889                                         Mean   :16.86  
+##  3rd Qu.:8.000                                         3rd Qu.:19.00  
+##  Max.   :8.000                                         Max.   :35.00  
+##       hwy             fl               class          
+##  Min.   :12.00   Length:234         Length:234        
+##  1st Qu.:18.00   Class :character   Class :character  
+##  Median :24.00   Mode  :character   Mode  :character  
+##  Mean   :23.44                                        
+##  3rd Qu.:27.00                                        
+##  Max.   :44.00
+\end{verbatim}
+
+Fungsi \texttt{summary()} memberikan Anda ringkasan umum dari sebuah set
+data. Jika variabelnya bertipe numerik, akan ditampilkan ringkasan
+seperti nilai minimal, maksimal, rata-rata, median, kuartil pertama, dan
+kuartil ketiga.
+
+Selain fungsi \texttt{summary()}, ada fungsi lain yang lebih ringkas,
+yaitu \texttt{str()} dan \texttt{glimpse()}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan struktur dan isi data}
+\KeywordTok{str}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Classes 'tbl_df', 'tbl' and 'data.frame':    234 obs. of  11 variables:
+##  $ manufacturer: chr  "audi" "audi" "audi" "audi" ...
+##  $ model       : chr  "a4" "a4" "a4" "a4" ...
+##  $ displ       : num  1.8 1.8 2 2 2.8 2.8 3.1 1.8 1.8 2 ...
+##  $ year        : int  1999 1999 2008 2008 1999 1999 2008 1999 1999 2008 ...
+##  $ cyl         : int  4 4 4 4 6 6 6 4 4 4 ...
+##  $ trans       : chr  "auto(l5)" "manual(m5)" "manual(m6)" "auto(av)" ...
+##  $ drv         : chr  "f" "f" "f" "f" ...
+##  $ cty         : int  18 21 20 21 16 18 18 18 16 20 ...
+##  $ hwy         : int  29 29 31 30 26 26 27 26 25 28 ...
+##  $ fl          : chr  "p" "p" "p" "p" ...
+##  $ class       : chr  "compact" "compact" "compact" "compact" ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan struktur dan isi data}
+\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{glimpse}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Observations: 234
+## Variables: 11
+## $ manufacturer <chr> "audi", "audi", "audi", "audi", "audi", "audi", "...
+## $ model        <chr> "a4", "a4", "a4", "a4", "a4", "a4", "a4", "a4 qua...
+## $ displ        <dbl> 1.8, 1.8, 2.0, 2.0, 2.8, 2.8, 3.1, 1.8, 1.8, 2.0,...
+## $ year         <int> 1999, 1999, 2008, 2008, 1999, 1999, 2008, 1999, 1...
+## $ cyl          <int> 4, 4, 4, 4, 6, 6, 6, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6...
+## $ trans        <chr> "auto(l5)", "manual(m5)", "manual(m6)", "auto(av)...
+## $ drv          <chr> "f", "f", "f", "f", "f", "f", "f", "4", "4", "4",...
+## $ cty          <int> 18, 21, 20, 21, 16, 18, 18, 18, 16, 20, 19, 15, 1...
+## $ hwy          <int> 29, 29, 31, 30, 26, 26, 27, 26, 25, 28, 27, 25, 2...
+## $ fl           <chr> "p", "p", "p", "p", "p", "p", "p", "p", "p", "p",...
+## $ class        <chr> "compact", "compact", "compact", "compact", "comp...
+\end{verbatim}
+
+Seperti yang Anda lihat, fungsi \texttt{glimpse()} sepertinya lebih
+rapih dalam tampilan.
+
+Kedua fungsi ini menampilkan cukup informasi dalam sebuah tampilan yang
+padat dan jelas mulai dari berapa jumlah variabel, jumlah observasi,
+nama variabel, tipe variabel, sampai dengan isi dari sebagian data.
+
+Ketika Anda mendapatkan sebuah set data untuk diolah, tentu fungsi ini
+tidak akan Anda lewatkan begitu saja.
+
+Yang perlu Anda cermati, set data \texttt{mpg} ini tipe variabelnya
+masih kurang tepat. Misalnya, variabel \texttt{year} atau tahun
+pembuatan mobil. Di data hanya ada tahun 1999 dan 2008 saja. Seharusnya
+ini termasuk ke dalam tipe variabel faktor atau kategorikal, bukan
+numerik.
+
+Di bagian berikutnya, akan dibahas bagaimana cara mengubah variabel.
+
+\subsection{Mengubah Variabel, Kolom, Isi
+Data}\label{mengubah-variabel-kolom-isi-data}
+
+Sebelum melangkah lebih jauh, Anda harus mengetahui beberapa tipe
+variabel di pemrograman R.
+
+\textbf{TIPE VARIABEL}
+
+Yang sering digunakan ada 6 tipe:
+
+\begin{itemize}
+\tightlist
+\item
+  Karakter: Huruf, kata, atau kalimat seperti \texttt{b}, \texttt{apel},
+  \texttt{mantap\ jiwa}.
+\item
+  Integer: Bilangan bulat, contoh \texttt{1}, \texttt{4}, \texttt{7}.
+\item
+  Double: Bilangan tidak bulat atau real, contoh \texttt{2.3},
+  \texttt{3.5}.
+\item
+  Logikal: Benar atau salah (\texttt{TRUE} / \texttt{FALSE}).
+\item
+  Kompleks: \texttt{2+4i}, angka kompleks gabungan real dan imaginer.
+\item
+  Faktor: Kategorikal, seperti \texttt{laki-laki}, \texttt{perempuan}
+  (jenis kelamin).
+\end{itemize}
+
+Jika Anda lihat kembali set data \texttt{mpg} menggunakan \texttt{str()}
+atau \texttt{glimpse()}, maka tipe masing-masing variabelnya sebagai
+berikut:
+
+\begin{itemize}
+\tightlist
+\item
+  manufacturer: karakter
+\item
+  model: karakter
+\item
+  displ: double
+\item
+  year: integer
+\item
+  cyl: integer
+\item
+  trans: karakter
+\item
+  drv: karakter
+\item
+  cty: integer
+\item
+  hwy: integer
+\item
+  fl: karakter
+\item
+  class: karakter
+\end{itemize}
+
+Beberapa tipe variabel di atas ada yang tidak sesuai sehingga perlu
+diubah. Agar Anda lebih mengerti dan lebih jelas tentang variabel dan
+isinya serta tipe variabel yang seharusnya digunakan, maka coba Anda
+simak tabel berikut.
+
+\begin{tabular}{l|l|l|l}
+\hline
+Variabel & Penjelasan & Tipe Variabel & Revisi Tipe Variabel\\
+\hline
+manufacturer & Produsen pembuat mobil & karakter & faktor\\
+\hline
+model & Nama model mobil & karakter & karakter\\
+\hline
+displ & \_Engine displacement\_ atau kapasitas mesin dalam liter & double & double\\
+\hline
+year & Tahun pembuatan mobil & integer & faktor\\
+\hline
+cyl & Jumlah silinder mesin & integer & faktor\\
+\hline
+trans & Tipe transmisi, auto atau manual & karakter & faktor\\
+\hline
+drv & Roda penggerak, f = roda depan, r = roda belakang, 4 = 4 roda & karakter & faktor\\
+\hline
+cty & Konsumsi bensin dalam kota (mil per galon) & integer & integer\\
+\hline
+hwy & Konsumsi bensin di jalan tol (mil per galon) & integer & integer\\
+\hline
+fl & Jenis bensin, e = ethanol, d = diesel, r = reguler, p = premium, c = natural gas & karakter & faktor\\
+\hline
+class & Tipe atau kelas mobil & karakter & faktor\\
+\hline
+\end{tabular}
+
+Beberapa variabel seperti manufacturer, year, cyl, trans, drv, fl, dan
+class merupakan tipe variabel berupa kategori sehingga perlu diubah
+menjadi tipe faktor. Di set data original, variabel-variabel tersebut
+dikenali sebagai tipe karakter atau integer.
+
+\textbf{MENGAKSES VARIABEL ATAU KOLOM DALAM SET DATA}
+
+Untuk mengubah variabel, Anda harus tahu cara mengakses salah satu
+variabel atau kolom beserta isi dari sebuah set data. Operator yang
+sering digunakan untuk mengakses variabel atau kolom adalah \texttt{\$}.
+Ketik nama set data diikuti operator \texttt{\$} lalu nama variabel atau
+kolom. Semua diketik tanpa spasi.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengakses variabel atau kolom drv}
+\NormalTok{mpg}\OperatorTok{$}\NormalTok{drv}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   [1] "f" "f" "f" "f" "f" "f" "f" "4" "4" "4" "4" "4" "4" "4" "4" "4" "4"
+##  [18] "4" "r" "r" "r" "r" "r" "r" "r" "r" "r" "r" "4" "4" "4" "4" "f" "f"
+##  [35] "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "4" "4" "4"
+##  [52] "4" "4" "4" "4" "4" "4" "4" "4" "4" "4" "4" "4" "4" "4" "4" "4" "4"
+##  [69] "4" "4" "4" "4" "4" "4" "r" "r" "r" "4" "4" "4" "4" "4" "4" "4" "4"
+##  [86] "4" "4" "4" "4" "4" "r" "r" "r" "r" "r" "r" "r" "r" "r" "f" "f" "f"
+## [103] "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f"
+## [120] "f" "f" "f" "4" "4" "4" "4" "4" "4" "4" "4" "4" "4" "4" "4" "r" "r"
+## [137] "r" "4" "4" "4" "4" "f" "f" "f" "f" "f" "f" "f" "f" "f" "4" "4" "4"
+## [154] "4" "f" "f" "f" "f" "f" "4" "4" "4" "4" "4" "4" "4" "4" "4" "4" "4"
+## [171] "4" "4" "4" "4" "4" "4" "4" "4" "4" "f" "f" "f" "f" "f" "f" "f" "f"
+## [188] "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "4" "4" "4" "4" "4" "4"
+## [205] "4" "4" "4" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f"
+## [222] "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f" "f"
+\end{verbatim}
+
+Seluruh 234 isi dari variabel drv ditampilkan. Anda juga bisa mencoba
+variabel yang lainnya dengan cara yang sama.
+
+\textbf{MENGUBAH TIPE VARIABEL}
+
+Sebelum melakukan manipulasi data, pertama-tama pastikan Anda menyalin
+set data asli ke set data yang baru.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menyalin set data mpg ke set data baru bernama df.mobil}
+\CommentTok{# df merupakan singkatan dari data frame}
+\NormalTok{df.mobil <-}\StringTok{ }\NormalTok{mpg}
+\end{Highlighting}
+\end{Shaded}
+
+Mulai sekarang dan selanjutnya, segala manipulasi data dilakukan di set
+data \texttt{df.mobil}.
+
+Untuk mengubah tipe variabel ke tipe faktor atau kategorikal digunakan
+fungsi \texttt{as.factor()}. Fungsi pengubah tipe variabel lainnya:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{as.character()} mengubah ke tipe karakter
+\item
+  \texttt{as.integer()} mengubah ke tipe integer
+\item
+  \texttt{as.double()} mengubah ke tipe double
+\item
+  \texttt{as.logical()} mengubah ke tipe logikal
+\item
+  \texttt{as.complex()} mengubah ke tipe kompleks
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengubah tipe variabel manufacturer, year, cyl, trans, drv, fl, dan class}
+\CommentTok{# ke tipe faktor}
+\NormalTok{df.mobil}\OperatorTok{$}\NormalTok{manufacturer <-}\StringTok{ }\KeywordTok{as.factor}\NormalTok{(df.mobil}\OperatorTok{$}\NormalTok{manufacturer)}
+\NormalTok{df.mobil}\OperatorTok{$}\NormalTok{year <-}\StringTok{ }\KeywordTok{as.factor}\NormalTok{(df.mobil}\OperatorTok{$}\NormalTok{year)}
+\NormalTok{df.mobil}\OperatorTok{$}\NormalTok{cyl <-}\StringTok{ }\KeywordTok{as.factor}\NormalTok{(df.mobil}\OperatorTok{$}\NormalTok{cyl)}
+\NormalTok{df.mobil}\OperatorTok{$}\NormalTok{trans <-}\StringTok{ }\KeywordTok{as.factor}\NormalTok{(df.mobil}\OperatorTok{$}\NormalTok{trans)}
+\NormalTok{df.mobil}\OperatorTok{$}\NormalTok{drv <-}\StringTok{ }\KeywordTok{as.factor}\NormalTok{(df.mobil}\OperatorTok{$}\NormalTok{drv)}
+\NormalTok{df.mobil}\OperatorTok{$}\NormalTok{fl <-}\StringTok{ }\KeywordTok{as.factor}\NormalTok{(df.mobil}\OperatorTok{$}\NormalTok{fl)}
+\NormalTok{df.mobil}\OperatorTok{$}\NormalTok{class <-}\StringTok{ }\KeywordTok{as.factor}\NormalTok{(df.mobil}\OperatorTok{$}\NormalTok{class)}
+\end{Highlighting}
+\end{Shaded}
+
+Hasilnya bisa dicek melalui fungsi \texttt{str()} atau glimpse.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan struktur set data df.mobil}
+\KeywordTok{str}\NormalTok{(df.mobil)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Classes 'tbl_df', 'tbl' and 'data.frame':    234 obs. of  11 variables:
+##  $ manufacturer: Factor w/ 15 levels "audi","chevrolet",..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ model       : chr  "a4" "a4" "a4" "a4" ...
+##  $ displ       : num  1.8 1.8 2 2 2.8 2.8 3.1 1.8 1.8 2 ...
+##  $ year        : Factor w/ 2 levels "1999","2008": 1 1 2 2 1 1 2 1 1 2 ...
+##  $ cyl         : Factor w/ 4 levels "4","5","6","8": 1 1 1 1 3 3 3 1 1 1 ...
+##  $ trans       : Factor w/ 10 levels "auto(av)","auto(l3)",..: 4 9 10 1 4 9 1 9 4 10 ...
+##  $ drv         : Factor w/ 3 levels "4","f","r": 2 2 2 2 2 2 2 1 1 1 ...
+##  $ cty         : int  18 21 20 21 16 18 18 18 16 20 ...
+##  $ hwy         : int  29 29 31 30 26 26 27 26 25 28 ...
+##  $ fl          : Factor w/ 5 levels "c","d","e","p",..: 4 4 4 4 4 4 4 4 4 4 ...
+##  $ class       : Factor w/ 7 levels "2seater","compact",..: 2 2 2 2 2 2 2 2 2 2 ...
+\end{verbatim}
+
+Variabel-variabel terkait yang sebelumnya bertipe integer atau karakter
+telah diubah menjadi faktor.
+
+Perubahan lain yang bisa dilihat melalui fungsi \texttt{summary()}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan ringkasan umum dari set data df.mobil}
+\KeywordTok{summary}\NormalTok{(df.mobil)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##      manufacturer    model               displ         year     cyl   
+##  dodge     :37    Length:234         Min.   :1.600   1999:117   4:81  
+##  toyota    :34    Class :character   1st Qu.:2.400   2008:117   5: 4  
+##  volkswagen:27    Mode  :character   Median :3.300              6:79  
+##  ford      :25                       Mean   :3.472              8:70  
+##  chevrolet :19                       3rd Qu.:4.600                    
+##  audi      :18                       Max.   :7.000                    
+##  (Other)   :74                                                        
+##         trans    drv          cty             hwy        fl     
+##  auto(l4)  :83   4:103   Min.   : 9.00   Min.   :12.00   c:  1  
+##  manual(m5):58   f:106   1st Qu.:14.00   1st Qu.:18.00   d:  5  
+##  auto(l5)  :39   r: 25   Median :17.00   Median :24.00   e:  8  
+##  manual(m6):19           Mean   :16.86   Mean   :23.44   p: 52  
+##  auto(s6)  :16           3rd Qu.:19.00   3rd Qu.:27.00   r:168  
+##  auto(l6)  : 6           Max.   :35.00   Max.   :44.00          
+##  (Other)   :13                                                  
+##         class   
+##  2seater   : 5  
+##  compact   :47  
+##  midsize   :41  
+##  minivan   :11  
+##  pickup    :33  
+##  subcompact:35  
+##  suv       :62
+\end{verbatim}
+
+Dengan mengubah tipe variabel menjadi faktor, kategori pada
+masing-masing variabel akan terlihat dan dihitung frekuensinya. Tampilan
+ini memudahkan Anda untuk mengetahui bahwa produsen dodge dan toyota
+memiliki oberservasi terbanyak dibandingkan produsen mobil lainnya.
+
+Bandingkan dengan hasil ringkasan set data aslinya yang kurang
+informatif:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan ringkasan umum dari set data df.mobil}
+\KeywordTok{summary}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  manufacturer          model               displ            year     
+##  Length:234         Length:234         Min.   :1.600   Min.   :1999  
+##  Class :character   Class :character   1st Qu.:2.400   1st Qu.:1999  
+##  Mode  :character   Mode  :character   Median :3.300   Median :2004  
+##                                        Mean   :3.472   Mean   :2004  
+##                                        3rd Qu.:4.600   3rd Qu.:2008  
+##                                        Max.   :7.000   Max.   :2008  
+##       cyl           trans               drv                 cty       
+##  Min.   :4.000   Length:234         Length:234         Min.   : 9.00  
+##  1st Qu.:4.000   Class :character   Class :character   1st Qu.:14.00  
+##  Median :6.000   Mode  :character   Mode  :character   Median :17.00  
+##  Mean   :5.889                                         Mean   :16.86  
+##  3rd Qu.:8.000                                         3rd Qu.:19.00  
+##  Max.   :8.000                                         Max.   :35.00  
+##       hwy             fl               class          
+##  Min.   :12.00   Length:234         Length:234        
+##  1st Qu.:18.00   Class :character   Class :character  
+##  Median :24.00   Mode  :character   Mode  :character  
+##  Mean   :23.44                                        
+##  3rd Qu.:27.00                                        
+##  Max.   :44.00
+\end{verbatim}
+
+\textbf{MENGUBAH NAMA VARIABEL}
+
+Nama variabel set data \texttt{mpg} menggunakan singkatan yang pendek
+dan berbahasa Inggris. Untuk memudahkan pemahaman, nama variabel
+tersebut akan diganti ke bahasa Indonesia serta tanpa singkatan.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan nama variabel set data df.mobil}
+\KeywordTok{names}\NormalTok{(df.mobil)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "manufacturer" "model"        "displ"        "year"        
+##  [5] "cyl"          "trans"        "drv"          "cty"         
+##  [9] "hwy"          "fl"           "class"
+\end{verbatim}
+
+Perhatikan urutan dari output di atas. Urutan nama variabel dimulai dari
+baris paling atas kiri ke kanan, lalu baris kedua mulai kiri ke kanan
+dan seterusnya. Angka di dalam kurung kotak \texttt{{[}{]}} adalah alat
+bantu untuk mempermudah identifikasi nomor urut variabel. Contohnya
+\texttt{{[}7{]}} adalah nomor urut variabel `drv', sebelah kanannya,
+`cty' sudah tentu nomor delapan dan seterusnya.
+
+Mengubah nama variabel bisa dilakukan satu per satu atau sekaligus.
+
+Berikut cara untuk mengubah salah satu nama variabel pada sebuah set
+data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengubah nama variabel displ menjadi kapasitas}
+\KeywordTok{names}\NormalTok{(df.mobil)[}\DecValTok{3}\NormalTok{] <-}\StringTok{ "kapasitas"}
+\end{Highlighting}
+\end{Shaded}
+
+Penjelasan dari kode di atas adalah mengubah nama variabel yang
+merupakan elemen vektor ketiga set data df.mobil menjadi ``kapasitas''.
+
+Yang perlu Anda identifikasi adalah nomor urut ke berapa variabel yang
+akan diubah. Variabel `displ' urutan ketiga. Dengan menggunakan prinsip
+elemen vektor, maka digunakan \texttt{{[}3{]}} sebagai akses elemen
+dengan urutan yang ketiga.
+
+Pastikan bahwa nama variabel `displ' sudah diubah.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan nama variabel set data df.mobil}
+\KeywordTok{names}\NormalTok{(df.mobil)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "manufacturer" "model"        "kapasitas"    "year"        
+##  [5] "cyl"          "trans"        "drv"          "cty"         
+##  [9] "hwy"          "fl"           "class"
+\end{verbatim}
+
+Variabel kapasitas sudah ada di set data df.mobil.
+
+Lalu, bagaimana cara mengubah semua nama variabel sekaligus?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengubah seluruh nama variabel }
+\KeywordTok{names}\NormalTok{(df.mobil) <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"produsen"}\NormalTok{, }\StringTok{"model"}\NormalTok{, }\StringTok{"kapasitas"}\NormalTok{, }\StringTok{"tahun"}\NormalTok{, }\StringTok{"silinder"}\NormalTok{, }\StringTok{"transmisi"}\NormalTok{, }\StringTok{"roda.gerak"}\NormalTok{, }\StringTok{"kota"}\NormalTok{, }\StringTok{"jalan.tol"}\NormalTok{, }\StringTok{"jenis.bensin"}\NormalTok{, }\StringTok{"kelas"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Dengan menggunakan fungsi \texttt{names()} dan \texttt{c()}, kesebelas
+nama varibel baru disusun secara berurutan.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan nama variabel set data df.mobil}
+\KeywordTok{names}\NormalTok{(df.mobil)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "produsen"     "model"        "kapasitas"    "tahun"       
+##  [5] "silinder"     "transmisi"    "roda.gerak"   "kota"        
+##  [9] "jalan.tol"    "jenis.bensin" "kelas"
+\end{verbatim}
+
+Seluruh nama variabel telah diubah.
+
+\textbf{MENGUBAH ISI DATA}
+
+Konsep mengubah isi data sebenarnya mirip seperti halnya konsep
+\emph{``find and replace''} pada aplikasi \emph{spreadsheet}. Untuk
+manipulasi ini digunakan fungsi \texttt{gsub()}.
+
+Argumen pertama huruf/kata yang akan diganti, argumen kedua huruf/kata
+pengganti, dan argumen terakhir adalah target variabelnya.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengubah isi variabel drv menjadi yang sebelumnya }
+\CommentTok{# satu huruf menjadi satu kata berbahasa Indonesia }
+\NormalTok{df.mobil}\OperatorTok{$}\NormalTok{roda.gerak <-}\StringTok{ }\KeywordTok{gsub}\NormalTok{(}\StringTok{"f"}\NormalTok{, }\StringTok{"depan"}\NormalTok{, df.mobil}\OperatorTok{$}\NormalTok{roda.gerak)}
+\NormalTok{df.mobil}\OperatorTok{$}\NormalTok{roda.gerak <-}\StringTok{ }\KeywordTok{gsub}\NormalTok{(}\StringTok{"r"}\NormalTok{, }\StringTok{"belakang"}\NormalTok{, df.mobil}\OperatorTok{$}\NormalTok{roda.gerak)}
+\NormalTok{df.mobil}\OperatorTok{$}\NormalTok{roda.gerak <-}\StringTok{ }\KeywordTok{gsub}\NormalTok{(}\StringTok{"4"}\NormalTok{, }\StringTok{"4roda"}\NormalTok{, df.mobil}\OperatorTok{$}\NormalTok{roda.gerak)}
+\end{Highlighting}
+\end{Shaded}
+
+Hasil pengubahan isi data ini bisa dilihat menggunakan fungsi
+\texttt{table()}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan ringkasan variabel roda.gerak pada set data df.mobil}
+\KeywordTok{table}\NormalTok{(df.mobil}\OperatorTok{$}\NormalTok{roda.gerak)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##    4roda belakang    depan 
+##      103       25      106
+\end{verbatim}
+
+Fungsi \texttt{table()} menampilkan ringkasan isi berupa banyaknya
+frekuensi faktor yang ada di salah satu variabel.
+
+Bandingkan dengan data aslinya.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan ringkasan variabel drv pada set data mpg}
+\KeywordTok{table}\NormalTok{(mpg}\OperatorTok{$}\NormalTok{drv)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##   4   f   r 
+## 103 106  25
+\end{verbatim}
+
+Yang baru saja dilakukan adalah cara mengubah isi data bertipe karakter.
+Bagaimana cara mengubah data numerik?
+
+Misalnya, Anda ingin mengubah isi data variabel `kota' dan `jalan.tol'
+pada set data df.mobil yang sebelumnya menggunakan satuan miles per
+gallon (mpg) menjadi kilometer per liter (untuk seterusnya disingkat
+kpl). Satuan kpl dalam perhitungan konsumsi BBM lebih familiar di
+Indonesia.
+
+1 miles per gallon (mpg standar Amerika) setara dengan 0.425144
+kilometer per liter (kpl). Agar memudahkan perhitungan, dibulatkan
+menjadi 0.43 kpl.
+
+Di bab sebelumnya, Anda sudah belajar bagaimana R berfungsi sebagai
+\protect\hyperlink{kalkulator-interaktif}{Kalkulator Interaktif}. Ya,
+Anda cukup menggunakan operator \texttt{*} untuk mengalikan 0.43
+variabel `kota' dan `jalan.tol' sehingga isi data berubah menjadi satuan
+kpl.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengubah isi dari variabel kota dan jalan tol menjadi satuan kpl}
+\CommentTok{# dengan mengalikan 0.43}
+\NormalTok{df.mobil}\OperatorTok{$}\NormalTok{kota <-}\StringTok{ }\NormalTok{df.mobil}\OperatorTok{$}\NormalTok{kota }\OperatorTok{*}\StringTok{ }\FloatTok{0.43}
+\NormalTok{df.mobil}\OperatorTok{$}\NormalTok{jalan.tol <-}\StringTok{ }\NormalTok{df.mobil}\OperatorTok{$}\NormalTok{jalan.tol }\OperatorTok{*}\StringTok{ }\FloatTok{0.43}
+\end{Highlighting}
+\end{Shaded}
+
+Melihat hasilnya menggunakan fungsi \texttt{head()}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Melihat 5 data pertama dari variabel kota dan jalan.tol pada set data df.mobil}
+\KeywordTok{head}\NormalTok{(df.mobil}\OperatorTok{$}\NormalTok{kota, }\DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 7.74 9.03 8.60 9.03 6.88
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{head}\NormalTok{(df.mobil}\OperatorTok{$}\NormalTok{jalan.tol, }\DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 12.47 12.47 13.33 12.90 11.18
+\end{verbatim}
+
+\subsection{\texorpdfstring{Operator Pipa
+(\texttt{\%\textgreater{}\%})}{Operator Pipa (\%\textgreater{}\%)}}\label{operator-pipa}
+
+R adalah bahasa fungsional. Artinya, \emph{syntax} atau fungsi banyak
+sekali menggunakan tanda kurung \texttt{(} dan \texttt{)}. Ketika Anda
+melakukan manipulasi data yang kompleks, maka konsekuensinya kode juga
+banyak mengandung tanda kurung. Fungsi dalam fungsi yang bersarang. Ini
+membuat kode Anda sulit dibaca dan dimengerti. Operator pipa
+\texttt{\%\textgreater{}\%} bisa menyederhanakannya.
+
+Sebagai contoh, Anda melakukan perhitungan berikut.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sin}\NormalTok{(}\KeywordTok{exp}\NormalTok{(}\KeywordTok{log}\NormalTok{(}\KeywordTok{sqrt}\NormalTok{(}\DecValTok{9}\NormalTok{))))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.14112
+\end{verbatim}
+
+Ada 4 fungsi yang terlibat dan banyak tanda kurung sehingga untuk
+mengetiknya pun Anda cukup rumit. Struktur urutan pengetikkan pun
+dimulai dari dalam ke luar atau dari kiri ke kanan. Mulai dari
+\texttt{sqrt(9)} lalu dikurung oleh \texttt{log()}, dikurung, dikurung
+sampai terakhir oleh \texttt{sin()}.
+
+Sekarang bandingkan dengan menggunakan \texttt{\%\textgreater{}\%}.
+Hasil perhitungannya sama.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Inisiasi paket magrittr agar mengenali operator pipa}
+\KeywordTok{library}\NormalTok{(magrittr)}
+
+\CommentTok{# Contoh penggunaan operator pipa}
+\DecValTok{9} \OperatorTok{%>%}\StringTok{ }\KeywordTok{sqrt}\NormalTok{() }\OperatorTok{%>%}\StringTok{ }\KeywordTok{log}\NormalTok{() }\OperatorTok{%>%}\StringTok{ }\KeywordTok{exp}\NormalTok{() }\OperatorTok{%>%}\StringTok{ }\KeywordTok{sin}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.14112
+\end{verbatim}
+
+Operator pipa memberikan kemudahan memahami kode pemrograman dalam hal:
+
+\begin{itemize}
+\tightlist
+\item
+  Struktur urutan fungsi dari kiri ke kanan (yang biasanya dari kanan ke
+  kiri)
+\item
+  Menghindari banyaknya tanda kurung yang bersarang dari fungsi
+\item
+  Menambah fungsi sesuai urutan jika diperlukan
+\end{itemize}
+
+Contoh lainnya:
+
+\begin{itemize}
+\tightlist
+\item
+  Kode umum yang biasa digunakan untuk melihat 7 baris pertama pada set
+  data df.mobil: \texttt{head(df.mobil,\ 7)}
+\item
+  Kode menggunakan operator pipa:
+  \texttt{df.mobil\ \%\textgreater{}\%\ head(7)}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Contoh lain penggunaan operator pipa}
+\CommentTok{# melihat 7 baris pertama pada set data df.mobil}
+\NormalTok{df.mobil }\OperatorTok{%>%}\StringTok{ }\KeywordTok{head}\NormalTok{(}\DecValTok{7}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 7 x 11
+##   produsen model kapasitas tahun silinder transmisi roda.gerak  kota
+##   <fct>    <chr>     <dbl> <fct> <fct>    <fct>     <chr>      <dbl>
+## 1 audi     a4          1.8 1999  4        auto(l5)  depan       7.74
+## 2 audi     a4          1.8 1999  4        manual(m~ depan       9.03
+## 3 audi     a4          2   2008  4        manual(m~ depan       8.6 
+## 4 audi     a4          2   2008  4        auto(av)  depan       9.03
+## 5 audi     a4          2.8 1999  6        auto(l5)  depan       6.88
+## 6 audi     a4          2.8 1999  6        manual(m~ depan       7.74
+## 7 audi     a4          3.1 2008  6        auto(av)  depan       7.74
+## # ... with 3 more variables: jalan.tol <dbl>, jenis.bensin <fct>,
+## #   kelas <fct>
+\end{verbatim}
+
+Anda harus mengenal dan memahami operator pipa ini terlebih dulu karena
+pembahasan ke depan akan sering digunakan.
+
+\subsection{Memilih Variabel Data}\label{memilih-variabel-data}
+
+Untuk memilih beberapa variabel atau kolom pada sebuah set data, gunakan
+fungsi \texttt{select()}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Memilih variabel produsen, tahun, dan roda.gerak dari 11 variabel yang ada}
+\CommentTok{# pada set data df.mobil}
+\NormalTok{contoh.pilih <-}\StringTok{ }\NormalTok{df.mobil }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{select}\NormalTok{(produsen, tahun, roda.gerak)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Melihat 8 baris pertama pada set data contoh.pilih}
+\NormalTok{contoh.pilih }\OperatorTok{%>%}\StringTok{  }\KeywordTok{head}\NormalTok{(}\DecValTok{8}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 8 x 3
+##   produsen tahun roda.gerak
+##   <fct>    <fct> <chr>     
+## 1 audi     1999  depan     
+## 2 audi     1999  depan     
+## 3 audi     2008  depan     
+## 4 audi     2008  depan     
+## 5 audi     1999  depan     
+## 6 audi     1999  depan     
+## 7 audi     2008  depan     
+## 8 audi     1999  4roda
+\end{verbatim}
+
+Kode pemrograman di atas dapat digabung tanpa perlu menyimpan hasilnya
+di sebuah variabel baru.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Memilih variabel produsen, tahun, dan roda.gerak }
+\CommentTok{# lalu menampilkan 8 baris pertama dari set data df.mobil}
+\NormalTok{df.mobil }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{select}\NormalTok{(produsen, tahun, roda.gerak) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{head}\NormalTok{(}\DecValTok{8}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 8 x 3
+##   produsen tahun roda.gerak
+##   <fct>    <fct> <chr>     
+## 1 audi     1999  depan     
+## 2 audi     1999  depan     
+## 3 audi     2008  depan     
+## 4 audi     2008  depan     
+## 5 audi     1999  depan     
+## 6 audi     1999  depan     
+## 7 audi     2008  depan     
+## 8 audi     1999  4roda
+\end{verbatim}
+
+\subsection{Menyaring Baris Data}\label{menyaring-baris-data}
+
+Fungsi \texttt{filter()} digunakan untuk menyaring baris pada sebuah set
+data dengan kondisi tertentu.
+
+Misalnya, Anda ingin mengetahui model mobil yang merupakan kelas dua
+tempat duduk atau 2seater dari set data \texttt{df.mobil}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Memilih variabel model dan kelas}
+\CommentTok{# lalu menyaring baris data dengan kondisi kelas 2seater}
+\NormalTok{df.mobil }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{select}\NormalTok{(model, kelas) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(kelas }\OperatorTok{==}\StringTok{ "2seater"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 5 x 2
+##   model    kelas  
+##   <chr>    <fct>  
+## 1 corvette 2seater
+## 2 corvette 2seater
+## 3 corvette 2seater
+## 4 corvette 2seater
+## 5 corvette 2seater
+\end{verbatim}
+
+\subsection{Mengurutkan Data}\label{mengurutkan-data}
+
+Anda bisa mengurutkan data dengan menggunakan fungsi \texttt{arrange()}.
+
+Anda ingin mengetahui 10 peringkat teratas model mobil yang memiliki
+efisiensi konsumsi bensin (kpl) tertinggi dalam kota dari set data
+\texttt{df.mobil}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Memilih variabel model, transmisi, dan kota}
+\CommentTok{# lalu mengurutkan kpl dari yang tertinggi ke terendah}
+\CommentTok{# menggunakan fungsi arrange dan desc}
+\CommentTok{# serta menampilkan hasilnya untuk 10 baris teratas}
+\NormalTok{df.mobil }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{select}\NormalTok{(model, transmisi, kota) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\KeywordTok{desc}\NormalTok{(kota)) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{head}\NormalTok{(}\DecValTok{10}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 10 x 3
+##    model      transmisi   kota
+##    <chr>      <fct>      <dbl>
+##  1 new beetle manual(m5)  15.0
+##  2 jetta      manual(m5)  14.2
+##  3 new beetle auto(l4)    12.5
+##  4 civic      manual(m5)  12.0
+##  5 corolla    manual(m5)  12.0
+##  6 civic      manual(m5)  11.2
+##  7 corolla    manual(m5)  11.2
+##  8 corolla    auto(l4)    11.2
+##  9 civic      manual(m5)  10.8
+## 10 civic      auto(l5)    10.8
+\end{verbatim}
+
+\subsection{Menambah Variabel Data}\label{menambah-variabel-data}
+
+Pada contoh kali ini, akan ditambahkan variabel atau kolom efisiensi
+bensin untuk penggunaan dalam kota dengan satuan kilometer per liter
+dari set data \texttt{mpg}. Untuk manipulasi ini, fungsi
+\texttt{mutate()} akan digunakan.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Memilih variabel model, cty, dan hwy}
+\CommentTok{# lalu menambahkan variabel baru: kota.kpl dan tol.kpl}
+\CommentTok{# yang merupakan konversi satuan mpg ke kpl}
+\CommentTok{# serta menampilkan hasilnya untuk 10 baris teratas}
+\NormalTok{mpg }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{select}\NormalTok{(model, cty, hwy) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{kota.kpl =}\NormalTok{ cty }\OperatorTok{*}\StringTok{ }\FloatTok{0.43}\NormalTok{, }\DataTypeTok{tol.kpl =}\NormalTok{ hwy }\OperatorTok{*}\StringTok{ }\FloatTok{0.43}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{head}\NormalTok{(}\DecValTok{10}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 10 x 5
+##    model        cty   hwy kota.kpl tol.kpl
+##    <chr>      <int> <int>    <dbl>   <dbl>
+##  1 a4            18    29     7.74    12.5
+##  2 a4            21    29     9.03    12.5
+##  3 a4            20    31     8.6     13.3
+##  4 a4            21    30     9.03    12.9
+##  5 a4            16    26     6.88    11.2
+##  6 a4            18    26     7.74    11.2
+##  7 a4            18    27     7.74    11.6
+##  8 a4 quattro    18    26     7.74    11.2
+##  9 a4 quattro    16    25     6.88    10.8
+## 10 a4 quattro    20    28     8.6     12.0
+\end{verbatim}
+
+\subsection{Mengelompokkan dan Meringkas
+Data}\label{mengelompokkan-dan-meringkas-data}
+
+Fungsi manipulasi terakhir yang dibahas adalah fungsi
+\texttt{group\_by()} dan \texttt{summarise()} untuk mengelompokkan dan
+meringkas data.
+
+Kembali ke set data \texttt{df.mobil}. Anda ingin mengetahui berapa
+rata-rata efisiensi konsumsi bensin penggunaan dalam kota dan jalan tol
+untuk masing-masing kategori roda gerak.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengelompokkan berdasarkan kategori roda.gerak}
+\CommentTok{# lalu menampilkan rata-rata efisiensi menggunakan fungsi mean}
+\CommentTok{# untuk masing-masing konsumsi kpl kota dan jalan tol}
+\NormalTok{df.mobil }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(roda.gerak) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{kota.kpl =} \KeywordTok{mean}\NormalTok{(kota), }\DataTypeTok{tol.kpl =} \KeywordTok{mean}\NormalTok{(jalan.tol))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 3 x 3
+##   roda.gerak kota.kpl tol.kpl
+##   <chr>         <dbl>   <dbl>
+## 1 4roda          6.16    8.25
+## 2 belakang       6.05    9.03
+## 3 depan          8.59   12.1
+\end{verbatim}
+
+\section{Interpretasi Data}\label{interpretasi-data}
+
+Interpretasi data berarti menyimpulkan hasil analisis data yang sudah
+Anda lakukan. Anda sudah bersusah payah membuat visualisasi serta
+manipulasi data, namun tidak diinterpretasikan, maka hasilnya nol besar.
+Anda harus menarik kesimpulan. Anda harus mendapatkan cerita dari data.
+Inti dari analisis data yang Anda sudah lakukan adalah untuk mendapatkan
+\emph{insight}.
+
+Memang, kemampuan interpretasi setiap orang berbeda dan subjektif dalam
+memandang sebuah permasalahan atau dalam menarik informasi dari data.
+Untuk mengasah kemampuan interpretasi ini, Anda setidaknya harus
+memiliki 3 sikap positif: tekad/semangat \emph{(passion)}, rasa
+penasaran \emph{(curiosity)}, dan antusias.
+
+Ketiga sikap positif ini akan sangat membantu Anda, disamping keahlian
+teknis dalam analisis data tentunya. Mendapatkan \emph{insight} dari
+kumpulan set data merupakan hal yang cukup menantang. Jika keahlian dan
+keterampilan teknis sudah semaksimal mungkin dikeluarkan, namun masih
+belum juga optimal dalam menggali kesimpulan dari data, sikap semangat
+pantang menyerah, rasa penasaran tinggi, dan antusias yang tidak pernah
+habis akan menjadi tambahan energi luar biasa bagi Anda.
+
+Selain faktor \emph{soft skill} yang baru saja dibahas, berikut panduan
+pertanyaan-pertanyaan teknis sebagai pemicu untuk membantu Anda dalam
+proses interpretasi dan menggali informasi serta \emph{insight} dalam
+analisis data.
+
+\begin{itemize}
+\item
+  \textbf{Sebenarnya apa tujuan utama atau motivasi Anda dalam
+  menganalisis set data tertentu? Apa inti permasalahan yang Anda atau
+  organisasi/perusahaan hadapi?} Ambil contoh set data \texttt{mpg} yang
+  merupakan data efisiensi penggunaan bensin pada mobil. Anggaplah dalam
+  beberapa bulan ke depan, Anda berencana membeli mobil pertama yang
+  merupakan hasil jerih payah kerja Anda selama ini. Anda tidak ingin
+  salah dalam membeli mobil pertama impian Anda. \textbf{Kriteria
+  pilihan Anda adalah mobil yang paling irit digunakan di dalam kota}.
+  Bisa dikatakan, kriteria pemilihan mobil merupakan salah satu motivasi
+  Anda untuk menganalisis dan menggali informasi dari set data
+  \texttt{mpg}. Anda ingin tahu, tipe atau jenis mobil seperti apa yang
+  memiliki efisiensi penggunaan bensin yang tinggi sehingga Anda bisa
+  membeli mobil dengan kriteria atau karakterisitik yang sama di
+  Indonesia.
+\item
+  \textbf{Dari beberapa variabel pada suatu set data, kira-kira variabel
+  mana saja yang paling berpengaruh terhadap pengambilan keputusan dalam
+  menjawab permasalahan Anda?} Berkaitan dengan contoh sebelumnya, Anda
+  mencari tahu mobil yang paling irit, maka tentu saja variabel utama
+  yang paling berpengaruh adalah variabel `cty' dan `hwy'. Kedua
+  variabel tersebut merupakan data miles per gallon penggunaan bensin di
+  kota dan jalan tol. Selain kedua variabel tersebut, Anda juga harus
+  mencari variabel lain yang berpengaruh terhadap efisiensi penggunaan
+  mobil.
+\item
+  \textbf{Bagaimana cara mendapatkan temuan atau \emph{insight} pada set
+  data yang berguna dalam mengatasi permasalahan Anda?} Seringlah
+  latihan dan otak-atik data. Untuk mendapatkan \emph{insight},
+  pertama-tama Anda harus memahami data yang Anda analisis. Set data
+  dapat Anda pahami dengan melakukan banyak visualisasi dan manipulasi
+  sehingga Anda bisa menemukan semacam relasi variabel juga pola-pola
+  tertentu yang jika terus dilakukan dan diasah akan meningkatkan
+  intuisi Anda dalam menarik \emph{insight} dari set data.
+\end{itemize}
+
+\textbf{5 TIPE HUBUNGAN ANTAR VARIABEL DALAM SET DATA}
+
+Ketika Anda bermain dengan set data, ada satu titik Anda menemukan
+sebuah pola atau keterkaitan antar variabel yang bisa membantu Anda
+mendapatkan \emph{insight}. Anda harus mengetahui 5 tipe hubungan antar
+variabel dalam set data yang sering ditemukan:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Korelasi
+\item
+  \emph{Trend}
+\item
+  Distribusi
+\item
+  \emph{Outlier}
+\item
+  Perbandingan dan Peringkat
+\end{enumerate}
+
+\subsection{Korelasi}\label{korelasi}
+
+Korelasi antar dua variabel bisa diidentifikasi dengan menggunakan
+grafik sebar \emph{(scatter plot)}.
+
+Berikut gambar penjelasannya (sumber:
+\url{https://statistics.laerd.com/statistical-guides/pearson-correlation-coefficient-statistical-guide.php}):
+
+\includegraphics[width=1\linewidth]{images/pearson-1-small}
+
+\begin{itemize}
+\tightlist
+\item
+  Korelasi positif: peningkatan nilai pada variabel pertama berbanding
+  lurus dengan nilai variabel kedua. Variabel A naik, variabel B naik.
+\item
+  Korelasi negatif: peningkatan nilai pada variabel pertama berbanding
+  terbalik dengan nilai variabel kedua. Variabel A naik, variabel B
+  turun.
+\item
+  Tidak ada korelasi: tidak ada kolerasi antara variabel pertama dan
+  kedua.
+\end{itemize}
+
+Misalnya, Anda akan mengecek apakah ada korelasi antara variabel
+`kapasitas' dan `kota' pada set data \texttt{df.mobil}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Membuat grafik sebar antara variabel kapasitas dan kota}
+\CommentTok{# pada set data df.mobil menggunakan fungsi geom_point()}
+\NormalTok{df.mobil }\OperatorTok{%>%}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ kota, }\DataTypeTok{y =}\NormalTok{ kapasitas)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_point}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-73-1.pdf}
+
+Anda bisa lihat grafik sebar diatas. Sebarannya berpola korelasi
+negatif. Semakin rendah nilai kapasitas mesin, maka efisiensi penggunaan
+bensin mobil di dalam kota akan semakin tinggi, demikian sebaliknya.
+
+Selain melalui grafik sebar, koefisien korelasi juga bisa dihitung
+dengan menggunakan fungsi \texttt{cor.test()}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengitung korelasi antara variabel kapasitas dan kota}
+\CommentTok{# pada set data df.mobil menggunakan fungsi cor.test()}
+  \KeywordTok{cor.test}\NormalTok{(df.mobil}\OperatorTok{$}\NormalTok{kapasitas, df.mobil}\OperatorTok{$}\NormalTok{kota)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Pearson's product-moment correlation
+## 
+## data:  df.mobil$kapasitas and df.mobil$kota
+## t = -20.205, df = 232, p-value < 2.2e-16
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  -0.8406782 -0.7467508
+## sample estimates:
+##       cor 
+## -0.798524
+\end{verbatim}
+
+Nilai koefisien korelasinya \texttt{-0.798524}. Korelasi negatif.
+
+Korelasinya cukup kuat. Kekuatan korelasi antar dua variabel ditentukan
+oleh nilai koefisiennya. Semakin mendekati angka \texttt{1} atau
+\texttt{-1}, maka korelasinya semakin kuat.
+
+\subsection{\texorpdfstring{\emph{Trend}}{Trend}}\label{trend}
+
+\emph{Trend} dapat didefinisikan sebagai arah atau pergerakan. Bisa naik
+atau turun. Biasanya ditunjukkan melalui grafik garis atau grafik
+batang.
+
+Berikut contoh grafik trend (sumber:
+\url{http://ririnzuliyaningsih.blogspot.com/2015/05/kemiskinan-dan-kesenjangan-pembangunan.html})
+
+\includegraphics[width=1\linewidth]{images/garis-kemiskinan}
+
+Grafik ini menunjukkan \emph{trend} kemiskinan di Indonesia dari tahun
+1996 sampai dengan 2012. Trend naik ditunjukkan mulai tahun 1996 - 1999.
+Dari tahun 2006 sampai tahun 2012 terlihat penurunan jumlah penduduk
+miskin.
+
+Kesimpulannya, terjadi penurunan \emph{trend} kemiskinan di Indonesia
+dalam rentang waktu 16 tahun sejak 1996.
+
+Selain \emph{insight} dari \emph{trend}, Anda juga bisa mencermati dari
+rentang 16 tahun tersebut, jumlah penduduk miskin tertinggi ada di tahun
+berapa?
+
+Tahun 1998.
+
+Lalu, Anda coba gali lagi, ada apa di tahun 1998 yang menyebabkan angka
+kemiskinan menjadi paling tinggi dibandingkan tahun lainnya?
+
+Krisis moneter.
+
+Apakah ketika terjadi krisis di Indonesia, selalu diikuti dengan
+peningkatan jumlah kemiskinan di tahun yang sama?
+
+Di tahun 2008 terjadi krisis ekonomi, namun tidak diikuti dengan
+meningkatnya jumlah penduduk miskin.
+
+Kenapa tidak terjadi peningkatan jumlah kemiskinan di tahun 2008? Apa
+bedanya krisis tahun 1998 dengan tahun 2008? Apa yang menyebabkan
+krisis? Apakah ada kaitan antara krisis ekonomi dengan kemiskinan?
+
+Dan seterusnya.
+
+Diiringi dengan rasa penasaran serta antusias, munculkan
+pertanyaan-pertanyaan yang bisa membuat Anda berpikir kritis. Dengan
+cara ini, Anda bisa menggali \emph{insight} dan informasi dari sebuah
+set data atau grafik.
+
+\subsection{Distribusi}\label{distribusi}
+
+Distribusi sering digunakan untuk mengetahui nilai terendah, tertinggi,
+rata-rata, median, serta rentang dari suatu variabel pada set data.
+Grafik histogram biasa dipakai untuk menunjukkan pola distribusi ini.
+
+Sebagai contoh, Anda ingin mengetahui distribusi jumlah mobil
+berdasarkan kapasitas mesinnya pada set data \texttt{df.mobil}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Membuat grafik histogram kapasitas mesin}
+\CommentTok{# pada set data df.mobil menggunakan fungsi geom_histogram()}
+\NormalTok{df.mobil }\OperatorTok{%>%}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ kapasitas)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_histogram}\NormalTok{(}\DataTypeTok{color =} \StringTok{"white"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-76-1.pdf}
+
+Anda bisa lihat, jumlah mobil terbanyak pada set data \texttt{df.mobil}
+memiliki kapasitas mesin antara 1 - 2.5 liter.
+
+\subsection{\texorpdfstring{\emph{Outlier}}{Outlier}}\label{outlier}
+
+\emph{Outlier} atau pencilan adalah data obervasi yang menyimpang
+terlalu jauh atau bernilai ekstrim dibandingkan data lainnya. Data
+\emph{outlier} ini bisa terjadi karena beberapa hal, diantaranya
+kesalahan dalam pemasukan data, kesalahan dalam pengambilan sampel, atau
+memang ada data -- data ekstrim yang tidak dapat dihindarkan
+keberadaannya. Untuk mengidentifikasinya dapat dilakukan dengan beberapa
+cara antara lain melalui boxplot atau scatterplot.
+
+Ilustrasi \emph{outlier} (sumber:
+\url{http://disabilitydunktank.com/tag/social-security-disability-fraud/}):
+
+\includegraphics[width=1\linewidth]{images/outlier}
+
+Misalkan Anda seorang penyidik yang bekerja di KPK atau kepolisian. Anda
+bisa mendapatkan data pendapatan yang diterima pejabat-pejabat Pegawai
+Negeri Sipil (PNS) tertentu dari bank. Setelah Anda analisis data
+tersebut, Anda menemukan bahwa rata-rata pendapatan pejabat PNS adalah
+sekitar 100 juta rupiah per bulan. Anda gali lebih dalam lagi, ternyata
+ada 3 pejabat yang memiliki pendapatan 10 miliar rupiah per bulan.
+Inilah yang dinamakan \emph{outlier}.
+
+Apa yang harus dilakukan dengan data \emph{outlier} ini? Tergantung
+tujuan Anda. Jika Anda seorang penyidik seperti contoh di atas, tentu
+Anda memfokuskan pada 3 pejabat tersebut. Data \emph{outlier} ini dapat
+dijadikan sebuah \emph{insight} bernilai bagi Anda. Anda bisa melakukan
+penyidikan lebih lanjut terhadap ketiga pejabat tersebut. Dari mana
+pendapatan mereka berasal?
+
+Jika Anda, misalkan seorang penentu kebijakan di pemerintahan dan ingin
+mengkaji usulan kenaikan gaji PNS, maka data \emph{outlier} tersebut
+sebaiknya disingkirkan. \emph{Outlier} dapat menyebabkan penyimpangan
+hasil analisis data yang Anda lakukan.
+
+\subsection{Perbandingan dan
+Peringkat}\label{perbandingan-dan-peringkat}
+
+Cara ini sering dilakukan jika Anda ingin mengetahui nilai tertinggi dan
+terendah serta perbandingan antara satu data obervasi dengan yang
+lainnya. Yang sering digunakan biasanya grafik batang.
+
+Perbandingan dan Peringkat ini sudah disinggung sebelumnya di bagian
+(\#mengurutkan-data).
+
+Langsung ke contoh. Misalkan Anda ingin mengetahui peringkat produsen
+mobil yang memiliki efisiensi penggunaan bensin (kpl) tertinggi di jalan
+tol dari set data \texttt{df.mobil}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengelompokkan berdasarkan variabel produsen}
+\CommentTok{# lalu meringkas nilai rata-rata efisiensi di jalan tol}
+\CommentTok{# dan menampilkannya dalam grafik batang}
+\NormalTok{df.mobil }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(produsen) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{rerata.tol =} \KeywordTok{mean}\NormalTok{(jalan.tol)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{y =}\NormalTok{ rerata.tol, }\DataTypeTok{x =} \KeywordTok{reorder}\NormalTok{(produsen, rerata.tol))) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"#8B0000"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Produsen"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Rata-rata Efisiensi (kpl)"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{ggtitle}\NormalTok{(}\StringTok{"Peringkat Efisiensi Penggunaan Bensin di Jalan Tol"}\NormalTok{, }
+          \DataTypeTok{subtitle =} \StringTok{"Berdasarkan Produsen Mobil"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{coord_flip}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-78-1.pdf}
+
+Dengan melihat grafik batang di atas, Anda dapat mengetahui produsen
+yang memiliki efisiensi tertinggi adalah Honda, sedangkan yang terendah
+adalah Land Rover. Selain itu, Anda juga bisa membandingkan efisiensi
+dari masing-masing produsen mobil lainnya.
+
+\chapter{Latihan, Latihan, Latihan}\label{latihan-latihan-latihan}
+
+Ya, tidak ada yang spesial atau hal yang \emph{wah} di langkah ketiga
+ini. Untuk bisa mahir analisis data, Anda harus banyak latihan.
+
+Baca kembali 2 langkah sebelumnya, terutama langkah kedua. Kuasai teknik
+dasar analisis terlebih dahulu.
+
+Jalankan kode programnya, \emph{copy paste} boleh, pelajari cara kerja
+dan konsepnya. Setelah Anda sudah tidak merasa asing dengan sistem
+pemrograman R, coba Anda ketik kode programnya, tidak \emph{copy paste}.
+Dengan mengetik, Anda akan lebih cepat terbiasa dengan beberapa fungsi
+yang sering digunakan untuk mengolah data.
+
+Lalu, Anda coba latihan dengan set data yang lain. Jelajahi set data
+tersebut dengan fungsi-fungsi yang sudah dibahas di buku ini.
+
+Berikut akan disajikan bagaimana cara melakukan analisis data dari mulai
+proses pengambilan sampai dengan mendapatkan \emph{insight}.
+Fungsi-fungsi yang digunakan pada contoh kali ini sebagian sudah dibahas
+di bagian sebelumnya dan sebagian akan dibahas beriringan dengan
+penulisan kode.
+
+\section{Unduh, Inisiasi, dan Mempersiapkan Set
+Data}\label{unduh-inisiasi-dan-mempersiapkan-set-data}
+
+Set data yang akan digunakan dapat diunduh secara manual pada tautan
+berikut:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://data.jakarta.go.id/dataset/jumlahpendudukberdasarkanjeniskelamindankewarganegaraandkijakarta/resource/5a948e1c-facd-4eec-8943-bef5c45d16d8}{Data
+  Jumlah Penduduk Jakarta Berdasarkan Jenis Kelamin dan Kewarganegaraan}
+\end{itemize}
+
+Anda bisa langsung inisiasi dan menyimpan set data ini ke dalam variabel
+tanpa harus mengunduhnya terlebih dahulu.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Meyimpan alamat tautan (URL) data penduduk Jakarta berdasarkan jenis kelamin dan kewarganegaraan dalam variabel alamat}
+\NormalTok{alamat <-}\StringTok{ "http://data.jakarta.go.id/dataset/aed0be8f-b36e-457c-9210-6f5e970b987c/resource/5a948e1c-facd-4eec-8943-bef5c45d16d8/download/Data-Jumlah-Penduduk-Berdasarkan-Kewarganegaraan-dan-Jenis-Kelamin-Tahun-2017.csv"}
+
+\CommentTok{# Membaca file csv dari set data dan memasukkannya ke dalam variabel}
+\NormalTok{df.penduduk <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(alamat, }\DataTypeTok{sep =} \StringTok{","}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Set data kependudukan Jakarta tersedia dalam bentuk file csv, sehingga
+untuk membaca data tersebut digunakan fungsi \texttt{read.csv}.
+
+Melihat struktur dari set data \texttt{df.penduduk}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{str}\NormalTok{(df.penduduk)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    1068 obs. of  8 variables:
+##  $ tahun          : int  2017 2017 2017 2017 2017 2017 2017 2017 2017 2017 ...
+##  $ provinsi       : Factor w/ 1 level "DKI Jakarta": 1 1 1 1 1 1 1 1 1 1 ...
+##  $ kabupaten      : Factor w/ 6 levels "JAKARTA BARAT",..: 6 6 6 6 6 6 2 2 2 2 ...
+##  $ kecamatan      : Factor w/ 44 levels "CAKUNG","CEMPAKA PUTIH",..: 22 22 22 21 21 21 9 9 9 9 ...
+##  $ kelurahan      : Factor w/ 267 levels "ANCOL","ANGKE",..: 165 164 163 168 167 166 55 24 195 194 ...
+##  $ kewarganegaraan: Factor w/ 2 levels "WNA","WNI": 2 2 2 2 2 2 2 2 2 2 ...
+##  $ jenis_kelamin  : Factor w/ 2 levels "Laki-laki","Perempuan": 1 1 1 1 1 1 1 1 1 1 ...
+##  $ jumlah         : int  3426 3546 1241 1204 2797 1688 1645 9802 11224 9333 ...
+\end{verbatim}
+
+Seperti yang Anda lihat, beberapa variabel seperti provinsi, kabupaten,
+kecamatan, kelurahan, kewarganegaraan, serta jenis kelamin sudah bertipe
+faktor, sehingga tidak perlu diubah lagi. Variabel yang lain seperti
+tahun dan jumlah sudah benar bertipe integer.
+
+Yang perlu sedikit diubah adalah penamaan variabel kabupaten. Di DKI
+Jakarta, penamaan wilayah administratif setelah propinsi lebih tepatnya
+kota, bukan kabupaten.
+
+Masih ingat bagaimana cara mengubah nama variabel?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengubah nama variabel kabupaten menjadi kota pada set data df.penduduk}
+\KeywordTok{names}\NormalTok{(df.penduduk)[}\DecValTok{3}\NormalTok{] <-}\StringTok{ "kota"}
+\end{Highlighting}
+\end{Shaded}
+
+Bagaimana dengan informasi jumlah penduduk Jakarta?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Jumlah total penduduk Jakarta}
+\KeywordTok{sum}\NormalTok{(df.penduduk}\OperatorTok{$}\NormalTok{jumlah)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10348570
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Jumlah penduduk Jakarta terbanyak berdasarkan kecamatan}
+\NormalTok{df.penduduk }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(kecamatan, jumlah) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(kecamatan) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{jumlah =} \KeywordTok{sum}\NormalTok{(jumlah)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\OperatorTok{-}\NormalTok{jumlah) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{head}\NormalTok{(}\DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 5 x 2
+##   kecamatan     jumlah
+##   <fct>          <int>
+## 1 CENGKARENG    513064
+## 2 CAKUNG        509194
+## 3 DUREN SAWIT   406998
+## 4 CILINCING     403028
+## 5 TANJUNG PRIOK 395022
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Jumlah penduduk Jakarta paling sedikit berdasarkan kecamatan}
+\NormalTok{df.penduduk }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(kecamatan, jumlah) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(kecamatan) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{jumlah =} \KeywordTok{sum}\NormalTok{(jumlah)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(jumlah) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{head}\NormalTok{(}\DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 5 x 2
+##   kecamatan       jumlah
+##   <fct>            <int>
+## 1 KEP. SERIBU SLT  11342
+## 2 KEP. SERIBU UTR  16249
+## 3 MENTENG          92026
+## 4 CEMPAKA PUTIH    99263
+## 5 GAMBIR          101832
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Peringkat jumlah penduduk Jakarta berdasarkan kota}
+\NormalTok{df.penduduk }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(kota, jumlah) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{group_by}\NormalTok{(kota) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{jumlah =} \KeywordTok{sum}\NormalTok{(jumlah)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{arrange}\NormalTok{(}\OperatorTok{-}\NormalTok{jumlah)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 2
+##   kota                jumlah
+##   <fct>                <int>
+## 1 JAKARTA TIMUR      2946926
+## 2 JAKARTA BARAT      2327258
+## 3 JAKARTA SELATAN    2190919
+## 4 JAKARTA UTARA      1716591
+## 5 JAKARTA PUSAT      1139285
+## 6 KAB.ADM.KEP.SERIBU   27591
+\end{verbatim}
+
+\section{Visualisasi Grafik}\label{visualisasi-grafik}
+
+Set data kependudukan \texttt{df.penduduk} ini dari awal sudah lumayan
+rapih dan tidak diperlukan proses manipulasi. Langkah berikutnya
+menggunakan \texttt{ggplot} untuk memvisualisasikan data agar bisa
+mendapatkan \texttt{insight} dari set data kependudukan ini.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Inisiasi paket ggplot dan dplyr}
+\KeywordTok{library}\NormalTok{(ggplot2)}
+\KeywordTok{library}\NormalTok{(dplyr)}
+
+\NormalTok{df.penduduk }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \KeywordTok{reorder}\NormalTok{(kecamatan, jumlah, sum), }\DataTypeTok{y =}\NormalTok{ jumlah)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"#8B0000"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{coord_flip}\NormalTok{() }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{6}\NormalTok{)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{scale_y_continuous}\NormalTok{(}\DataTypeTok{labels =}\NormalTok{ scales}\OperatorTok{::}\KeywordTok{comma_format}\NormalTok{()) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Kecamatan"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Jumlah Penduduk"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{ggtitle}\NormalTok{(}\StringTok{"Perbandingan Jumlah Penduduk Jakarta Berdasarkan Kecamatan"}\NormalTok{, }
+          \DataTypeTok{subtitle =} \StringTok{"Tahun 2017"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-86-1.pdf}
+
+Penjelasan kode:
+
+\begin{itemize}
+\item
+  \texttt{ggplot(aes(x\ =\ reorder(kecamatan,\ jumlah,\ sum),\ y\ =\ jumlah))}:
+  mengurutkan faktor kecamatan berdasarkan jumlah dengan fungsi
+  \texttt{reorder}.
+\item
+  \texttt{theme(axis.text.y\ =\ element\_text(size\ =\ 6))}: mengatur
+  huruf pada axis y menjadi berukuran 6.
+\item
+  \texttt{scale\_y\_continuous(labels\ =\ scales::comma\_format()}:
+  mengatur skala angka menjadi format yang mudah dibaca.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df.penduduk }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \KeywordTok{reorder}\NormalTok{(kota, jumlah, sum), }\DataTypeTok{y =}\NormalTok{ jumlah)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"#8B0000"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{coord_flip}\NormalTok{() }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{8}\NormalTok{)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{7}\NormalTok{)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{scale_y_continuous}\NormalTok{(}\DataTypeTok{labels =}\NormalTok{ scales}\OperatorTok{::}\KeywordTok{comma_format}\NormalTok{()) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Kota"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Jumlah Penduduk"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{ggtitle}\NormalTok{(}\StringTok{"Perbandingan Jumlah Penduduk Jakarta Berdasarkan Kota"}\NormalTok{,}
+          \DataTypeTok{subtitle =} \StringTok{"Tahun 2017"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-87-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df.penduduk }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \KeywordTok{reorder}\NormalTok{(kecamatan, jumlah, sum), }\DataTypeTok{y =}\NormalTok{ jumlah)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{fill =}\NormalTok{ jenis_kelamin)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{coord_flip}\NormalTok{() }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{6}\NormalTok{)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{scale_y_continuous}\NormalTok{(}\DataTypeTok{labels =}\NormalTok{ scales}\OperatorTok{::}\KeywordTok{comma_format}\NormalTok{()) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Kecamatan"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Jumlah Penduduk"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{ggtitle}\NormalTok{(}\StringTok{"Perbandingan Jumlah Penduduk Jakarta"}\NormalTok{,}
+          \DataTypeTok{subtitle =} \StringTok{"Berdasarkan Jenis Kelamin Per Kecamatan Tahun 2017"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-88-1.pdf}
+
+Argumen \texttt{fill} pada kode di atas berfungsi untuk menampilkan
+atribut estetik berdasarkan variabel jenis\_kelamin, sehingga pada
+grafik terlihat komposisi penduduk laki-laki dan perempuan yang berbeda
+warna.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df.penduduk }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \KeywordTok{reorder}\NormalTok{(kecamatan, jumlah, sum), }\DataTypeTok{y =}\NormalTok{ jumlah)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"#8B0000"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{coord_flip}\NormalTok{() }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{6}\NormalTok{)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{scale_y_continuous}\NormalTok{(}\DataTypeTok{labels =}\NormalTok{ scales}\OperatorTok{::}\KeywordTok{comma_format}\NormalTok{()) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{facet_wrap}\NormalTok{(}\OperatorTok{~}\NormalTok{jenis_kelamin) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Kecamatan"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Jumlah Penduduk"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{ggtitle}\NormalTok{(}\StringTok{"Perbandingan Jumlah Penduduk Jakarta"}\NormalTok{,}
+          \DataTypeTok{subtitle =} \StringTok{"Berdasarkan Jenis Kelamin Per Kecamatan Tahun 2017"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-89-1.pdf}
+
+Fungsi \texttt{facet\_wrap()} membuat grafik terbagi menjadi dua kolom
+berdasarkan jenis kelamin. Opsi ini mempermudah pengguna untuk melihat
+lebih detail untuk masing-masing kategori.
+
+\section{Visualisasi Peta}\label{visualisasi-peta}
+
+Visualisasi data juga dapat ditampilkan dalam bentuk peta. Selain cukup
+informatif, visualisasi peta juga secara estetis indah dipandang dan
+keren.
+
+Untuk membuat visualisasi peta Jakarta, Anda perlu menginstal paket
+berikut terlebih dahulu.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{)}
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"sf"}\NormalTok{)}
+\NormalTok{devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"tidyverse/ggplot2"}\NormalTok{)}
+\NormalTok{devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"rasyidstat/indonesia"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+Inisiasi paket dan persiapan visualiasi peta Jakarta.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Persiapan data spasial peta Jakarta dengan pembagian wilayah kelurahan}
+\NormalTok{kelurahan.jkt <-}\StringTok{ }\KeywordTok{id_map}\NormalTok{(}\StringTok{"jakarta"}\NormalTok{, }\StringTok{"kelurahan"}\NormalTok{)}
+
+\CommentTok{# Menampilkan struktur set data kelurahan.jkt}
+\KeywordTok{str}\NormalTok{(kelurahan.jkt)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Classes 'sf' and 'data.frame':   377 obs. of  9 variables:
+##  $ kode_provinsi : int  31 31 31 31 31 31 31 31 31 31 ...
+##  $ nama_provinsi : Factor w/ 1 level "DAERAH KHUSUS IBUKOTA JAKARTA": 1 1 1 1 1 1 1 1 1 1 ...
+##  $ kode_kota     : int  3171 3172 3172 3172 3172 3171 3172 3172 3171 3172 ...
+##  $ nama_kota     : Factor w/ 6 levels "Jakarta Barat",..: 3 4 4 4 4 3 4 4 3 4 ...
+##  $ kode_kecamatan: int  3171010 3172020 3172030 3172030 3172010 3171010 3172010 3172020 3171010 3172030 ...
+##  $ nama_kecamatan: Factor w/ 45 levels "Cakung","Cempaka Putih",..: 11 7 6 6 34 11 34 7 11 6 ...
+##  $ kode_kelurahan: num  3.17e+09 3.17e+09 3.17e+09 3.17e+09 3.17e+09 ...
+##  $ nama_kelurahan: Factor w/ 267 levels "Ancol","Angke",..: 35 23 202 162 179 236 87 122 25 34 ...
+##  $ geometry      :sfc_POLYGON of length 377; first list element: List of 1
+##   ..$ : num [1:1283, 1:2] 107 107 107 107 107 ...
+##   ..- attr(*, "class")= chr  "XY" "POLYGON" "sfg"
+##  - attr(*, "sf_column")= chr "geometry"
+##  - attr(*, "agr")= Factor w/ 3 levels "constant","aggregate",..: NA NA NA NA NA NA NA NA
+##   ..- attr(*, "names")= chr  "kode_provinsi" "nama_provinsi" "kode_kota" "nama_kota" ...
+\end{verbatim}
+
+Melalui fungsi \texttt{str()} diketahui bahwa set data
+\texttt{kelurahan.jkt} bertipe `sf' dan `data.frame'. Simple features
+atau sf adalah bentuk set data yang didalamnya berisi variabel geometri
+dua dimensi (titik, garis, poligon). Di dalam set data
+\texttt{kelurahan.jkt} diwakili oleh variabel `geometry'.
+
+Untuk memvisualisasikan peta, gunakan paket \texttt{ggplot} diikuti
+dengan fungsi \texttt{geom\_sf()}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Visualisasi peta dasar Jakarta}
+\NormalTok{kelurahan.jkt }\OperatorTok{%>%}\StringTok{ }\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_sf}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-93-1.pdf}
+
+Visualisasi peta dasar Jakarta yang dihasilkan dari kode di atas tidak
+terlalu bagus. Seperti yang Anda lihat, Kepulauan Seribu termasuk dalam
+wilayah Jakarta, sehingga visualisasi yang dihasilkan mencakup seluruh
+wilayah administratif sesuai variabel pada set data
+\texttt{kelurahan.jkt}. Agar visualisasi yang dihasilkan lebih estetis,
+maka wilayah Kepulauan Seribu akan dikeluarkan dari set data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengeluarkan data observasi kecamatan KEPULAUAN SERIBU}
+\CommentTok{# dan memvisualisasikan peta dengan ggplot dan fungsi geom_sf}
+\NormalTok{kelurahan.jkt }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(}\OperatorTok{!}\NormalTok{nama_kecamatan }\OperatorTok{%in%}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"KEPULAUAN SERIBU UTARA"}\NormalTok{, }\StringTok{"KEPULAUAN SERIBU SELATAN"}\NormalTok{)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_sf}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-94-1.pdf}
+
+Nah, hasilnya sudah lumayan bagus. Peta difokuskan pada wilayah Jakarta
+yang ada di pulau Jawa, tidak termasuk wilayah Kepulauan Seribu.
+
+Selanjutnya yang harus dilakukan adalah menggabungkan set data
+\texttt{kelurahan.jkt} dan \texttt{df.penduduk} sehingga visualisasi
+peta kepadatan penduduk Jakarta dapat ditampilkan.
+
+Syarat agar dua set data bisa digabung: ada satu variabel memiliki isi
+yang sama pada kedua set data. Pada contoh ini, variabel `jumlah' pada
+set data \texttt{df.penduduk} akan digabungkan ke set data
+\texttt{kelurahan.jkt} melalui variabel kelurahan/nama\_kelurahan.
+
+Jadi, harus dipastikan dulu penamaan variabel kelurahan/nama\_kelurahan
+beserta isinya pada kedua set data harus sama.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Meringkas variabel kelurahan dan jumlah penduduk pada set data df.penduduk}
+\CommentTok{# lalu menyimpannya di variabel jml.penduduk}
+\NormalTok{jml.penduduk <-}\StringTok{ }
+\StringTok{  }\NormalTok{df.penduduk }\OperatorTok{%>%}\StringTok{ }
+\StringTok{    }\KeywordTok{group_by}\NormalTok{(kelurahan) }\OperatorTok{%>%}
+\StringTok{    }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{jumlah =} \KeywordTok{sum}\NormalTok{(jumlah))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengambil isi variabel nama_kelurahan pada set data keluahan.jkt}
+\CommentTok{# dan menyimpannya di variabel kelurahan}
+\NormalTok{kelurahan <-}\StringTok{ }\KeywordTok{sort}\NormalTok{(}\KeywordTok{unique}\NormalTok{(kelurahan.jkt}\OperatorTok{$}\NormalTok{nama_kelurahan))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menggabungkan set data jml.penduduk dan vektor kelurahan}
+\CommentTok{# menggunakan fungsi data.frame}
+\NormalTok{cek.kelurahan <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(jml.penduduk, }\DataTypeTok{nama_kelurahan =}\NormalTok{ kelurahan)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menampilkan isi set data cek.kelurahan}
+\KeywordTok{head}\NormalTok{(cek.kelurahan)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##      kelurahan jumlah nama_kelurahan
+## 1        ANCOL  28870          Ancol
+## 2        ANGKE  34663          Angke
+## 3 BALE KAMBANG  32083   Bale Kambang
+## 4  BALI MESTER  11290     Balimester
+## 5   BAMBU APUS  28952     Bambu Apus
+## 6       BANGKA  25245         Bangka
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengecek adakah perbedaan penamaan kelurahan dengan membuat}
+\CommentTok{# kolom baru bernama cek_nama yang berisi data logikal menggunakan}
+\CommentTok{# menggunakan fungsi mutate() dari paket dplyr pada set data cek.kelurahan}
+\NormalTok{cek.kelurahan <-}\StringTok{  }
+\StringTok{  }\NormalTok{cek.kelurahan }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{cek_nama =} \KeywordTok{ifelse}\NormalTok{(}\KeywordTok{tolower}\NormalTok{(kelurahan) }\OperatorTok{%in%}\StringTok{ }\KeywordTok{tolower}\NormalTok{(nama_kelurahan), }\StringTok{"TRUE"}\NormalTok{, }\StringTok{"FALSE"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+Operator \texttt{==} bersifat \emph{case sensitive}, artinya perbedaan
+huruf besar/kecil juga menjadi faktor pengetesan logika.
+
+Contohnya: \texttt{ifelse("ANCOL"\ ==\ "Ancol",\ "TRUE",\ "FALSE")} akan
+menghasilkan output \texttt{FALSE}.
+
+Fungsi \texttt{tolower()} yang diaplikasikan di variabel kelurahan dan
+nama\_kelurahan membuat isi dari kedua variabel tersebut menjadi huruf
+kecil semua sehingga pengetesan logika menjadi lebih optimal.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengecek nama kelurahan yang berbeda dengan fungsi filter}
+\NormalTok{cek.kelurahan }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(kelurahan, cek_nama) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(cek_nama }\OperatorTok{==}\StringTok{ "FALSE"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                kelurahan cek_nama
+## 1            BALI MESTER    FALSE
+## 2  HALIM PERDANA KUSUMAH    FALSE
+## 3          HARAPAN MULIA    FALSE
+## 4              KALIDERES    FALSE
+## 5              KERENDANG    FALSE
+## 6       KOTA BAMBU UTARA    FALSE
+## 7             P. HARAPAN    FALSE
+## 8              P. KELAPA    FALSE
+## 9            P. PANGGANG    FALSE
+## 10               P. PARI    FALSE
+## 11             P. TIDUNG    FALSE
+## 12        P. UNTUNG JAWA    FALSE
+## 13            PAL MERIAM    FALSE
+## 14              PALMERAH    FALSE
+\end{verbatim}
+
+Ternyata ada 14 nama kelurahan yang berbeda. Untuk memperbaiki tulisan
+nama kelurahan, harus dibandingkan dulu versi nama kelurahan dari kedua
+set data tersebut.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengecek nama kelurahan yang berbeda dengan fungsi filter}
+\NormalTok{cek.kelurahan }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(nama_kelurahan) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(}\KeywordTok{grepl}\NormalTok{(}\StringTok{"mester|halim|harapan|deres|endang|bambu|}
+\StringTok{               |kelapa|panggang|pari|tidung|untung|meriam|merah"}\NormalTok{,    }
+\NormalTok{               nama_kelurahan, }\DataTypeTok{ignore.case =} \OtherTok{TRUE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##          nama_kelurahan
+## 1            Balimester
+## 2            Bambu Apus
+## 3  Halim Perdana Kusuma
+## 4         Harapan Mulya
+## 5            Kali Deres
+## 6          Kebon Kelapa
+## 7            Kelapa Dua
+## 8      Kelapa Dua Wetan
+## 9   Kelapa Gading Barat
+## 10  Kelapa Gading Timur
+## 11   Kota Bambu Selatan
+## 12      Kotabambu Utara
+## 13             Krendang
+## 14            Pal Merah
+## 15            Palmeriam
+## 16         Pondok Bambu
+## 17        Pondok Kelapa
+## 18        PULAU HARAPAN
+## 19         PULAU KELAPA
+## 20       PULAU PANGGANG
+## 21           PULAU PARI
+## 22         PULAU TIDUNG
+## 23    PULAU UNTUNG JAWA
+## 24         Sungai Bambu
+\end{verbatim}
+
+Dari hasil di atas, terdapat 14 perbedaan penamaan kelurahan di antara
+dua set data sebagai berikut:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  bali mester - balimester
+\item
+  halim perdana kusumah - halim perdana kusuma
+\item
+  harapan mulia - harapan mulya
+\item
+  kalideres - kali deres
+\item
+  kerendang - krendang
+\item
+  kota bambu utara - kotabambu utara
+\item
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \setcounter{enumii}{15}
+  \tightlist
+  \item
+    harapan - pulau harapan
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \setcounter{enumii}{15}
+  \tightlist
+  \item
+    kelapa - pulau kelapa
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \setcounter{enumii}{15}
+  \tightlist
+  \item
+    panggang - pulau panggang
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \setcounter{enumii}{15}
+  \tightlist
+  \item
+    pari - pulau pari
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \setcounter{enumii}{15}
+  \tightlist
+  \item
+    tidung - pulau tidung
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \setcounter{enumii}{15}
+  \tightlist
+  \item
+    untung jawa - pulau untung jawa
+  \end{enumerate}
+\item
+  pal meriam - palmeriam
+\item
+  palmerah - pal merah
+\end{enumerate}
+
+Selanjutnya, mengubah nama kelurahan di salah satu set data. Untuk
+contoh kali ini, nama kelurahan pada set data \texttt{jml.penduduk} akan
+diubah mengikuti penamaan kelurahan set data \texttt{kelurahan.jkt}.
+
+Setelah penamaan kelurahan sudah sama persis, penggabungan kedua set
+data ini bisa dilakukan.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Mengubah nama kelurahan menjadi huruf kecil semua pada set data}
+\CommentTok{# jml.penduduk dan kelurahan.jkt untuk memudahkan manipulasi string}
+\NormalTok{jml.penduduk}\OperatorTok{$}\NormalTok{kelurahan <-}\StringTok{ }\KeywordTok{as.factor}\NormalTok{(}\KeywordTok{tolower}\NormalTok{(jml.penduduk}\OperatorTok{$}\NormalTok{kelurahan))}
+\NormalTok{kelurahan.jkt}\OperatorTok{$}\NormalTok{nama_kelurahan <-}\StringTok{ }\KeywordTok{as.factor}\NormalTok{(}\KeywordTok{tolower}\NormalTok{(kelurahan.jkt}\OperatorTok{$}\NormalTok{nama_kelurahan))}
+
+\CommentTok{# Mengubah penamaan kelurahan pada set data jml.penduduk}
+\CommentTok{# mengikuti peamaan kelurahan set data kelurahan.jkt}
+\CommentTok{# menggunakan fungsi fct_recode}
+\NormalTok{jml.penduduk <-}\StringTok{ }
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(jml.penduduk, }\DataTypeTok{kelurahan =} 
+           \KeywordTok{fct_recode}\NormalTok{(kelurahan,}
+             \StringTok{"balimester"}\NormalTok{ =}\StringTok{ "bali mester"}\NormalTok{,}
+             \StringTok{"halim perdana kusuma"}\NormalTok{ =}\StringTok{ "halim perdana kusumah"}\NormalTok{,}
+             \StringTok{"harapan mulya"}\NormalTok{ =}\StringTok{ "harapan mulia"}\NormalTok{,}
+             \StringTok{"kali deres"}\NormalTok{ =}\StringTok{ "kalideres"}\NormalTok{,}
+             \StringTok{"krendang"}\NormalTok{ =}\StringTok{ "kerendang"}\NormalTok{,}
+             \StringTok{"kotabambu utara"}\NormalTok{ =}\StringTok{ "kota bambu utara"}\NormalTok{,}
+             \StringTok{"pulau harapan"}\NormalTok{ =}\StringTok{ "p. harapan"}\NormalTok{,}
+             \StringTok{"pulau kelapa"}\NormalTok{ =}\StringTok{ "p. kelapa"}\NormalTok{,}
+             \StringTok{"pulau panggang"}\NormalTok{ =}\StringTok{ "p. panggang"}\NormalTok{,}
+             \StringTok{"pulau pari"}\NormalTok{ =}\StringTok{ "p. pari"}\NormalTok{,}
+             \StringTok{"pulau tidung"}\NormalTok{ =}\StringTok{ "p. tidung"}\NormalTok{,}
+             \StringTok{"pulau untung jawa"}\NormalTok{ =}\StringTok{ "p. untung jawa"}\NormalTok{,}
+             \StringTok{"palmeriam"}\NormalTok{ =}\StringTok{ "pal meriam"}\NormalTok{,}
+             \StringTok{"pal merah"}\NormalTok{ =}\StringTok{ "palmerah"} 
+\NormalTok{  ))}
+\end{Highlighting}
+\end{Shaded}
+
+String di sebelah kiri \texttt{=} adalah nama baru, sedangkan di sebelah
+kanan \texttt{=} adalah nama lama.
+
+Fungsi \texttt{fct\_recode()} pada dasarnya sama dengan fungsi
+\texttt{gsub()}. Perbedaannya, mengubah string dengan menggunakan
+\texttt{fct\_recode()} dilakukan pada variabel faktor, sedangkan
+\texttt{gsub()} pada tipe variabel karakter.
+
+Jika \texttt{gsub()} digunakan untuk memanipulasi string pada tipe
+variabel faktor, maka ketika diaplikasikan variabel tersebut akan
+berubah menjadi tipe variabel karakter.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Menggabungkan set data jml.penduduk ke set data kelurahan.jkt}
+\CommentTok{# menggunakan fungsi left_join dari paket dplyr}
+\NormalTok{kelurahan.jkt <-}
+\StringTok{  }\KeywordTok{left_join}\NormalTok{(kelurahan.jkt, jml.penduduk, }\DataTypeTok{by =} \KeywordTok{c}\NormalTok{(}\StringTok{"nama_kelurahan"}\NormalTok{ =}\StringTok{ "kelurahan"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Memvisualisasikan peta jumlah penduduk Jakarta}
+\NormalTok{kelurahan.jkt }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(}\OperatorTok{!}\NormalTok{nama_kecamatan }\OperatorTok{%in%}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"KEPULAUAN SERIBU UTARA"}\NormalTok{, }\StringTok{"KEPULAUAN SERIBU SELATAN"}\NormalTok{)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_sf}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{fill =}\NormalTok{ jumlah), }\DataTypeTok{color =} \StringTok{"gray75"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{scale_fill_viridis_c}\NormalTok{() }\OperatorTok{+}
+\StringTok{  }\KeywordTok{ggtitle}\NormalTok{(}\StringTok{"Jumlah Penduduk DKI Jakarta 2017"}\NormalTok{, }
+          \DataTypeTok{subtitle =} \StringTok{"sumber set data: data.jakarta.go.id; referensi kode: datascience.or.id"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{panel.background =} \KeywordTok{element_blank}\NormalTok{()) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{axis.title =} \KeywordTok{element_blank}\NormalTok{()) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{axis.text =} \KeywordTok{element_blank}\NormalTok{()) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{axis.ticks =} \KeywordTok{element_blank}\NormalTok{()) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.title =} \KeywordTok{element_blank}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-104-1.pdf}
+
+Jika Anda ingin menampilkan salah satu kota di DKI Jakarta, tinggal
+menambahkan saringan set data untuk kota terkait. Contoh berikut
+menampilkan kota Jakarta Barat.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Memvisualisasikan peta jumlah penduduk Jakarta Barat}
+\NormalTok{kelurahan.jkt }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(}\OperatorTok{!}\NormalTok{nama_kecamatan }\OperatorTok{%in%}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"KEPULAUAN SERIBU UTARA"}\NormalTok{, }\StringTok{"KEPULAUAN SERIBU SELATAN"}\NormalTok{) }\OperatorTok{&}\StringTok{ }
+\StringTok{          }\NormalTok{nama_kota }\OperatorTok{==}\StringTok{ "Jakarta Barat"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_sf}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{fill =}\NormalTok{ jumlah), }\DataTypeTok{color =} \StringTok{"gray75"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{scale_fill_viridis_c}\NormalTok{() }\OperatorTok{+}
+\StringTok{  }\KeywordTok{ggtitle}\NormalTok{(}\StringTok{"Jumlah Penduduk Jakarta Barat 2017"}\NormalTok{,}
+          \DataTypeTok{subtitle =} \StringTok{"sumber set data: data.jakarta.go.id; referensi kode: datascience.or.id"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{panel.background =} \KeywordTok{element_blank}\NormalTok{()) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{axis.title =} \KeywordTok{element_blank}\NormalTok{()) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{axis.text =} \KeywordTok{element_blank}\NormalTok{()) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{axis.ticks =} \KeywordTok{element_blank}\NormalTok{()) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.title =} \KeywordTok{element_blank}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ebook_files/figure-latex/unnamed-chunk-105-1.pdf}
+
+\section{\texorpdfstring{\emph{Insight}}{Insight}}\label{insight}
+
+Beberapa \emph{insight} atau informasi yang bisa didapat dari hasil
+eksplorasi di atas antara lain sebagai berikut:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Jumlah penduduk terbanyak ada di kecamatan Cengkareng, sedangkan untuk
+  kategori kota ada di Jakarta Timur.
+\item
+  Jumlah penduduk paling sedikit terdapat di Kepulauan Seribu.
+\item
+  DKI Jakarta dalam angka jumlah penduduk tahun 2017:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Total = 10.348.570.
+  \item
+    Kecamatan terbanyak, Cengkareng = 513.064.
+  \item
+    Kecamatan/kota tersedikit, Kepulauan Seribu = 27.591.
+  \item
+    Kota terbanyak, Jakarta Timur = 2.946.926.
+  \end{itemize}
+\end{enumerate}
+
+\section{Referensi}\label{referensi}
+
+Berikut referensi yang bisa Anda jadikan panduan untuk lebih cepat
+menguasai R:
+
+\begin{itemize}
+\item
+  \href{https://www.rstudio.com/resources/cheatsheets/}{\emph{Cheat
+  Sheet} RStudio}. \emph{Cheat Sheet} atau contekan yang dirangkum dalam
+  2-3 lembar ini membantu dan mempermudah Anda untuk menavigasi
+  fungsi-fungsi yang diperlukan ketika proses eksplorasi data.
+\item
+  \href{https://www.datacamp.com/courses/free-introduction-to-r}{Kursus
+  online gratis dari DataCamp}. Tidak hanya belajar teori dan perintah
+  dasar pemrograman R, Anda juga akan disuguhi dan dilatih dengan banyak
+  praktek penulisan kode. Setiap bagian akan ada instruksi juga kuis
+  yang harus Anda jawab dengan menuliskan kode yang sesuai.
+\item
+  Googling. Anda juga bisa mendapatkan referensi melalui Google dengan
+  mengetikkan kata kunci secara spesifik terkait permasalahan tentang R
+  yang Anda hadapi.
+\end{itemize}
+
+Akhir kata, semoga buku yang ditulis secara amatir ini dapat membawa
+banyak manfaat bagi Anda.
+
+Terima kasih sudah membaca buku ini sampai akhir.
+
+dan..
+
+\textbf{SELAMAT BELAJAR}
+
+\begin{quote}
+``Anyone who stops learning is old, whether at twenty or eighty. Anyone
+who keeps learning stays young.''
+\end{quote}
+
+\begin{quote}
+―- \textbf{Henry Ford}
+\end{quote}
+
+\bibliography{book.bib,packages.bib}
+
+
+\end{document}

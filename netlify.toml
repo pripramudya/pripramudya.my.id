@@ -1,0 +1,10 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=63072000"
+    Feature-Policy = "vibrate 'none'; geolocation 'none'; midi 'none'; notifications 'none'; push 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; fullscreen 'none'; payment 'none'"
+    Content-Security-Policy = "default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>3 LANGKAH KILAT MAHIR ANALISIS DATA</title>
+  <meta name="description" content="Buku elektronik bagaimana cepat menguasai analisis data dengan RStudio">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="3 LANGKAH KILAT MAHIR ANALISIS DATA" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Buku elektronik bagaimana cepat menguasai analisis data dengan RStudio" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 LANGKAH KILAT MAHIR ANALISIS DATA" />
+  
+  <meta name="twitter:description" content="Buku elektronik bagaimana cepat menguasai analisis data dengan RStudio" />
+  
+
+<meta name="author" content="Pribadi Pramudya - pripramudya.com">
+
+
+<meta name="date" content="2019-01-14">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="kuasai-teknik-dasar-analisis-data.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">3 Langkah Kilat Mahir Analisis Data</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Pendahuluan</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#selamat-datang"><i class="fa fa-check"></i>Selamat Datang</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#kenapa-anda-perlu-menguasai-keterampilan-analisis-data"><i class="fa fa-check"></i>Kenapa Anda Perlu Menguasai Keterampilan Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#konsep-dasar-analisis-data"><i class="fa fa-check"></i>Konsep Dasar Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#apa-itu-analisis-data"><i class="fa fa-check"></i>Apa itu Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#proses-dan-tahapan-analisis-data"><i class="fa fa-check"></i>Proses dan Tahapan Analisis Data</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#menentukan-tujuan"><i class="fa fa-check"></i>1. Menentukan Tujuan</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#menentukan-metode-pengukuran-yang-digunakan"><i class="fa fa-check"></i>2. Menentukan Metode Pengukuran yang Digunakan</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pengumpulan-data"><i class="fa fa-check"></i>3. Pengumpulan Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pembersihan-dan-pembentukan-data"><i class="fa fa-check"></i>4. Pembersihan dan Pembentukan Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#analisis-data"><i class="fa fa-check"></i>5. Analisis Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#interpretasi-dan-komunikasi-hasil-analisis-data"><i class="fa fa-check"></i>6. Interpretasi dan Komunikasi Hasil Analisis Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#langkah-kilat-mahir-analisis-data"><i class="fa fa-check"></i>3 Langkah Kilat Mahir Analisis Data</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><i class="fa fa-check"></i><b>1</b> Instal dan Pelajari Satu <em>Tool</em> Analisis Data yang <em>Powerful</em> ini</a><ul>
+<li class="chapter" data-level="1.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#tool-atau-perangkat-lunak-analisis-data-populer-yang-banyak-orang-pakai"><i class="fa fa-check"></i><b>1.1</b> <em>Tool</em> atau Perangkat Lunak Analisis Data Populer yang Banyak Orang Pakai</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#microsoft-excel"><i class="fa fa-check"></i><b>1.1.1</b> Microsoft Excel</a></li>
+<li class="chapter" data-level="1.1.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#python"><i class="fa fa-check"></i><b>1.1.2</b> Python</a></li>
+<li class="chapter" data-level="1.1.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#r"><i class="fa fa-check"></i><b>1.1.3</b> R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#kenapa-harus-r"><i class="fa fa-check"></i><b>1.2</b> Kenapa harus R</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#dukungan-paket-r"><i class="fa fa-check"></i><b>1.2.1</b> Dukungan Paket R</a></li>
+<li class="chapter" data-level="1.2.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#belajar-analisis-data-lebih-mudah-menggunakan-r"><i class="fa fa-check"></i><b>1.2.2</b> Belajar Analisis Data lebih mudah menggunakan R</a></li>
+<li class="chapter" data-level="1.2.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#fleksibilitas-r"><i class="fa fa-check"></i><b>1.2.3</b> Fleksibilitas R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#instal-r-dan-rstudio"><i class="fa fa-check"></i><b>1.3</b> Instal R dan RStudio</a></li>
+<li class="chapter" data-level="1.4" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#instal-paket-r"><i class="fa fa-check"></i><b>1.4</b> Instal Paket R</a></li>
+<li class="chapter" data-level="1.5" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#syntax-dan-operasi-dasar-r"><i class="fa fa-check"></i><b>1.5</b> <em>Syntax</em> dan Operasi Dasar R</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#kalkulator-interaktif"><i class="fa fa-check"></i><b>1.5.1</b> Kalkulator Interaktif</a></li>
+<li class="chapter" data-level="1.5.2" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#variabel"><i class="fa fa-check"></i><b>1.5.2</b> Variabel</a></li>
+<li class="chapter" data-level="1.5.3" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#vektor"><i class="fa fa-check"></i><b>1.5.3</b> Vektor</a></li>
+<li class="chapter" data-level="1.5.4" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#urutan-angka"><i class="fa fa-check"></i><b>1.5.4</b> Urutan Angka</a></li>
+<li class="chapter" data-level="1.5.5" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#replikasi-angka"><i class="fa fa-check"></i><b>1.5.5</b> Replikasi Angka</a></li>
+<li class="chapter" data-level="1.5.6" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#ambil-elemen-vektor"><i class="fa fa-check"></i><b>1.5.6</b> Ambil Elemen Vektor</a></li>
+<li class="chapter" data-level="1.5.7" data-path="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html"><a href="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini.html#syntax-fungsi-penting-lainnya"><i class="fa fa-check"></i><b>1.5.7</b> <em>Syntax</em> / Fungsi Penting Lainnya</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html"><i class="fa fa-check"></i><b>2</b> Kuasai Teknik Dasar Analisis Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#visualisasi-data"><i class="fa fa-check"></i><b>2.1</b> Visualisasi Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#pemetaan-data-ke-atribut-estetik"><i class="fa fa-check"></i><b>2.1.1</b> Pemetaan Data ke Atribut Estetik</a></li>
+<li class="chapter" data-level="2.1.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#lapisan"><i class="fa fa-check"></i><b>2.1.2</b> Lapisan</a></li>
+<li class="chapter" data-level="2.1.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#iterasi-pemetaan-dan-lapisan"><i class="fa fa-check"></i><b>2.1.3</b> Iterasi Pemetaan dan Lapisan</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#manipulasi-data"><i class="fa fa-check"></i><b>2.2</b> Manipulasi Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#melihat-dan-mengetahui-set-data"><i class="fa fa-check"></i><b>2.2.1</b> Melihat dan Mengetahui Set Data</a></li>
+<li class="chapter" data-level="2.2.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#mengubah-variabel-kolom-isi-data"><i class="fa fa-check"></i><b>2.2.2</b> Mengubah Variabel, Kolom, Isi Data</a></li>
+<li class="chapter" data-level="2.2.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#operator-pipa"><i class="fa fa-check"></i><b>2.2.3</b> Operator Pipa (<code>%&gt;%</code>)</a></li>
+<li class="chapter" data-level="2.2.4" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#memilih-variabel-data"><i class="fa fa-check"></i><b>2.2.4</b> Memilih Variabel Data</a></li>
+<li class="chapter" data-level="2.2.5" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#menyaring-baris-data"><i class="fa fa-check"></i><b>2.2.5</b> Menyaring Baris Data</a></li>
+<li class="chapter" data-level="2.2.6" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#mengurutkan-data"><i class="fa fa-check"></i><b>2.2.6</b> Mengurutkan Data</a></li>
+<li class="chapter" data-level="2.2.7" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#menambah-variabel-data"><i class="fa fa-check"></i><b>2.2.7</b> Menambah Variabel Data</a></li>
+<li class="chapter" data-level="2.2.8" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#mengelompokkan-dan-meringkas-data"><i class="fa fa-check"></i><b>2.2.8</b> Mengelompokkan dan Meringkas Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#interpretasi-data"><i class="fa fa-check"></i><b>2.3</b> Interpretasi Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#korelasi"><i class="fa fa-check"></i><b>2.3.1</b> Korelasi</a></li>
+<li class="chapter" data-level="2.3.2" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#trend"><i class="fa fa-check"></i><b>2.3.2</b> <em>Trend</em></a></li>
+<li class="chapter" data-level="2.3.3" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#distribusi"><i class="fa fa-check"></i><b>2.3.3</b> Distribusi</a></li>
+<li class="chapter" data-level="2.3.4" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#outlier"><i class="fa fa-check"></i><b>2.3.4</b> <em>Outlier</em></a></li>
+<li class="chapter" data-level="2.3.5" data-path="kuasai-teknik-dasar-analisis-data.html"><a href="kuasai-teknik-dasar-analisis-data.html#perbandingan-dan-peringkat"><i class="fa fa-check"></i><b>2.3.5</b> Perbandingan dan Peringkat</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html"><i class="fa fa-check"></i><b>3</b> Latihan, Latihan, Latihan</a><ul>
+<li class="chapter" data-level="3.1" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#unduh-inisiasi-dan-mempersiapkan-set-data"><i class="fa fa-check"></i><b>3.1</b> Unduh, Inisiasi, dan Mempersiapkan Set Data</a></li>
+<li class="chapter" data-level="3.2" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#visualisasi-grafik"><i class="fa fa-check"></i><b>3.2</b> Visualisasi Grafik</a></li>
+<li class="chapter" data-level="3.3" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#visualisasi-peta"><i class="fa fa-check"></i><b>3.3</b> Visualisasi Peta</a></li>
+<li class="chapter" data-level="3.4" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#insight"><i class="fa fa-check"></i><b>3.4</b> <em>Insight</em></a></li>
+<li class="chapter" data-level="3.5" data-path="latihan-latihan-latihan.html"><a href="latihan-latihan-latihan.html#referensi"><i class="fa fa-check"></i><b>3.5</b> Referensi</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://pripramudya.com" target="blank">Ditulis oleh Pribadi Pramudya</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">3 LANGKAH KILAT MAHIR ANALISIS DATA</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="instal-dan-pelajari-satu-tool-analisis-data-yang-powerful-ini" class="section level1">
+<h1><span class="header-section-number">Langkah Kilat 1</span> Instal dan Pelajari Satu <em>Tool</em> Analisis Data yang <em>Powerful</em> ini</h1>
+<p>Salah satu yang mempengaruhi proses dan kualitas hasil analisis adalah dari <em>tool</em> yang dipakai. <em>Tool</em> atau perangkat lunak ini memudahkan Anda sebagai analis untuk melakukan proses analisis data secara efektif dan efisien. Selain itu, jika Anda menguasai dan mahir salah satu <em>tool</em> analisis data maka peluang dalam membuka karir terbaik Anda akan lebih tinggi. Begitu pentingnya pemilihan <em>tool</em> ini, sehingga saya akan merekomendasikan terlebih dahulu beberapa alternatif <em>tool</em> analisis data yang dipakai banyak orang.</p>
+<div id="tool-atau-perangkat-lunak-analisis-data-populer-yang-banyak-orang-pakai" class="section level2">
+<h2><span class="header-section-number">1.1</span> <em>Tool</em> atau Perangkat Lunak Analisis Data Populer yang Banyak Orang Pakai</h2>
+<p>Ada 3 <em>tool</em> yang akan dibahas di bagian ini:</p>
+<ul>
+<li>Microsoft Excel</li>
+<li>Python</li>
+<li>R</li>
+</ul>
+<div id="microsoft-excel" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Microsoft Excel</h3>
+<p><em>Software</em> nomor satu yang paling banyak dipakai orang di dunia.</p>
+<p>Microsoft pertama kali membuat dan memasarkan sebuah <em>spreadsheet program</em> bernama Multiplan di tahun 1982 yang sangat populer di CP/M sistem (sistem operasi mikrokontroler), namun kalah bersaing dengan Lotus 1-2-3 di MS-DOS. Hal ini membuat Microsoft mengembangkan versi terbaru dari <em>spreadsheet program</em> bernama Excel yang dimaksudkan untuk menyaingi seluruh fitur Lotus 1-2-3 dan membuatnya lebih baik.</p>
+<p>Versi pertama Excel dipasarkan untuk Mac di tahun 1985 dan pada Nopember 1987 untuk Windows. Di tahun 1988, Excel berhasil memimpin pangsa pasar <em>spreadsheet program</em> menyingkirkan Lotus 1-2-3 dan menjadi <em>software</em> yang paling banyak dipakai di seluruh dunia.</p>
+<p>Yang pasti Anda sudah familiar dan mahir menggunakan <em>sofware</em> ini. Jika Anda sedang mencari pekerjaan kantoran, maka keterampilan dasar yang dijadikan sebagai syarat di sebagian besar perusahaan adalah bisa menggunakan <em>sofware</em> Excel. Saking mudahnya mengoperasikan Excel, pengguna pemula tidak perlu belajar khusus untuk menguasainya. Tidak perlu tahu tentang <em>programming</em>. Cukup bermodalkan <em>point, click,</em> dan <em>drag</em>, Anda sudah bisa melakukan analisis data dengan <em>software</em> ini.</p>
+</div>
+<div id="python" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Python</h3>
+<p>Python adalah salah satu bahasa pemrograman untuk membuat berbagai macam aplikasi <em>(general purpose programming)</em>. Dibuat oleh Guido van Rossum dan pertama kali dirilis pada tahun 1991, Python menjadi salah satu bahasa pemrograman yang banyak digunakan di dunia. Kemudahan <em>syntax</em>, lisensi <em>open source</em>, serta dukungan komunitas merupakan beberapa faktor yang membuat popularitas Python melesat di beberapa tahun belakangan ini.</p>
+<p>Python juga menjadi salah satu <em>tool</em> yang sering digunakan untuk analisis data. Dukungan dari banyaknya paket membuat Python sangat fleksibel. Ada NumPy dan Pandas untuk manipulasi data, SciPy untuk perhitungan <em>science</em>, Matplotlib untuk data visualisasi, serta paket-paket lainnya.</p>
+<p>IDE <em>(Integrated Development Environment)</em> Python juga ada banyak pilihan. Mulai dari Spyder, Jupyter Notebook, Atom, PyCharm, dan Rodeo. Banyaknya pilihan dan fleksibilitas serta kemudahan dalam programming membuat Python menjadi <em>tool</em> nomor satu untuk data analisis saat ini.</p>
+</div>
+<div id="r" class="section level3">
+<h3><span class="header-section-number">1.1.3</span> R</h3>
+<p>R adalah perangkat lunak gratis untuk komputasi dan analisis data statistik yang juga dapat menampilkan visualisasi grafik. R didukung oleh ribuan <em>packages</em> yang dibuat oleh banyak kontributor aktif sehingga memudahkan pengguna dalam pengembangan aplikasi.</p>
+<p>R pertama kali dibuat oleh Ross Ihaka and Robert Gentleman di University of Auckland, New Zealand pada tahun 1992. Saat ini dikembangkan oleh R Development Core Team. Dinamakan R diambil dari abjad pertama kedua pembuat program ini. Versi pertama dirilis pada tahun 1995 dan versi beta yang stabil pada tahun 2000.</p>
+<p>Seperti halnya Python, bahasa pemrograman memiliki lisensi <em>open source</em>, dan dapat diinstal di seluruh sistem operasi: Windows, Linux, ataupun Mac. Komunitasnya pun banyak ditemukan di website seperti Stackoverflow ataupun di Github.</p>
+<p>Terkait popularitas, R masih kalah dibandingkan dengan Python. R nomor dua dalam hal <em>tool</em> analisis data paling banyak digunakan dan paling populer setelah Python.</p>
+<p>Anda masih ingat judul bab ini? Tentang <em>tool</em> analisis data <em>powerful</em>.</p>
+<p>Ya, <strong>R adalah <em>tool</em> analisis data <em>powerful</em> yang perlu Anda pelajari dan kuasai.</strong></p>
+</div>
+</div>
+<div id="kenapa-harus-r" class="section level2">
+<h2><span class="header-section-number">1.2</span> Kenapa harus R</h2>
+<p>Anda saat ini pasti bertanya-tanya kenapa harus belajar R? Kenapa tidak Excel saja atau Python?</p>
+<p>Yang pertama, kenapa tidak Excel saja? Karena Anda pasti sudah cukup mahir menggunakannya. Apakah hanya Anda yang mahir Excel? Tentu saja, tidak hanya Anda yang mahir, tetapi juga banyak orang. Menurut saya, orang yang minimal berpendidikan SMA pasti mengenal Excel.</p>
+<p>Jika Anda dalam posisi bersaing untuk mendapatkan karir yang lebih baik di suatu perusahaan atau mencari pekerjaan baru di perusahaan lain, maka Anda perlu memiliki <em>skill</em> yang berbeda dibandingkan kebanyakan orang.</p>
+<p><strong>R atau Python dapat memberikan perbedaan itu.</strong></p>
+<p>Yang kedua, kenapa tidak Python?</p>
+<p><em>Karena saya belum pernah pakai Python, he he :D</em></p>
+<p>Pada saat saya bertekad untuk belajar analisis data, saya memilih R sebagai <em>tool</em> utama. Python dan R sama-sama powerful, tinggal preferensi masing-masing saja. Jika Anda memiliki latar belakang <em>software developer</em>, mungkin Anda lebih cocok dengan Python, begitu pun sebaliknya. Saya memilih R karena saya bukan <em>software developer</em>. R sangat membantu meningkatkan produktifitas dalam menganalisis data di tempat kerja saya. R mungkin cocok buat Anda yang tidak memiliki latar belakang di bidang komputer atau <em>software</em>.</p>
+<p>Setidaknya ada 3 alasan kenapa Anda harus mencoba belajar R:</p>
+<div id="dukungan-paket-r" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Dukungan Paket R</h3>
+<p>Jumlah paket R yang bisa didownload sampai dengan sekarang ini sebanyak 13.409 di <a href="https://cran.r-project.org/">CRAN</a> (Comprehensive R Archive Network), <em>repository</em> R. Paket tersedia sebanyak ini belum termasuk ribuan lainnya yang ada di GitHub, juga paket komersial yang dikembangkan oleh vendor besar seperti Microsoft dan Oracle.</p>
+<p>Kenapa bisa begitu banyak paket?</p>
+<ul>
+<li><p>R memiliki banyak komunitas pengembang sangat aktif yang berkontribusi dalam membuat paket-paket baru ke CRAN setiap hari. Hal ini membuat hampir segala analisis yang ingin Anda lakukan sudah tersedia dalam bentuk paket di CRAN.</p></li>
+<li><p>R dibuat sejak tahun 1992, yang berarti sampai dengan saat ini sudah berusia lebih dari 20 tahun. Selama itu pula, berbagai macam paket terus dikembangkan sehingga R menjadi salah satu <em>tool</em> analisis data yang memiliki banyak pilihan paket dibandingkan <em>tool</em> analisis data lainnya.</p></li>
+<li><p>R banyak digunakan sebagai <em>tool</em> utama untuk penelitan statistik. Ketika metode baru dikembangkan, hasil penelitian tersebut tidak hanya dipublikasikan dalam bentuk makalah atau jurnal tetapi juga dalam bentuk paket. Ini membuat R selalu terdepan dalam mengadopsi metodologi terbaru.</p></li>
+<li><p>R didesain sebagai bahasa antar muka bahasa pemrograman lainnya. Banyak paket berfungsi sebagai pendukung perangkat lunak <em>open source</em> lainnya sehingga membuat R menjadi <em>tool</em> yang mempermudah kolaborasi berbagai macam metode dan algoritma pemrograman.</p></li>
+<li><p>Sistem CRAN merupakan platform yang sangat efektif dalam proses kolaborasi pengembangan paket R. Dengan sistem yang sudah teratur, pengguna bisa dengan mudah membuat, mengembangkan, mengetes, dan mendistribusikan paket.</p></li>
+</ul>
+</div>
+<div id="belajar-analisis-data-lebih-mudah-menggunakan-r" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Belajar Analisis Data lebih mudah menggunakan R</h3>
+<p>R menyediakan paket pembelajaran yang dinamakan <a href="https://swirlstats.com/">swirl</a>. Swirl mengajarkan Anda pemgrograman R dan analisis data secara interaktif langsung di dalam aplikasi R sesuai kecepatan pemahaman Anda.</p>
+<p>Selain adanya paket belajar mandiri di swirl, R juga memiliki syntax atau perintah yang lebih simpel dan lebih mudah diingat sehingga dapat mempercepat proses pembelajaran Anda. Hal ini juga membuat Anda akan lebih mudah mengerti script pemrograman yang ditulis oleh orang lain tanpa perlu membaca komentar programnya.</p>
+<p>Ditambah dengan paket-paket yang mempermudah Anda dalam melakukan analisis data seperti dplyr (untuk manipulasi data), ggplot (visualisasi), dan lainnya. Paket tersebut dibuat sedemikian rupa sehingga Anda dibantu untuk mengerti proses dan teknik, bukan syntax sehingga Anda akan lebih diarahkan pada pembelajaran konsep.</p>
+</div>
+<div id="fleksibilitas-r" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> Fleksibilitas R</h3>
+<p><a href="https://www.rstudio.com/">RStudio</a> adalah salah satu IDE (Integrated Development Environment) pemrograman R yang sangat populer. Dengan RStudio, membuat dan mengembangkan aplikasi R menjadi lebih mudah dibandingkan menggunakan konsol original R.</p>
+<p>RStudio sangat powerful dan membuat R menjadi sangat fleksibel. Anda bisa melakukan banyak hal melalui RStudio. Mulai dari membuat pemrograman script, grafik, laporan dalam bentuk pdf, ppt, excel, bahkan ebook, sampai dengan administrasi blog.</p>
+<p>Ya, ebook ini dan situs <a href="pripramudya.com" class="uri">pripramudya.com</a> dibuat menggunakan RStudio.</p>
+<p>Begitulah cerita tentang R. Jika Anda yakin untuk mulai belajar R, jangan ragu lagi untuk melakukan langkah kecil berikutnya.</p>
+</div>
+</div>
+<div id="instal-r-dan-rstudio" class="section level2">
+<h2><span class="header-section-number">1.3</span> Instal R dan RStudio</h2>
+<p>Pilihlah paket instalasi sesuai sistem operasi yang Anda pakai. Untuk RStudio, pilih yang versi desktop.</p>
+<ul>
+<li>R dapat diunduh di <a href="https://repo.bppt.go.id/cran/">sini</a>.</li>
+<li>RStudio dapat diunduh di <a href="https://www.rstudio.com/products/rstudio/download/">sini</a>.</li>
+</ul>
+<p>Buka software RStudio.</p>
+<p>Layout RStudio terdiri dari bagian Script, Console, Variable, dan Output.</p>
+<p><img src="images/Rstudio_Layout.jpg" width="100%" /></p>
+</div>
+<div id="instal-paket-r" class="section level2">
+<h2><span class="header-section-number">1.4</span> Instal Paket R</h2>
+<p>Paket adalah komponen penting yang memungkinkan pengguna untuk menggunakan program siap pakai tanpa harus membuatnya dari awal. Ada banyak ribuan paket di CRAN, tapi untuk saat ini, saya sarankan untuk instal cukup satu paket analisis data yang paling powerful, yakni <strong>tidyverse</strong>.</p>
+<p>Anda dapat menginstalnya cukup dengan mengetik di CONSOLE menggunakan perintah:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</code></pre></div>
+<p>Cukup instal paket tidyverse ini, Anda sudah bisa mulai belajar analisis data menggunakan R.</p>
+</div>
+<div id="syntax-dan-operasi-dasar-r" class="section level2">
+<h2><span class="header-section-number">1.5</span> <em>Syntax</em> dan Operasi Dasar R</h2>
+<p>Di bagian ini, Anda akan diarahkan untuk mengenal <em>syntax</em> serta operasi dasar dari pemrograman R. Apa itu <em>syntax</em>?</p>
+<p><em>Syntax</em> adalah aturan menulis kata perintah di CONSOLE agar dapat dimengerti dengan benar oleh bahasa pemrograman R. Aturan <em>syntax</em> ini secara mutlak harus dipenuhi. Jika ada kesalahan penulisan <em>syntax</em>, maka akan ada umpan balik berupa pesan eror yang diterima oleh pengguna.</p>
+<p>Jadi, bagian ini penting untuk Anda ketahui. Tutorial <em>syntax</em> dan operasi dasar ini harus Anda ketik di CONSOLE RStudio.</p>
+<div id="kalkulator-interaktif" class="section level3">
+<h3><span class="header-section-number">1.5.1</span> Kalkulator Interaktif</h3>
+<p>R bisa digunakan sebagai kalkulator. Ketik <code>2 + 5</code> di CONSOLE dan tekan Enter. Anda akan mendapat umpan balik berupa hasil perhitungan yang telah Anda input sebelumnya.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">5</span></code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<p>Anda juga bisa menggunakan operator aritmatika lainnya seperti <code>*</code> untuk perkalian, <code>-</code> untuk pengurangan, <code>/</code> untuk bagi, ataupun <code>^</code> untuk kuadrat.</p>
+</div>
+<div id="variabel" class="section level3">
+<h3><span class="header-section-number">1.5.2</span> Variabel</h3>
+<p>Jika Anda ingin melakukan perhitungan kedua menggunakan hasil di atas, maka Anda dapat menyimpannya dalam bentuk variabel. Dengan variabel, Anda tidak perlu ketik ulang <code>2 + 5</code> setiap kali Anda memerlukannya.</p>
+<p>Untuk membuat variabel baru, gunakan operator <code>panah ke kiri</code>, seperti ini: <code>&lt;-</code>. Operator variabel ini merupakan gabungan karakter ‘kurang dari’ yang diikuti karakter ‘minus’.</p>
+<p>Kenapa <code>panah ke kiri</code>? Operator ini merupakan simbol yang Anda gunakan seolah Anda memasukkan nilai yang ada di sebelah kanan panah ke variabel yang ada di sebelah kiri panah.</p>
+<p>Contohnya, Anda akan menyimpan hasil dari <code>2 + 5</code> ke variabel bernama <code>x</code>. Ketik <code>x &lt;- 2 + 5</code> di CONSOLE dan tekan Enter.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">5</span></code></pre></div>
+<p>Anda akan menyadari, R tidak langsung mengirim umpan balik hasil dari kalkulasi tersebut. Yang R lakukan hanya menyimpan hasil perhitungan tersebut ke variabel ‘x’ dan mengasumsikan Anda akan menggunakan varibel ini nantinya. Daftar nama variabel yang Anda buat akan tampil pada jendela VARIABLE di RStudio.</p>
+<p>Jika Anda ingin menampilkan isi variabel ‘x’, Anda ketik <code>x</code> dan tekan Enter.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x</code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<p>Sekarang, simpan hasil dari <code>x * 3</code> pada variabel bernama ‘y’.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span>x <span class="op">*</span><span class="st"> </span><span class="dv">3</span></code></pre></div>
+<p>Tampilkan hasil dari ‘y’.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y</code></pre></div>
+<pre><code>## [1] 21</code></pre>
+</div>
+<div id="vektor" class="section level3">
+<h3><span class="header-section-number">1.5.3</span> Vektor</h3>
+<p>Kumpulan dari beberapa objek disebut vektor. Objek bisa berupa angka, karakter, string, dan lainnya. Vektor berupa angka merupakan bentuk simpel dari struktur data di R. Bahkan, 1 angka bisa dikatakan sebagai vektor dengan elemen sepanjang 1.</p>
+<p>Cara membuat sebuah vektor adalah dengan menggunakan fungsi <code>c()</code> yang merupakan kepanjangan dari ‘concatenate’ atau ‘combine’.</p>
+<p>Anda akan membuat sebuah vektor yang berisi nilai numerik 1.1, 9, dan 3.14 (pada penulisan angka, tanda titik di pengaturan standar RStudio merupakan tanda koma, begitu juga sebaliknya). Vektor ini akan Anda simpan di variabel ‘z’.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">1.1</span>, <span class="dv">9</span>, <span class="fl">3.14</span>)</code></pre></div>
+<p>Lalu, Anda tampilkan variabel ‘z’.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">z</code></pre></div>
+<pre><code>## [1] 1.10 9.00 3.14</code></pre>
+<p>Perhatikan hasil outputnya. Tidak ada tanda koma yang memisahkan antar nilai pada vektor tersebut.</p>
+<p>Anda juga bisa menggabungkan vektor untuk membuat vektor baru. Misalnya, vektor baru yang terdiri dari z, 777, dan z lagi. Tidak perlu menyimpan di variabel, sehingga Anda bisa melihat langsung hasilnya setelah menekan Enter.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(z, <span class="dv">777</span>, z)</code></pre></div>
+<pre><code>## [1]   1.10   9.00   3.14 777.00   1.10   9.00   3.14</code></pre>
+<p>Numerik faktor bisa digunakan dengan operator aritmatika. Ketik: z * 2 + 100, dan lihat apa yang terjadi.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">z <span class="op">*</span><span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">100</span></code></pre></div>
+<pre><code>## [1] 102.20 118.00 106.28</code></pre>
+<p>Pertama-tama, R mengalikan 2 setiap elemen vektor z, lalu menambahkannya dengan 100 sehingga hasilnya seperti di atas.</p>
+</div>
+<div id="urutan-angka" class="section level3">
+<h3><span class="header-section-number">1.5.4</span> Urutan Angka</h3>
+<p>Cara termudah untuk membuat angka yang berurutan adalah dengan menggunakan operator <code>:</code>. Ketik <code>1:20</code> di CONSOLE dan tekan Enter untuk melihat apa yang akan terjadi.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">:</span><span class="dv">20</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
+<p>Lalu bagaimana halnya dengan angka real? Misalnya, coba Anda ketik <code>pi:10</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pi<span class="op">:</span><span class="dv">10</span></code></pre></div>
+<pre><code>## [1] 3.141593 4.141593 5.141593 6.141593 7.141593 8.141593 9.141593</code></pre>
+<p>Hasilnya, angka real dimulai dari pi (3.141593), angka naik (bertambah 1) sampai dengan 9. Batas atas 10 tidak tercapai karena angka selanjutnya (10.141593) lebih besar dari 10.</p>
+<p>Selain <code>:</code>, Anda bisa menggunakan fungsi <code>seq()</code>. Kelebihan fungsi ini, Anda bisa memilih opsi penambahannya. Contoh, Anda ingin membuat urutan angka dari 1 sampai dengan 5 dengan penambahan 0.5.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dt">by =</span> <span class="fl">0.5</span>)</code></pre></div>
+<pre><code>## [1] 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0</code></pre>
+</div>
+<div id="replikasi-angka" class="section level3">
+<h3><span class="header-section-number">1.5.5</span> Replikasi Angka</h3>
+<p>Fungsi untuk mereplika Angka adalah <code>rep()</code> yang merupakan kepanjangan dari ‘replicate’. Berikut contoh mereplikasi angka 0 sebanyak 30 kali.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="dv">0</span>, <span class="dt">times =</span> <span class="dv">30</span>)</code></pre></div>
+<pre><code>##  [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</code></pre>
+</div>
+<div id="ambil-elemen-vektor" class="section level3">
+<h3><span class="header-section-number">1.5.6</span> Ambil Elemen Vektor</h3>
+<p>Anda bisa mengambil elemen vektor dengan menggunakan operator <code>[]</code> dan operator urutan angka <code>:</code>, serta menggunakan fungsi <code>c()</code>.</p>
+<p>Misalkan, Anda ambil contoh: variabel ‘a’ adalah vektor yang terdiri dari nilai 2, 4, 6, dan 8.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Ambil elemen ke-1 sampai dengan yang ke-3 dari variabel a</span>
+a[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>]</code></pre></div>
+<pre><code>## [1] 2 4 6</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Ambil elemen ke-2 dari variabel a</span>
+a[<span class="dv">2</span>]</code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Ambil elemen ke-4 dan ke-1 dari variabel a</span>
+a[<span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">1</span>)]</code></pre></div>
+<pre><code>## [1] 8 2</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Keluarkan elemen ke-3 dari variabel a</span>
+a[<span class="op">-</span><span class="dv">3</span>]</code></pre></div>
+<pre><code>## [1] 2 4 8</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Keluarkan elemen ke-1 dan ke-3 dari variabel a</span>
+a[<span class="op">-</span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>)]</code></pre></div>
+<pre><code>## [1] 4 8</code></pre>
+</div>
+<div id="syntax-fungsi-penting-lainnya" class="section level3">
+<h3><span class="header-section-number">1.5.7</span> <em>Syntax</em> / Fungsi Penting Lainnya</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><em>Syntax</em></th>
+<th align="left">Keterangan</th>
+<th align="left">Contoh Penggunaan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">?</td>
+<td align="left">Akses ke dokumentasi dan penjelasan fungsi</td>
+<td align="left">?seq</td>
+</tr>
+<tr class="even">
+<td align="left">getwd()</td>
+<td align="left">Menampilkan filepath direktori kerja</td>
+<td align="left">getwd()</td>
+</tr>
+<tr class="odd">
+<td align="left">ls()</td>
+<td align="left">Menampilkan daftar varibel</td>
+<td align="left">ls()</td>
+</tr>
+<tr class="even">
+<td align="left">dir()</td>
+<td align="left">Menampilkan files dari sebuah direktori</td>
+<td align="left">dir()</td>
+</tr>
+<tr class="odd">
+<td align="left">rm(list=ls())</td>
+<td align="left">Menghapus seluruh variabel</td>
+<td align="left">rm(list=ls())</td>
+</tr>
+<tr class="even">
+<td align="left">length()</td>
+<td align="left">Mendapatkan panjang elemen sebuah vektor atau variabel</td>
+<td align="left">length(x)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tombol Keyboard</strong></p>
+<p>Beberapa tombol keyboard berfungsi untuk mempercepat Anda dalam menulis script di R:</p>
+<ul>
+<li><p><code>tab</code> sangat sering digunakan untuk fitur <em>auto completion</em>. Contohnya, jika Anda memiliki varibel bernama ‘aristoteles’, Anda cukup ketik ‘a’ di CONSOLE, lalu tekan tombol <code>tab</code>, maka R akan langsung menyempurnakan penulisan variabel tersebut.</p></li>
+<li><p><code>panah atas</code> dan <code>panah bawah</code> berfungsi untuk mengakses histori perintah yang sudah Anda input sebelumnya, sehingga Anda tidak perlu mengetik ulang.</p></li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="kuasai-teknik-dasar-analisis-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
