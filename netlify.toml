@@ -8,5 +8,5 @@
     Content-Security-Policy = "default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
-    Permissions-Policy = `geolocation=(self "https://pripramudya.com"); microphone=()`
+    Permissions-Policy = "geolocation=(self 'https://pripramudya.com'); microphone=()"
 
