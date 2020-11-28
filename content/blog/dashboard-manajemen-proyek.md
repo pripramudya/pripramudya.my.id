@@ -886,11 +886,7 @@ https://github.com/pripramudya/dashboard-manpro/blob/master/pdf.Rmd
 
 Fungsi pada skrip ini hampir sama dengan skrip `pdf.Rmd`. Perbedaannya, output yang dihasilkan berbentuk format file presentasi (.pptx).
 
-Berikut demo slide presentasinya:
-
-{{< rawhtml >}}
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/Lxx9awpERdOTHq" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/PribadiPramudyaPMP/laporan-manajemen-proyek" title="Laporan Manajemen Proyek" target="_blank">Laporan Manajemen Proyek</a> </strong> from <strong><a href="https://www.slideshare.net/PribadiPramudyaPMP" target="_blank">Pribadi Pramudya, PMP</a></strong> </div>
-{{< /rawhtml >}}
+[Berikut demo slide presentasinya.](https://www.slideshare.net/PribadiPramudyaPMP/laporan-manajemen-proyek)
 
 Kamu bisa lihat detail skrip file ini di:
 

@@ -15,9 +15,7 @@ Beda.
 
 Ya, kedua istilah tersebut sama dalam dalam hal mindset, yaitu 'memberikan yang terbaik untuk pelanggan' -- *Service Excellence*.
 
-Nah, sebelum melangkah lebih jauh, saya sarankan Kamu nonton video youtube tentang pelayanan pelanggan berikut, dijamin minimal mata Kamu akan berkaca-kaca (jangan sampai nangis yah):
-
-{{< youtube 779KwjAYTeQ >}}
+Nah, sebelum melangkah lebih jauh, saya sarankan Kamu [nonton video youtube](https://www.youtube.com/watch?v=779KwjAYTeQ) tentang pelayanan pelanggan berikut, dijamin minimal mata Kamu akan berkaca-kaca (jangan sampai nangis yah).
 
 Wow.
 
