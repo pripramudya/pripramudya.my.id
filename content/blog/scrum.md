@@ -3,7 +3,6 @@ title: 'Sertifikasi Scrum - Ringkasan Scrum Body of Knowledge (SBOK)'
 date: '2020-06-17'
 slug: scrum
 tags:
-  - wawasan
   - scrum
 ---
 

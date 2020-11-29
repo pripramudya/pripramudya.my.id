@@ -4,7 +4,7 @@ date: '2018-09-13'
 slug: buat-dashboard-web
 tags:
   - dashboard
-  - churn
+  - R
 ---
 
 Di tempat kerja, apakah Kamu pernah bingung harus mengerjakan apa hari ini?

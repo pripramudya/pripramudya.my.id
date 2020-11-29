@@ -4,7 +4,6 @@ date: '2020-02-19'
 slug: buat-slide-presentasi-wow
 tags: 
 - presentasi
-- wawasan
 ---
 
 Presentasi merupakan salah satu keterampilan penting yang harus dimiliki apapun profesi Kamu. 

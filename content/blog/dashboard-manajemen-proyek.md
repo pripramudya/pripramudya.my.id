@@ -5,6 +5,7 @@ slug: dashboard-manajemen-proyek
 tags:
   - dashboard
   - manajemen-proyek
+  - R
 ---
 
 Bagi kebanyakan orang, malas adalah sebuah kebiasaan buruk.
