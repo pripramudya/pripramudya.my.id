@@ -1,5 +1,5 @@
 ---
-title: 'Dongeng tentang Kucing yang Pasti Belum Pernah Kamu Tahu'
+title: 'Dongeng tentang Kucing yang Pasti Belum Pernah Kamu Ketahui'
 date: '2020-12-09'
 slug: dongeng-kucing
 tags: 

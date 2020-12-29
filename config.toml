@@ -1,5 +1,5 @@
 baseURL = "https://pripramudya.com"
-title = "pripramudya.com"
+title = "#pripramudya"
 author = "Pribadi Pramudya"
 languageCode = "en-US"
 disableKinds = ["taxonomy"]
@@ -12,5 +12,4 @@ enableRobotsTXT = true
 
 [params]
   description = "Blog Pengembangan Diri Melalui Keterampilan Digital"
-  favicon = "images/favicon.png"
   title = "Pribadi Pramudya Blog"
