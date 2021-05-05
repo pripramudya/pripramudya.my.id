@@ -6,7 +6,7 @@ slug: buku
 
 # Buka Peluang Karir Terbaik Kamu Melalui Keterampilan Analisis Data yang Mumpuni
 
-[![](/./images/ebook.png)](/mahir-analisis-data)
+[![](/./images/ebook.jpg)](/mahir-analisis-data)
 
 Di _ebook_ ini, Kamu akan mengetahui:
 
