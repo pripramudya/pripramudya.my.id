@@ -231,7 +231,7 @@ Kamu harus tahu *niche* populer blog Kamu masuk di kategori mana dengan alasan b
 2. *Niche* Kamu menentukan di mana - dan bagaimana - Kamu akan mendapatkan pembaca yang tertarik pada topik di blog Kamu.
 3. Para *influencer* yang ada di *niche* Kamu (blogger, penulis, *podcaster* lain) bisa mendatangkan trafik ke blog Kamu.
 
-Ada 11 kategori topik blog yang akan dibahas di bagian ini.
+Ada 10 kategori topik blog yang akan dibahas di bagian ini.
 
 Yuk kita cek kategori topik ini dan lihat kira-kira blog Kamu masuk di kategori yang mana.
 
@@ -241,7 +241,7 @@ Kamu bisa bayangkan *niche* atau ceruk pasar sebagai ember besar yang bisa menam
 
 Beberapa diantaranya bisa tumpang tindih, tapi secara umum, blog Kamu akan jatuh pada satu kategori *niche*.
 
-**Berikut 11 kategori *niche* dari blog:**
+**Berikut 10 kategori *niche* dari blog:**
 
 1. Bisnis dan kewirausahaan
 2. Karir

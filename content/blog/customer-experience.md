@@ -118,7 +118,6 @@ Ada dua cara yang bisa Kamu lakukan, dengan menerapkan teori berikut:
 
 Yang pertama adalah dengan *_brand promise_* - janji produk atau layanan.
 
-Padahal penting untuk mengukur tingkat kepuasan pelanggan Kamu
 ### *_Brand Promise_* {#brand-promise}
 
 Dikutip dari [marketing91](https://www.marketing91.com/brand-promise/):
@@ -488,11 +487,11 @@ Di antara 5 CX Core Aspects, menurut saya yang paling penting adalah CX Action i
 
 CX Action adalah bagaimana perusahaan Kamu melakukan tindakan/program/inisiatif untuk menangani 'pain point' atau keluhan dari pelanggan.
 
-Agar program atau inisiatif ini berjalan efektif, langkah pertama yang harus Kamu lakukan adalah mencari tahu apa saja yang menjadi 'paint point' pelanggan.
+Agar program atau inisiatif ini berjalan efektif, langkah pertama yang harus Kamu lakukan adalah mencari tahu apa saja yang menjadi 'pain point' pelanggan.
 
 #### Apa itu 'Pain Point'?
 
-Menurut kamus Merriam-Webster, berikut definisi 'paint point': 
+Menurut kamus Merriam-Webster, berikut definisi 'pain point': 
 
 > a persistent or recurring problem (as with a product or service) that frequently inconveniences or annoys customers; something that is a recurring source of trouble, annoyance, or distress
 
