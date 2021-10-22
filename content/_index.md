@@ -16,8 +16,6 @@ Karena itulah, [pripramudya.com](https://pripramudya.com) hadir dengan visi "Men
 
 Jika ingin kontak atau kirim pesan bisa melalui [telegram saya](https://t.me/pripramudya).
 
-Atau Kamu juga bisa dukung saya untuk tetap konsisten menulis di blog ini dengan [mentraktir saya segelas cendol di sini](https://trakteer.id/pripramudya).
-
 > "Orang boleh pandai setinggi langit, tapi selama ia tak menulis, ia akan hilang di dalam masyarakat dan dari sejarah."
 >
 > -- Pramoedya Ananta Toer, House of Glass
