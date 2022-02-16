@@ -204,7 +204,7 @@ Sekarang coba Kamu bayangkan jadi pelanggan Royal Laptop Services:
 * Kamu hubungi Royal Laptop Services dan pesan layanan perbaikan laptop. Kamu sudah bersiap, merencanakan kira-kira bisa kapan datang ke toko Royal. Ternyata Kamu malah ditanya alamatnya di mana dan diminta untuk *share location*. Kamu cukup tunggu tim Royal datang ke rumah Kamu untuk ambil laptop Kamu.
 * Sambil menunggu *pickup*, Kamu mulai memikirkan kehidupan Kamu tanpa laptop: *Wah, bakalan susah nih! Kerjaan masih banyak, stress, nggak ada hiburan. Padahal lagi seneng-senengnya nonton Descendants of the Sun. Gimana nih?*
 * Tim Royal akhirnya sampai ke rumah dan mengambil laptop Kamu untuk diperbaiki. Ternyata Kamu dipinjamkan laptop selama masa perbaikan berangsung. Di dalam laptop pinjaman itu sudah ter-instal Microsoft Office untuk Kamu bekerja. Kamu juga bisa nonton drama Korea kesukaan Kamu.
-* Di hari keempat sejak pemgambilan, Kamu kembali dikejutkan dengan kabar bahwa laptop Kamu sudah selesai diperbaiki dan ternyata lagi, biaya yang Kamu keluarkan lebih rendah dari estimasi awal.
+* Di hari keempat sejak pengambilan, Kamu kembali dikejutkan dengan kabar bahwa laptop Kamu sudah selesai diperbaiki dan ternyata lagi, biaya yang Kamu keluarkan lebih rendah dari estimasi awal.
 * Kamu juga diberikan layanan garansi selama 4 minggu.
 
 Setelah Kamu mendapatkan pengalaman layanan dari Royal Laptop Services tersebut, kemungkinan besar Kamu pasti akan bergumam 'Wow!'
@@ -424,7 +424,7 @@ NPS adalah salah satu metode untuk mengukur seberapa besar kemungkinan pelanggan
 
 Skor NPS rentangnya mulai -100 sampai dengan 100.
  
-Berbeda halnya dengan CSAT yang skalanya fleksibel, di NPS skala nilainya antara 1-10.
+Berbeda halnya dengan CSAT yang skalanya fleksibel, di NPS skala nilainya antara 0-10.
 
 Pertanyaannya cukup sederhana:
 
@@ -434,7 +434,7 @@ NPS membagi pelanggan menjadi 3 kategori:
 
 * **Promoter** - Pelanggan yang menilai di angka 9-10.
 * **Passive** - Pelanggan yang menilai di angka 7-8.
-* **Detractor** - Pelanggan yang menilai di angka 1-6.
+* **Detractor** - Pelanggan yang menilai di angka 0-6.
 
 Bagaimana cara menghitung NPS?
 
