@@ -1,6 +1,6 @@
 ---
 title: 'Coaching untuk Pengembangan Potensi Tim'
-date: '2023-01-24'
+date: '2023-02-24'
 slug: coaching
 tags: 
 - karir

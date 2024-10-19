@@ -56,7 +56,7 @@ Begitu mendengar kata ini, mungkin Kamu teringat langsung pada sebuah tampilan y
 
 Berapa kecepatannya saat ini, berapa jarak total yang sudah ditempuh, sampai dengan berapa banyak bensin yang masih tersedia.
 
-Ada banyak sekali definisi dari dashboard dan menurut saya yang paling baik menjelaskan “dashboard” adalah dari [Stephen Few](http://www.stephen-few.com/) di bukunya yang berjudul Information Dashboard Design:
+Ada banyak sekali definisi dari dashboard dan menurut saya yang paling baik menjelaskan “dashboard” adalah dari Stephen Few di bukunya yang berjudul Information Dashboard Design:
 
 > a visual **display** of the **most important information** needed to **achieve one or more objectives**; consolidated and arranged on a single screen so the information can be monitored **at a glance.**
 
