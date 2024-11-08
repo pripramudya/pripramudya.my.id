@@ -40,10 +40,12 @@ Dengan ketentuan mencantumkan atribusi/kredit dari pemilik asli dari konten di b
 
 ## Kebijakan Privasi
 
-pripramudya.com menyadari dan mengakui pentingnya data pribadi yang telah Anda percayakan kepada Kami dan percaya bahwa merupakan tanggung jawab kami untuk mengelola, melindungi dan mengolah data pribadi Anda dengan baik. Kebijakan Privasi ini ("Kebijakan Privasi" atau "Kebijakan") ini dirancang untuk membantu Anda memahami bagaimana kami mengumpulkan, menggunakan, mengungkapkan dan/atau mengolah data pribadi yang telah Anda percayakan kepada Kami dan/atau Kami miliki tentang Anda, baik di masa sekarang maupun di masa mendatang, serta untuk membantu Anda membuat keputusan yang tepat sebelum memberikan data pribadi Anda kepada Kami. Dan Kami berkomitmen untuk melindungi dan merahasiakan data pribadi Anda sesuai dengan peraturan perundang-undangan yang berlaku.
+pripramudya.com menyadari dan mengakui pentingnya data pribadi yang telah Anda percayakan kepada Kami dan percaya bahwa merupakan tanggung jawab kami untuk mengelola, melindungi dan mengolah data pribadi Anda dengan baik. 
+
+jKebijakan Privasi ini ("Kebijakan Privasi" atau "Kebijakan") ini dirancang untuk membantu Anda memahami bagaimana kami mengumpulkan, menggunakan, mengungkapkan dan/atau mengolah data pribadi yang telah Anda percayakan kepada Kami dan/atau Kami miliki tentang Anda, baik di masa sekarang maupun di masa mendatang, serta untuk membantu Anda membuat keputusan yang tepat sebelum memberikan data pribadi Anda kepada Kami. Dan Kami berkomitmen untuk melindungi dan merahasiakan data pribadi Anda sesuai dengan peraturan perundang-undangan yang berlaku.
 
 
-1. Perolehan dan pengumpulan data pribadi
+<div>1. Perolehan dan pengumpulan data pribadi</div>
 
 Perolehan dan pengumpulan data pribadi yang dilakukan dibatasi pada informasi yang relevan dan sesuai dengan tujuannya, yang meliputi:
 
@@ -55,7 +57,7 @@ Perolehan dan pengumpulan data pribadi yang dilakukan dibatasi pada informasi ya
 - Berapa lama kunjungan website
 - Referer (perujuk)
 
-2. Penggunaan data pribadi
+<div>2. Penggunaan data pribadi</div>
 
 Data pribadi Anda digunakan untuk kepentingan-kepentingan berikut:
 
